@@ -49,7 +49,8 @@ public class PengajuanPage extends Utilities {
 	private WebElement selEntries;
 	@FindBy(xpath = "//input[@placeholder='Enter value here']")
 	public WebElement txtSearch;
-	@FindBy(xpath = "//table[@id='dataTable']/tbody/tr/td[6]/button/i")
+	@FindBy(xpath = "//i[@class='fa fa-times']")
+//	@FindBy(xpath = "//table[@id='dataTable']/tbody/tr/td[6]/button/i")
 //	@FindBy(xpath = "//i[@class='fa fa-times']")
 	public WebElement actionDeleteTd;
 	@FindBy(xpath = "//span[@class='dtr-data']//i[@class='fa fa-times']")

@@ -317,12 +317,14 @@ public class HRISBukcetDataDefine {
 	public void validateEntries(String entries) {
 		boolean check = false;
 		if (entries.equals("10")) {
-			if (!driver.findElements(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[10]/td[1]")).isEmpty()) {
+			if (!driver.findElements(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[10]/td[1]")).isEmpty()) { // if element
+																											// exist
 				check = true;
 				System.out.println("entries 10 true");
 			}
 		} else if (entries.equals("25")) {
-			if (!driver.findElements(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[11]/td[1]")).isEmpty()) {
+			if (!driver.findElements(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[11]/td[1]")).isEmpty()) { // if element
+																											// exist
 				check = true;
 				System.out.println("entries 25 true");
 			}
@@ -333,15 +335,16 @@ public class HRISBukcetDataDefine {
 	@And("User delete data")
 	public void deleteAnnual() {
 		driver.get("https://dev.ptdika.com/employee/data/cuti");
-		propose.zoomOut(67);
+//		propose.zoomOut(67);
 		try {
-//			driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")).click();
-			propose.actionDeleteTd.click();
-//			propose.actionDelete.click();
+			driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")).click();
+			propose.actionDelete.click();
 		} catch (Exception e) {
 			// TODO: handle exception
-			e.printStackTrace();
-			System.out.println("Unavail");
+			System.err.println(e);
+			propose.actionDeleteTd.click();
+			propose.sleep(1000);
+			propose.btnValidateAction.click();
 		}
 		propose.sleep(1000);
 		propose.btnValidateAction.click();
@@ -351,18 +354,23 @@ public class HRISBukcetDataDefine {
 	public void checkAction() {
 		boolean check = true;
 		driver.get("https://dev.ptdika.com/employee/data/cuti");
+//		propose.zoomOut(67);
 		try {
-//			driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")).click();
-//			propose.actionDelete.click();
-			propose.actionDeleteTd.click();
+			driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")).click();
+			propose.actionDelete.click();
 		} catch (Exception e) {
 			// TODO: handle exception
-//			e.printStackTrace();
-			check = false;
-			Assert.assertTrue(check);
-			System.out.println("Unavail");
+			System.err.println(e);
+			try {
+				propose.actionDeleteTd.click();
+			} catch (Exception e2) {
+				// TODO: handle exception
+				System.err.println(e2);
+				check = false;
+			} finally {
+				Assert.assertTrue(check);
+			}
 		}
-		System.out.println("Avail");
 		Assert.assertTrue(check);
 	}
 

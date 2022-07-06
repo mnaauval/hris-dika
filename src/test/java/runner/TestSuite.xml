@@ -9,6 +9,12 @@
 			<class name="runner.HRISResultTableCutiRunner"></class>
 			<class name="runner.HRISCutiAnnualRunner"></class>
 			<class name="runner.HRISCutiSpecialRunner"></class>
+			<class name="runner.HRISDateCompareRunner"></class>
+			<class name="runner.HRISNotesRunner"></class>
+			<class name="runner.HRISDateCountRunner"></class>
+			<class name="runner.HRISSearchRunner"></class>
+			<class name="runner.HRISShowEntriesRunner"></class>
+			<class name="runner.HRISStepKeepSessionRunner"></class>
 		</classes>
 
 	</test>
