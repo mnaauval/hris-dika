@@ -14,6 +14,8 @@ public class HomePage {
 	public WebElement linkData;
 	@FindBy(xpath = "//a[normalize-space()='Pengajuan Cuti']")
 	public WebElement linkPengajuanNav;
+	@FindBy(xpath = "//a[normalize-space()='Tanda Tangan Digital']")
+	public WebElement linkSignature;
 	@FindBy(xpath = "//h4[normalize-space()='Pengajuan Cuti']")
 	public WebElement linkPengajuanTask;
 	@FindBy(xpath = "//h4[normalize-space()='Promotion']")

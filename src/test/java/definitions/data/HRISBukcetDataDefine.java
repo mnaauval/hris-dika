@@ -18,6 +18,7 @@ import io.cucumber.java.en.When;
 import pom.HomePage;
 import pom.LoginPage;
 import pom.PengajuanPage;
+import pom.SignaturePage;
 
 public class HRISBukcetDataDefine {
 
@@ -26,6 +27,7 @@ public class HRISBukcetDataDefine {
 	private LoginPage login;
 	private HomePage home;
 	private PengajuanPage propose;
+	private SignaturePage signature;
 
 	@SuppressWarnings("deprecation")
 	@Before
@@ -41,6 +43,7 @@ public class HRISBukcetDataDefine {
 		login = PageFactory.initElements(driver, LoginPage.class);
 		home = PageFactory.initElements(driver, HomePage.class);
 		propose = PageFactory.initElements(driver, PengajuanPage.class);
+		signature = PageFactory.initElements(driver, SignaturePage.class);
 	}
 
 	@Given("User has logged in as SPV")
@@ -81,6 +84,11 @@ public class HRISBukcetDataDefine {
 	@And("User click Pengajuan Cuti in Navbar")
 	public void clickPengajuanCutiNav() {
 		home.linkPengajuanNav.click();
+	}
+
+	@And("User click Tanda Tangan Digital in Navbar")
+	public void clickSignature() {
+		home.linkSignature.click();
 	}
 
 	@Then("User at Page Pengajuan Cuti")
@@ -144,15 +152,6 @@ public class HRISBukcetDataDefine {
 		propose.txtNotes.sendKeys(notes);
 	}
 
-//	@And("User pick range date {string} {string} {string} {string} and input notes")
-//	public void typeNotChoosen(String dateFrom, String yearFrom, String dateTo, String yearTo) {
-//		String notes = "Ini notes test";
-//		System.out.println(dateFrom + ", " + yearFrom + " - " + dateTo + ", " + yearTo);
-//		propose.pickRangeDate(dateFrom, yearFrom, dateTo, yearTo);
-//		propose.txtNotes.sendKeys(notes);
-//		System.out.println("Type not choosen");
-//	}
-
 	@And("^User select type (.*), select special (.*), pick range date (.*) (.*) (.*) (.*)$")
 	public void selectType(String type, String special, String dateFrom, String yearFrom, String dateTo,
 			String yearTo) {
@@ -165,18 +164,10 @@ public class HRISBukcetDataDefine {
 		propose.pickRangeDate(dateFrom, yearFrom, dateTo, yearTo);
 	}
 
-//	@And("^User select type (.*), pick range date (.*) (.*) (.*) (.*) and input note$")
-//	public void specialNotChoosen(String type, String dateFrom, String yearFrom, String dateTo,
-//			String yearTo) {
-//		String notes = "Ini notes test";
-//		System.out.println(type);
-//		System.out.println(dateFrom + ", " + yearFrom + " - " + dateTo + ", " + yearTo);
-//		System.out.println("Special not choosen");
-//		propose.selectType(type);
-//		propose.sleep(1000);
-//		propose.pickRangeDate(dateFrom, yearFrom, dateTo, yearTo);
-//		propose.txtNotes.sendKeys(notes);
-//	}
+	@And("User draw signature")
+	public void drawSignature() {
+		signature.drawSignature();
+	}
 
 	@And("^User input notes (.*)$")
 	public void inputNotes(String notes) {
@@ -269,6 +260,19 @@ public class HRISBukcetDataDefine {
 		actual = actual.replace("×", "").trim();
 		System.out.println(actual);
 		String expected = "Danger! The type special field is required.";
+		Assert.assertEquals(actual, expected);
+	}
+
+	@Then("User save signature")
+	public void clickSaveSignature() {
+		signature.btnSave.click();
+	}
+
+	@And("User validate signture")
+	public void validateSignature() {
+		String actual = signature.getAlertMsg();
+		System.out.println(actual);
+		String expected = "Succesfully uploaded";
 		Assert.assertEquals(actual, expected);
 	}
 
