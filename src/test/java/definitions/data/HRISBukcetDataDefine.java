@@ -3,6 +3,7 @@ package definitions.data;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -176,7 +177,7 @@ public class HRISBukcetDataDefine {
 //		propose.pickRangeDate(dateFrom, yearFrom, dateTo, yearTo);
 //		propose.txtNotes.sendKeys(notes);
 //	}
-	
+
 	@And("^User input notes (.*)$")
 	public void inputNotes(String notes) {
 		System.out.println(notes);
@@ -269,6 +270,64 @@ public class HRISBukcetDataDefine {
 		System.out.println(actual);
 		String expected = "Danger! The type special field is required.";
 		Assert.assertEquals(actual, expected);
+	}
+
+	@When("^User search by value (.*)$")
+	public void searchByValue(String value) {
+		propose.getCount(); // just scroll to element
+		propose.txtSearch.clear();
+		propose.txtSearch.sendKeys(value);
+		propose.txtSearch.sendKeys(Keys.ENTER);
+		propose.sleep(2000);
+	}
+
+	@When("^User validate search (.*)$")
+	public void validateSearch(String value) {
+		String date = propose.getDate();
+		String count = propose.getCount();
+		String type = propose.getType();
+		String status = propose.getStatus();
+		boolean check = false;
+		System.out.println(date);
+		System.out.println(count);
+		System.out.println(type);
+		System.out.println(status);
+		System.out.println(value);
+		if (value.contains(date)) {
+			check = true;
+		} else if (value.contains(count)) {
+			check = true;
+		} else if (value.contains(type)) {
+			check = true;
+		} else if (value.contains(status)) {
+			check = true;
+		} else if (value.isEmpty()) {
+			check = true;
+		}
+		Assert.assertTrue(check);
+	}
+
+	@When("^User choose show (.*) entries$")
+	public void showEntries(String entries) {
+		System.out.println(entries);
+		propose.selectEntries(entries);
+	}
+
+	@Then("^User validate show (.*)$")
+	public void validateEntries(String entries) {
+		boolean check = false;
+		if (entries.equals("10")) {
+			if (!driver.findElements(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[10]/td[1]")).isEmpty()) {
+				check = true;
+				System.out.println("entries 10 true");
+			}
+		} else if (entries.equals("25")) {
+			if (!driver.findElements(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[11]/td[1]")).isEmpty()) {
+				check = true;
+				System.out.println("entries 25 true");
+			}
+		}
+		Assert.assertTrue(check);
 	}
 
 	@And("User delete data")

@@ -13,8 +13,7 @@ public class PengajuanPage extends Utilities {
 
 	private WebDriver driver;
 	private WebDriverWait wait;
-	private Select type;
-	private Select special;
+	private Select select;
 
 	@FindBy(xpath = "//h1[@class='page-header hidden-print']")
 	public WebElement lblPengajuanCuti;
@@ -46,6 +45,10 @@ public class PengajuanPage extends Utilities {
 	public WebElement alertSuccess;
 	@FindBy(xpath = "//div[@class='alert alert-danger fade show']")
 	public WebElement alertFailed;
+	@FindBy(xpath = "//select[@name='dataTable_length']")
+	private WebElement selEntries;
+	@FindBy(xpath = "//input[@placeholder='Enter value here']")
+	public WebElement txtSearch;
 	@FindBy(xpath = "//table[@id='dataTable']/tbody/tr/td[6]/button/i")
 //	@FindBy(xpath = "//i[@class='fa fa-times']")
 	public WebElement actionDeleteTd;
@@ -65,22 +68,43 @@ public class PengajuanPage extends Utilities {
 
 	public void selectType(String type) {
 		scrollToElem(selType);
-		this.type = new Select(selType);
-		this.type.selectByVisibleText(type);
+		select = new Select(selType);
+		select.selectByVisibleText(type);
 	}
 
 	public void selectSpecial(String special) {
 		scrollToElem(selSpecial);
-		this.special = new Select(selSpecial);
-		this.special.selectByVisibleText(special);
+		select = new Select(selSpecial);
+		select.selectByVisibleText(special);
+	}
+	
+	public void selectEntries(String entries) {
+		scrollToElem(selSpecial);
+		select = new Select(selEntries);
+		select.selectByVisibleText(entries);
 	}
 
 	public void pickRangeDate(String dateFrom, String yearFrom, String dateTo, String yearTo) {
 		this.date.sendKeys(dateFrom + ", " + yearFrom + " - " + dateTo + ", " + yearTo);
 	}
 
+	public String getDate() {
+//		scrollToElem(driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[2]/p")));
+		return driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[2]/p")).getText();
+	}
+
 	public String getCount() {
-		scrollToElem(driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[3]/p")));
+//		scrollToElem(driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[3]/p")));
 		return driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[3]/p")).getText();
+	}
+
+	public String getType() {
+//		scrollToElem(driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[4]/p")));
+		return driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[4]/p")).getText();
+	}
+
+	public String getStatus() {
+//		scrollToElem(driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[5]/p")));
+		return driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[5]/p")).getText();
 	}
 }
