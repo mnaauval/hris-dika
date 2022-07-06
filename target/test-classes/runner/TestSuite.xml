@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="SuiteTest" parallel="none">
+	<test name="HRIS Employee">
+
+		<classes>
+			<class name="runner.HRISLoginRunner"></class>
+			<class name="runner.HRISPagePengajuanRunner"></class>
+			<class name="runner.HRISResultTableCutiRunner"></class>
+			<class name="runner.HRISCutiAnnualRunner"></class>
+			<class name="runner.HRISCutiSpecialRunner"></class>
+		</classes>
+
+	</test>
+</suite>
