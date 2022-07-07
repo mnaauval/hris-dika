@@ -15,6 +15,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pom.ApprovalPage;
 import pom.HomePage;
 import pom.LoginPage;
 import pom.PengajuanPage;
@@ -27,6 +28,7 @@ public class HRISBukcetDataDefine {
 	private LoginPage login;
 	private HomePage home;
 	private PengajuanPage propose;
+	private ApprovalPage approve;
 	private SignaturePage signature;
 
 	@SuppressWarnings("deprecation")
@@ -43,6 +45,7 @@ public class HRISBukcetDataDefine {
 		login = PageFactory.initElements(driver, LoginPage.class);
 		home = PageFactory.initElements(driver, HomePage.class);
 		propose = PageFactory.initElements(driver, PengajuanPage.class);
+		approve = PageFactory.initElements(driver, ApprovalPage.class);
 		signature = PageFactory.initElements(driver, SignaturePage.class);
 	}
 
@@ -62,18 +65,25 @@ public class HRISBukcetDataDefine {
 	public void at_Home() {
 		System.out.println(home.lblName.getText());
 		String actual = home.lblName.getText();
-		if (actual.equals("EX - ADHITYA BAYU W")) {
-			String expected = "EX - ADHITYA BAYU W";
-			Assert.assertEquals(actual, expected);
-		} else if (actual.equals("EX - AHMAD ZAKI BIN TAMIMI")) {
-			String expected = "EX - AHMAD ZAKI BIN TAMIMI";
-			Assert.assertEquals(actual, expected);
+		actual = actual.replace("×", "").trim();
+		boolean check = false;
+		if (actual.contains("EX - ADHITYA BAYU W")) {
+			check = true;
+			Assert.assertTrue(check);
+		} else if (actual.contains("EX - AHMAD ZAKI BIN TAMIMI")) {
+			check = true;
+			Assert.assertTrue(check);
 		}
 	}
 
 	@When("User click Pengajuan Cuti in My Task")
 	public void clickPengajuanCutiTask() {
 		home.linkPengajuanTask.click();
+	}
+
+	@When("User click Approval Cuti in My Task")
+	public void clickApprovalTask() {
+		home.linkApprovalTask.click();
 	}
 
 	@When("User click Data in Navbar")
@@ -84,6 +94,11 @@ public class HRISBukcetDataDefine {
 	@And("User click Pengajuan Cuti in Navbar")
 	public void clickPengajuanCutiNav() {
 		home.linkPengajuanNav.click();
+	}
+
+	@And("User click Approval Cuti in Navbar")
+	public void clickApprovalCuti() {
+		home.linkApprovalNav.click();
 	}
 
 	@And("User click Tanda Tangan Digital in Navbar")
@@ -97,7 +112,14 @@ public class HRISBukcetDataDefine {
 		String actual = propose.lblPengajuanCuti.getText();
 		String expected = "Pengajuan cuti";
 		Assert.assertEquals(actual, expected);
+	}
 
+	@Then("User at Page Approval Cuti")
+	public void at_Approval() {
+		System.out.println(approve.lblPersetujuanCuti.getText());
+		String actual = approve.lblPersetujuanCuti.getText();
+		String expected = "Persetujuan cuti";
+		Assert.assertEquals(actual, expected);
 	}
 
 	@Then("Show total cuti")
@@ -182,6 +204,7 @@ public class HRISBukcetDataDefine {
 
 	@And("Data cuti created")
 	public void showDataCuti() {
+		home.sleep(2000);
 		System.out.println(propose.alertSuccess.getText());
 		String actual = propose.alertSuccess.getText();
 		actual = actual.replace("×", "").trim();
@@ -268,12 +291,27 @@ public class HRISBukcetDataDefine {
 		signature.btnSave.click();
 	}
 
-	@And("User validate signture")
+	@Then("User delete signature")
+	public void clickDeleteSignature() {
+		signature.btnDelete.click();
+	}
+
+	@And("User validate signature")
 	public void validateSignature() {
 		String actual = signature.getAlertMsg();
 		System.out.println(actual);
-		String expected = "Succesfully uploaded";
-		Assert.assertEquals(actual, expected);
+		if (actual.equals("Succesfully uploaded")) {
+			String expected = "Succesfully uploaded";
+			Assert.assertEquals(actual, expected);
+		} else if (actual.equals("Please provide signature first.")) {
+			String expected = "Please provide signature first.";
+			Assert.assertEquals(actual, expected);
+		}
+	}
+
+	@And("User validate empty canvas")
+	public void validateEmptyCanvas() {
+		signature.checkEmptyCanvas();
 	}
 
 	@When("^User search by value (.*)$")
@@ -347,10 +385,10 @@ public class HRISBukcetDataDefine {
 			// TODO: handle exception
 			System.err.println(e);
 			propose.actionDeleteTd.click();
-			propose.sleep(1000);
+			propose.sleep(2000);
 			propose.btnValidateAction.click();
 		}
-		propose.sleep(1000);
+		propose.sleep(2000);
 		propose.btnValidateAction.click();
 	}
 

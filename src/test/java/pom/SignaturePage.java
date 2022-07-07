@@ -1,20 +1,17 @@
 package pom;
 
-import java.time.Duration;
-
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SignaturePage {
+public class SignaturePage extends Utilities {
 
 	private WebDriver driver;
-	private WebDriverWait wait;
 	private Actions builder;
 	private Action drawAction;
 	private Alert alert;
@@ -28,9 +25,9 @@ public class SignaturePage {
 
 	public SignaturePage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
+		super(driver);
 		this.driver = driver;
 		builder = new Actions(driver);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
 	public void drawSignature() {
@@ -39,12 +36,26 @@ public class SignaturePage {
 		drawAction.perform();
 	}
 
+	public void checkEmptyCanvas() {
+		Dimension canvas_dimension = canvas.getSize();
+		int canvas_center_x = canvas_dimension.getWidth() / 2;
+		int canvas_center_y = canvas_dimension.getHeight() / 2;
+		System.out.println(canvas_dimension);
+		System.out.println(canvas_center_x);
+		System.out.println(canvas_center_y);
+        int button_x = (canvas_center_x / 3) * 2;
+        int button_y = (canvas_center_y / 3) * 2;
+		builder.moveToElement(canvas, button_x, button_y).click().perform();
+	}
+
 	public String getAlertMsg() {
 		try {
 			alert = driver.switchTo().alert();
 			System.out.println(alert.getText() + " Alert is Displayed");
+			String msg = alert.getText();
+			sleep(1000);
 			alert.accept();
-			return alert.getText();
+			return msg;
 		} catch (NoAlertPresentException e) {
 			System.err.println(e);
 			return "Alert is Not Displayed";

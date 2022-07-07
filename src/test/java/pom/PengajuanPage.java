@@ -56,6 +56,7 @@ public class PengajuanPage extends Utilities {
 	@FindBy(xpath = "//span[@class='dtr-data']//i[@class='fa fa-times']")
 	public WebElement actionDelete;
 	@FindBy(xpath = "//button[normalize-space()='Yes, cancle it!']")
+//	@FindBy(xpath = "(//button[@type='button'])[9]")
 	public WebElement btnValidateAction;
 	@FindBy(xpath = "//p[normalize-space()='Error Number: 1064']")
 	public WebElement lblError1604;
@@ -78,7 +79,7 @@ public class PengajuanPage extends Utilities {
 		select = new Select(selSpecial);
 		select.selectByVisibleText(special);
 	}
-	
+
 	public void selectEntries(String entries) {
 		scrollToElem(selSpecial);
 		select = new Select(selEntries);
