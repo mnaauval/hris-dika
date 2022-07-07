@@ -80,7 +80,7 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User choose show <entries> entries
-    Then User validate show <entries>
+    Then User validate show entries <entries>
 
     #And User delete data
     Examples: 

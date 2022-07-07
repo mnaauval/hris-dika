@@ -49,6 +49,8 @@ public class HRISBukcetDataDefine {
 		signature = PageFactory.initElements(driver, SignaturePage.class);
 	}
 
+//	<<====================================== LOGIN ======================================>>
+
 	@Given("User has logged in as SPV")
 	public void hasLoggedInAsSPV() {
 		login.setCredentials("EXD8200015", "admin12345");
@@ -60,6 +62,8 @@ public class HRISBukcetDataDefine {
 		login.setCredentials("EXD8120011", "admin12345");
 		login.clickLogin();
 	}
+
+//	<<====================================== HOME ======================================>>
 
 	@And("User at Home Page")
 	public void at_Home() {
@@ -106,6 +110,8 @@ public class HRISBukcetDataDefine {
 		home.linkSignature.click();
 	}
 
+//	<<====================================== PENGAJUAN ======================================>>
+
 	@Then("User at Page Pengajuan Cuti")
 	public void at_Pengajuan() {
 		System.out.println(propose.lblPengajuanCuti.getText());
@@ -114,13 +120,7 @@ public class HRISBukcetDataDefine {
 		Assert.assertEquals(actual, expected);
 	}
 
-	@Then("User at Page Approval Cuti")
-	public void at_Approval() {
-		System.out.println(approve.lblPersetujuanCuti.getText());
-		String actual = approve.lblPersetujuanCuti.getText();
-		String expected = "Persetujuan cuti";
-		Assert.assertEquals(actual, expected);
-	}
+//	<====================================== TABLE RESULT ======================================>
 
 	@Then("Show total cuti")
 	public void showTotalCuti() {
@@ -158,10 +158,14 @@ public class HRISBukcetDataDefine {
 		Assert.assertEquals(propose.lblTotalSisaCuti.getText(), "12 Hari");
 	}
 
+//	<====================================== FORM CUTI ======================================>
+
 	@Then("User click button form cuti")
 	public void clickBtnForm() {
 		propose.btnForm.click();
 	}
+
+//	====================================== INPUT FIELD CUTI ======================================
 
 	@And("User select type {string}, pick range date {string} {string} {string} {string} and input notes")
 	public void selectType(String type, String dateFrom, String yearFrom, String dateTo, String yearTo) {
@@ -186,11 +190,6 @@ public class HRISBukcetDataDefine {
 		propose.pickRangeDate(dateFrom, yearFrom, dateTo, yearTo);
 	}
 
-	@And("User draw signature")
-	public void drawSignature() {
-		signature.drawSignature();
-	}
-
 	@And("^User input notes (.*)$")
 	public void inputNotes(String notes) {
 		System.out.println(notes);
@@ -201,6 +200,37 @@ public class HRISBukcetDataDefine {
 	public void clickSubmit() {
 		propose.btnSubmit.click();
 	}
+
+	@Then("Show error type field")
+	public void typeFieldError() {
+		System.out.println(propose.alertFailed.getText());
+		String actual = propose.alertFailed.getText();
+		actual = actual.replace("×", "").trim();
+		System.out.println(actual);
+		String expected = "Danger! The type field is required.";
+		Assert.assertEquals(actual, expected);
+	}
+
+	@Then("Show error special field")
+	public void specialFieldError() {
+		System.out.println(propose.alertFailed.getText());
+		String actual = propose.alertFailed.getText();
+		actual = actual.replace("×", "").trim();
+		System.out.println(actual);
+		String expected = "Danger! The type special field is required.";
+		Assert.assertEquals(actual, expected);
+	}
+
+	@And("Database occured")
+	public void databaseOccured() {
+		System.out.println(propose.lblError1604.getText());
+		String actual = propose.lblError1604.getText();
+		System.out.println(actual);
+		String expected = "Error Number: 1064";
+		Assert.assertEquals(actual, expected);
+	}
+
+//	====================================== TABLE DATA CUTI ======================================
 
 	@And("Data cuti created")
 	public void showDataCuti() {
@@ -227,91 +257,6 @@ public class HRISBukcetDataDefine {
 			String expected = "Permintaan cuti melebihi kapasitas sisa cuti";
 			Assert.assertEquals(actual, expected);
 		}
-	}
-
-	@And("Database occured")
-	public void databaseOccured() {
-		System.out.println(propose.lblError1604.getText());
-		String actual = propose.lblError1604.getText();
-		System.out.println(actual);
-		String expected = "Error Number: 1064";
-		Assert.assertEquals(actual, expected);
-	}
-
-	@And("^Count less than (.*)$")
-	public void coutLessThan(String count) {
-		System.out.println(propose.getCount());
-		int actual = Integer.parseInt(propose.getCount());
-		System.out.println(actual);
-		int expected = Integer.parseInt(count);
-		boolean check = false;
-		if (actual < expected) {
-			check = true;
-			System.out.println("True");
-		}
-		Assert.assertTrue(check);
-	}
-
-	@And("^Count equals (.*)$")
-	public void countEquals(String count) {
-		System.out.println(propose.getCount());
-		int actual = Integer.parseInt(propose.getCount());
-		System.out.println(actual);
-		int expected = Integer.parseInt(count);
-		boolean check = false;
-		if (actual == expected) {
-			check = true;
-			System.out.println("True");
-		}
-		Assert.assertTrue(check);
-	}
-
-	@Then("Show error type field")
-	public void typeFieldError() {
-		System.out.println(propose.alertFailed.getText());
-		String actual = propose.alertFailed.getText();
-		actual = actual.replace("×", "").trim();
-		System.out.println(actual);
-		String expected = "Danger! The type field is required.";
-		Assert.assertEquals(actual, expected);
-	}
-
-	@Then("Show error special field")
-	public void specialFieldError() {
-		System.out.println(propose.alertFailed.getText());
-		String actual = propose.alertFailed.getText();
-		actual = actual.replace("×", "").trim();
-		System.out.println(actual);
-		String expected = "Danger! The type special field is required.";
-		Assert.assertEquals(actual, expected);
-	}
-
-	@Then("User save signature")
-	public void clickSaveSignature() {
-		signature.btnSave.click();
-	}
-
-	@Then("User delete signature")
-	public void clickDeleteSignature() {
-		signature.btnDelete.click();
-	}
-
-	@And("User validate signature")
-	public void validateSignature() {
-		String actual = signature.getAlertMsg();
-		System.out.println(actual);
-		if (actual.equals("Succesfully uploaded")) {
-			String expected = "Succesfully uploaded";
-			Assert.assertEquals(actual, expected);
-		} else if (actual.equals("Please provide signature first.")) {
-			String expected = "Please provide signature first.";
-			Assert.assertEquals(actual, expected);
-		}
-	}
-
-	@And("User validate empty canvas")
-	public void validateEmptyCanvas() {
-		signature.checkEmptyCanvas();
 	}
 
 	@When("^User search by value (.*)$")
@@ -355,7 +300,7 @@ public class HRISBukcetDataDefine {
 		propose.selectEntries(entries);
 	}
 
-	@Then("^User validate show (.*)$")
+	@Then("^User validate show entries (.*)$")
 	public void validateEntries(String entries) {
 		boolean check = false;
 		if (entries.equals("10")) {
@@ -370,6 +315,34 @@ public class HRISBukcetDataDefine {
 				check = true;
 				System.out.println("entries 25 true");
 			}
+		}
+		Assert.assertTrue(check);
+	}
+
+	@And("^Count less than (.*)$")
+	public void coutLessThan(String count) {
+		System.out.println(propose.getCount());
+		int actual = Integer.parseInt(propose.getCount());
+		System.out.println(actual);
+		int expected = Integer.parseInt(count);
+		boolean check = false;
+		if (actual < expected) {
+			check = true;
+			System.out.println("True");
+		}
+		Assert.assertTrue(check);
+	}
+
+	@And("^Count equals (.*)$")
+	public void countEquals(String count) {
+		System.out.println(propose.getCount());
+		int actual = Integer.parseInt(propose.getCount());
+		System.out.println(actual);
+		int expected = Integer.parseInt(count);
+		boolean check = false;
+		if (actual == expected) {
+			check = true;
+			System.out.println("True");
 		}
 		Assert.assertTrue(check);
 	}
@@ -416,9 +389,54 @@ public class HRISBukcetDataDefine {
 		Assert.assertTrue(check);
 	}
 
+//	<<====================================== APPROVAL ======================================>>
+
+	@Then("User at Page Approval Cuti")
+	public void at_Approval() {
+		System.out.println(approve.lblPersetujuanCuti.getText());
+		String actual = approve.lblPersetujuanCuti.getText();
+		String expected = "Persetujuan cuti";
+		Assert.assertEquals(actual, expected);
+	}
+
+//	<<====================================== SIGNATURE ======================================>>
+
+	@And("User draw signature")
+	public void drawSignature() {
+		signature.drawSignature();
+	}
+
+	@Then("User save signature")
+	public void clickSaveSignature() {
+		signature.btnSave.click();
+	}
+
+	@Then("User delete signature")
+	public void clickDeleteSignature() {
+		signature.btnDelete.click();
+	}
+
+	@And("User validate signature")
+	public void validateSignature() {
+		String actual = signature.getAlertMsg();
+		System.out.println(actual);
+		if (actual.equals("Succesfully uploaded")) {
+			String expected = "Succesfully uploaded";
+			Assert.assertEquals(actual, expected);
+		} else if (actual.equals("Please provide signature first.")) {
+			String expected = "Please provide signature first.";
+			Assert.assertEquals(actual, expected);
+		}
+	}
+
+	@And("User validate empty canvas")
+	public void validateEmptyCanvas() {
+		signature.checkEmptyCanvas();
+	}
+
 	@After
 	public void close() {
-		propose.sleep(3000);
+		propose.sleep(2000);
 		driver.close();
 	}
 }
