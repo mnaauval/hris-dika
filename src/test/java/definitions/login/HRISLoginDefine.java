@@ -35,6 +35,32 @@ public class HRISLoginDefine {
 		home = PageFactory.initElements(driver, HomePage.class);
 	}
 
+	@Given("User open browser")
+	public void openBrowser() {
+		System.out.println("Open browser");
+	}
+
+	@When("User input url {string}")
+	public void inputURL(String URL) {
+		driver.get(URL);
+	}
+
+	@Then("User validate page {string}")
+	public void validatePage(String URL) {
+		driver.get(URL);
+		if (URL.equals("https://dev.ptdika.com/employee/panel/login/")) {
+			String actual = login.lblDIKA.getText();
+			System.out.println(actual);
+			String expected = "DIKA | EMPLOYEE";
+			Assert.assertEquals(actual, expected);
+		} else if (URL.equals("https://dev.ptdika.com/employee/panel/signin/")) {
+			String actual = login.lbl404.getText();
+			System.out.println(actual);
+			String expected = "404 Page Not Found";
+			Assert.assertEquals(actual, expected);
+		}
+	}
+
 	@Given("User at Login Page")
 	public void at_Login() {
 		login.sleep(2000);
@@ -59,18 +85,6 @@ public class HRISLoginDefine {
 		login.clickLogin();
 	}
 
-	@Then("User logout from Profile")
-	public void clickLogoutProfile() {
-		login.dropProfile.click();
-		login.btnLogoutDrop.click();
-	}
-
-	@Then("User logout from Nav")
-	public void clickLogoutNav() {
-		login.scrollToElem(login.btnLogoutNav);
-		login.btnLogoutNav.click();
-	}
-
 	@And("User logged in")
 	public void loggedIn() {
 		System.out.println(home.lblName.getText());
@@ -85,14 +99,6 @@ public class HRISLoginDefine {
 			Assert.assertTrue(check);
 		}
 		home.sleep(2000);
-	}
-
-	@And("User logged out")
-	public void loggedOut() {
-		System.out.println(login.btnLogin.getText());
-		String actual = login.btnLogin.getText();
-		String expected = "Login";
-		Assert.assertEquals(actual, expected);
 	}
 
 	@And("Show error")
@@ -110,6 +116,26 @@ public class HRISLoginDefine {
 		} else if (login.isAttrPasswdPresent() == true) {
 			System.out.println("Passwd required");
 		}
+	}
+
+	@Then("User logout from Profile")
+	public void clickLogoutProfile() {
+		login.dropProfile.click();
+		login.btnLogoutDrop.click();
+	}
+
+	@Then("User logout from Nav")
+	public void clickLogoutNav() {
+		login.scrollToElem(login.btnLogoutNav);
+		login.btnLogoutNav.click();
+	}
+
+	@And("User logged out")
+	public void loggedOut() {
+		System.out.println(login.btnLogin.getText());
+		String actual = login.btnLogin.getText();
+		String expected = "Login";
+		Assert.assertEquals(actual, expected);
 	}
 
 	@After

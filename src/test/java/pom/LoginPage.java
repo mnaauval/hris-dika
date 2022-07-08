@@ -9,6 +9,10 @@ public class LoginPage extends Utilities {
 
 	private WebDriver driver;
 
+	@FindBy(xpath = "//h1[normalize-space()='404 Page Not Found']")
+	public WebElement lbl404;
+	@FindBy(xpath = "//b[normalize-space()='DIKA | EMPLOYEE']")
+	public WebElement lblDIKA;
 	@FindBy(xpath = "//input[@name='username']")
 	private WebElement txtUname;
 	@FindBy(xpath = "//input[@name='password']")

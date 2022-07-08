@@ -16,6 +16,8 @@ public class SignaturePage extends Utilities {
 	private Action drawAction;
 	private Alert alert;
 
+	@FindBy(xpath = "//h1[@class='page-header']")
+	public WebElement lblSignature;
 	@FindBy(xpath = "//canvas[@id='signature']")
 	private WebElement canvas;
 	@FindBy(xpath = "//button[@id='btnSave']")

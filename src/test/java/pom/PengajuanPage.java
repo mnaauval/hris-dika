@@ -35,8 +35,12 @@ public class PengajuanPage extends Utilities {
 	private WebElement selType;
 	@FindBy(xpath = "//select[@id='type_special']")
 	private WebElement selSpecial;
+	@FindBy(xpath = "//small[normalize-space()='The type field is required.']")
+	public WebElement lblErrorType;
 	@FindBy(xpath = "//input[@id='leave_periode']")
 	private WebElement date;
+	@FindBy(xpath = "//small[normalize-space()='The leave periode field is required.']")
+	public WebElement lblErrorDate;
 	@FindBy(xpath = "//textarea[@id='notes']")
 	public WebElement txtNotes;
 	@FindBy(xpath = "//button[@id='btnSubmit']")
@@ -84,6 +88,11 @@ public class PengajuanPage extends Utilities {
 		scrollToElem(selSpecial);
 		select = new Select(selEntries);
 		select.selectByVisibleText(entries);
+	}
+	
+	public String getErrorField(WebElement element) {
+		scrollToElem(element);
+		return element.getText();
 	}
 
 	public void pickRangeDate(String dateFrom, String yearFrom, String dateTo, String yearTo) {

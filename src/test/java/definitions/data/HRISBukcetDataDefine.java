@@ -112,7 +112,7 @@ public class HRISBukcetDataDefine {
 
 //	<<====================================== PENGAJUAN ======================================>>
 
-	@Then("User at Page Pengajuan Cuti")
+	@Then("User at Pengajuan Cuti Page")
 	public void at_Pengajuan() {
 		System.out.println(propose.lblPengajuanCuti.getText());
 		String actual = propose.lblPengajuanCuti.getText();
@@ -203,15 +203,14 @@ public class HRISBukcetDataDefine {
 
 	@Then("Show error type field")
 	public void typeFieldError() {
-		System.out.println(propose.alertFailed.getText());
-		String actual = propose.alertFailed.getText();
-		actual = actual.replace("×", "").trim();
+//		System.out.println(propose.lblErrorType.getText());
+		String actual = propose.getErrorField(propose.lblErrorType);
 		System.out.println(actual);
-		String expected = "Danger! The type field is required.";
+		String expected = "The type field is required.";
 		Assert.assertEquals(actual, expected);
 	}
 
-	@Then("Show error special field")
+	/*@Then("Show error special field")
 	public void specialFieldError() {
 		System.out.println(propose.alertFailed.getText());
 		String actual = propose.alertFailed.getText();
@@ -219,6 +218,20 @@ public class HRISBukcetDataDefine {
 		System.out.println(actual);
 		String expected = "Danger! The type special field is required.";
 		Assert.assertEquals(actual, expected);
+	}*/
+	
+	@Then("Show error date field")
+	public void dateFieldError() {
+//		System.out.println(propose.lblErrorDate.getText());
+		String actual = propose.getErrorField(propose.lblErrorDate);
+		System.out.println(actual);
+		String expected = "The leave periode field is required.";
+		Assert.assertEquals(actual, expected);
+	}
+	
+	@Then("Show error note field")
+	public void noteFieldError() {
+		Assert.assertTrue(false);
 	}
 
 	@And("Database occured")
@@ -391,7 +404,7 @@ public class HRISBukcetDataDefine {
 
 //	<<====================================== APPROVAL ======================================>>
 
-	@Then("User at Page Approval Cuti")
+	@Then("User at Approval Cuti Page")
 	public void at_Approval() {
 		System.out.println(approve.lblPersetujuanCuti.getText());
 		String actual = approve.lblPersetujuanCuti.getText();
@@ -400,6 +413,14 @@ public class HRISBukcetDataDefine {
 	}
 
 //	<<====================================== SIGNATURE ======================================>>
+	
+	@Then("User at Signature Page")
+	public void at_Signature() {
+		System.out.println(signature.lblSignature.getText());
+		String actual = signature.lblSignature.getText();
+		String expected = "Setup Tanda Tangan";
+		Assert.assertEquals(actual, expected);
+	}
 
 	@And("User draw signature")
 	public void drawSignature() {

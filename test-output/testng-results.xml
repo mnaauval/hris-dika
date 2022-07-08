@@ -1,31 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="94" passed="80" failed="14" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-07T15:43:13 ICT" name="Default suite" finished-at="2022-07-07T15:44:59 ICT" duration-ms="105760">
+  <suite started-at="2022-07-09T02:04:33 ICT" name="SuiteTest" finished-at="2022-07-09T02:32:37 ICT" duration-ms="1684212">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.general.HRISDrawSignatureRunner@72035809]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.dashboard.HRISDashboardSPVRunner@7d9d0818]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.login.HRISLoginSPVRunner@7c137fd5]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.login.HRISLogoutSPVRunner@183ec003]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.login.HRISPageSignInSPVRunner@5b247367]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISDoubleSubmitRunner@24569dba]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISNotesRunner@3e08ff24]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISTableResultCutiRunner@221a3fa4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.signature.HRISDrawSignatureSPVRunner@5ddeb7cb]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-07-07T15:43:13 ICT" name="Default test" finished-at="2022-07-07T15:44:59 ICT" duration-ms="105760">
-      <class name="runner.general.HRISDrawSignatureRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.general.HRISDrawSignatureRunner@72035809]" started-at="2022-07-07T15:43:13 ICT" name="setUpClass" finished-at="2022-07-07T15:43:14 ICT" duration-ms="476" status="PASS">
+    <test started-at="2022-07-09T02:04:33 ICT" name="HRIS Employee" finished-at="2022-07-09T02:32:37 ICT" duration-ms="1684212">
+      <class name="runner.pengajuan.HRISTableResultCutiRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.pengajuan.HRISTableResultCutiRunner@221a3fa4]" started-at="2022-07-09T02:07:12 ICT" name="setUpClass" finished-at="2022-07-09T02:07:12 ICT" duration-ms="37" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@d2708a7]]>
+                <![CDATA[org.testng.TestRunner@7412a4db]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.general.HRISDrawSignatureRunner@72035809]" started-at="2022-07-07T15:43:14 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T15:43:30 ICT" duration-ms="16128" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISTableResultCutiRunner@221a3fa4]" started-at="2022-07-09T02:07:12 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:07:21 ICT" duration-ms="8679" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Draw and save"]]>
+                <![CDATA["Show total cuti"]]>
               </value>
             </param>
             <param index="1">
@@ -37,11 +48,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.general.HRISDrawSignatureRunner@72035809]" started-at="2022-07-07T15:43:30 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T15:43:43 ICT" duration-ms="12462" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISTableResultCutiRunner@221a3fa4]" started-at="2022-07-09T02:07:21 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:07:29 ICT" duration-ms="7972" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Empty canvas and save"]]>
+                <![CDATA["Show total cuti yang bisa diambil"]]>
               </value>
             </param>
             <param index="1">
@@ -53,11 +64,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.general.HRISDrawSignatureRunner@72035809]" started-at="2022-07-07T15:43:43 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T15:43:55 ICT" duration-ms="12812" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISTableResultCutiRunner@221a3fa4]" started-at="2022-07-09T02:07:29 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:07:37 ICT" duration-ms="8438" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Draw and delete"]]>
+                <![CDATA["Show total cuti bersama"]]>
               </value>
             </param>
             <param index="1">
@@ -69,11 +80,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.general.HRISDrawSignatureRunner@72035809]" started-at="2022-07-07T15:43:55 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T15:44:07 ICT" duration-ms="11405" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISTableResultCutiRunner@221a3fa4]" started-at="2022-07-09T02:07:37 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:07:46 ICT" duration-ms="8540" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Empty canvas and delete"]]>
+                <![CDATA["Show total cuti approved"]]>
               </value>
             </param>
             <param index="1">
@@ -85,11 +96,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.general.HRISDrawSignatureRunner@72035809]" started-at="2022-07-07T15:44:07 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T15:44:21 ICT" duration-ms="13822" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISTableResultCutiRunner@221a3fa4]" started-at="2022-07-09T02:07:46 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:07:54 ICT" duration-ms="7650" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Draw and save"]]>
+                <![CDATA["Show total cuti request"]]>
               </value>
             </param>
             <param index="1">
@@ -101,11 +112,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.general.HRISDrawSignatureRunner@72035809]" started-at="2022-07-07T15:44:21 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T15:44:34 ICT" duration-ms="13586" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISTableResultCutiRunner@221a3fa4]" started-at="2022-07-09T02:07:54 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:08:02 ICT" duration-ms="8376" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Empty canvas and save"]]>
+                <![CDATA["Show total sisa cuti"]]>
               </value>
             </param>
             <param index="1">
@@ -117,43 +128,1979 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.general.HRISDrawSignatureRunner@72035809]" started-at="2022-07-07T15:44:34 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T15:44:47 ICT" duration-ms="12316" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Draw and delete"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Bucket Data Pengajuan"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.general.HRISDrawSignatureRunner@72035809]" started-at="2022-07-07T15:44:47 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T15:44:59 ICT" duration-ms="12602" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Empty canvas and delete"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Bucket Data Pengajuan"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.general.HRISDrawSignatureRunner@72035809]" started-at="2022-07-07T15:44:59 ICT" name="tearDownClass" finished-at="2022-07-07T15:44:59 ICT" duration-ms="26" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.pengajuan.HRISTableResultCutiRunner@221a3fa4]" started-at="2022-07-09T02:08:02 ICT" name="tearDownClass" finished-at="2022-07-09T02:08:02 ICT" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- runner.general.HRISDrawSignatureRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- runner.pengajuan.HRISTableResultCutiRunner -->
+      <class name="runner.login.HRISLoginSPVRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.login.HRISLoginSPVRunner@7c137fd5]" started-at="2022-07-09T02:04:46 ICT" name="setUpClass" finished-at="2022-07-09T02:04:46 ICT" duration-ms="162" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7412a4db]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.login.HRISLoginSPVRunner@7c137fd5]" started-at="2022-07-09T02:04:46 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:04:58 ICT" duration-ms="12025" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login valid "SPV""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.login.HRISLoginSPVRunner@7c137fd5]" started-at="2022-07-09T02:04:58 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:05:09 ICT" duration-ms="10577" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login invalid "SPV""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.login.HRISLoginSPVRunner@7c137fd5]" started-at="2022-07-09T02:05:09 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:05:19 ICT" duration-ms="10533" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login invalid "SPV""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.login.HRISLoginSPVRunner@7c137fd5]" started-at="2022-07-09T02:05:19 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:05:29 ICT" duration-ms="9961" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login invalid "SPV""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.login.HRISLoginSPVRunner@7c137fd5]" started-at="2022-07-09T02:05:29 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:05:51 ICT" duration-ms="22055" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login invalid "SPV""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.login.HRISLoginSPVRunner@7c137fd5]" started-at="2022-07-09T02:05:51 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:06:13 ICT" duration-ms="21895" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login invalid "SPV""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.login.HRISLoginSPVRunner@7c137fd5]" started-at="2022-07-09T02:06:13 ICT" name="tearDownClass" finished-at="2022-07-09T02:06:13 ICT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.login.HRISLoginSPVRunner -->
+      <class name="runner.pengajuan.HRISSelectLeaveTypeRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5]" started-at="2022-07-09T02:08:02 ICT" name="setUpClass" finished-at="2022-07-09T02:08:02 ICT" duration-ms="35" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7412a4db]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5]" started-at="2022-07-09T02:08:02 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:08:11 ICT" duration-ms="8867" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Menampilkan form cuti (Button form cuti)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5]" started-at="2022-07-09T02:08:11 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:08:29 ICT" duration-ms="18301" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Annual"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5]" started-at="2022-07-09T02:08:29 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:08:49 ICT" duration-ms="19922" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5]" started-at="2022-07-09T02:08:49 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:09:08 ICT" duration-ms="18823" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5]" started-at="2022-07-09T02:09:08 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:09:27 ICT" duration-ms="19245" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5]" started-at="2022-07-09T02:09:27 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:09:46 ICT" duration-ms="18875" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5]" started-at="2022-07-09T02:09:46 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:10:05 ICT" duration-ms="18654" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5]" started-at="2022-07-09T02:10:05 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:10:24 ICT" duration-ms="19213" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5]" started-at="2022-07-09T02:10:24 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:10:43 ICT" duration-ms="19355" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5]" started-at="2022-07-09T02:10:43 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:10:53 ICT" duration-ms="9941" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Empty type"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5]" started-at="2022-07-09T02:10:53 ICT" name="tearDownClass" finished-at="2022-07-09T02:10:53 ICT" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.pengajuan.HRISSelectLeaveTypeRunner -->
+      <class name="runner.pengajuan.HRISCountTanggalCutiRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:14:44 ICT" name="setUpClass" finished-at="2022-07-09T02:14:44 ICT" duration-ms="50" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7412a4db]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:14:44 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:15:04 ICT" duration-ms="20015" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Annual and count date "LESS" than 12"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:15:04 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:15:23 ICT" duration-ms="18918" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Annual and count date "EQUALS" 12"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:15:23 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:15:36 ICT" duration-ms="12847" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Annual and count date "MORE" than 12"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:15:36 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:15:57 ICT" duration-ms="20981" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "LESS" than max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:15:57 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:20:34 ICT" duration-ms="276656" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "LESS" than max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[java.util.concurrent.TimeoutException
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'DESKTOP-S76SA9N', ip: '192.168.1.164', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cacac00c5730407040e56dcd1e773ddf, clickElement {id=7b7b33ab-be39-4f61-a6c3-ade23beafe6c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:64818}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64818/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (cacac00c5730407040e56dcd1e773ddf)] -> xpath: //button[@type='submit']]
+Session ID: cacac00c5730407040e56dcd1e773ddf]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'DESKTOP-S76SA9N', ip: '192.168.1.164', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cacac00c5730407040e56dcd1e773ddf, clickElement {id=7b7b33ab-be39-4f61-a6c3-ade23beafe6c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:64818}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64818/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (cacac00c5730407040e56dcd1e773ddf)] -> xpath: //button[@type='submit']]
+Session ID: cacac00c5730407040e56dcd1e773ddf
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:72)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:51)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:119)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at jdk.internal.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at com.sun.proxy.$Proxy28.click(Unknown Source)
+at pom.LoginPage.clickLogin(LoginPage.java:43)
+at definitions.data.HRISBukcetDataDefine.hasLoggedInAsSPV(HRISBukcetDataDefine.java:57)
+at ?.User has logged in as SPV(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:48)
+Caused by: java.util.concurrent.TimeoutException
+at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1886)
+at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2021)
+at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:66)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:51)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:119)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at jdk.internal.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at com.sun.proxy.$Proxy28.click(Unknown Source)
+at pom.LoginPage.clickLogin(LoginPage.java:43)
+at definitions.data.HRISBukcetDataDefine.hasLoggedInAsSPV(HRISBukcetDataDefine.java:57)
+at jdk.internal.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+at jdk.internal.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:20:34 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:20:53 ICT" duration-ms="19391" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "LESS" than max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:20:53 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:21:12 ICT" duration-ms="19242" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "LESS" than max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:21:12 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:21:31 ICT" duration-ms="18996" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "LESS" than max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:21:31 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:21:51 ICT" duration-ms="19204" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "LESS" than max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:21:51 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:22:37 ICT" duration-ms="46378" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "EQUALS" max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[normalize-space()='Yes, cancle it!']"}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'DESKTOP-S76SA9N', ip: '192.168.1.164', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6ff3e5008e6e011327f73ca2be780237, findElement {using=xpath, value=//button[normalize-space()='Yes, cancle it!']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:65090}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65090/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ff3e5008e6e011327f73ca2be780237]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[normalize-space()='Yes, cancle it!']"}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'DESKTOP-S76SA9N', ip: '192.168.1.164', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6ff3e5008e6e011327f73ca2be780237, findElement {using=xpath, value=//button[normalize-space()='Yes, cancle it!']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:65090}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65090/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ff3e5008e6e011327f73ca2be780237
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at com.sun.proxy.$Proxy28.click(Unknown Source)
+at definitions.data.HRISBukcetDataDefine.deleteAnnual(HRISBukcetDataDefine.java:378)
+at ?.User delete data(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:79)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:22:37 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:22:56 ICT" duration-ms="18781" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "EQUALS" max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:22:56 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:23:14 ICT" duration-ms="18636" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "EQUALS" max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:23:14 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:23:34 ICT" duration-ms="19741" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "EQUALS" max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:23:34 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:23:54 ICT" duration-ms="19582" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "EQUALS" max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:23:54 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:24:13 ICT" duration-ms="18749" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "EQUALS" max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:24:13 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:24:32 ICT" duration-ms="18996" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "EQUALS" max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:24:32 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:24:43 ICT" duration-ms="11344" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "MORE" than max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:24:43 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:24:55 ICT" duration-ms="11968" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "MORE" than max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:24:55 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:25:07 ICT" duration-ms="12036" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "MORE" than max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:25:07 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:25:19 ICT" duration-ms="12492" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "MORE" than max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:25:19 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:25:31 ICT" duration-ms="11811" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "MORE" than max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:25:31 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:25:43 ICT" duration-ms="11763" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "MORE" than max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:25:43 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:25:55 ICT" duration-ms="11512" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special and count date "MORE" than max count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:25:55 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:26:11 ICT" duration-ms="16091" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Count date as expected"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at definitions.data.HRISBukcetDataDefine.countEquals(HRISBukcetDataDefine.java:360)
+at ?.Count equals 3(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:122)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:26:11 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:26:30 ICT" duration-ms="19430" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Count date as expected"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:26:30 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:26:45 ICT" duration-ms="15235" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Count date as expected"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at definitions.data.HRISBukcetDataDefine.countEquals(HRISBukcetDataDefine.java:360)
+at ?.Count equals 0(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:122)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e]" started-at="2022-07-09T02:26:45 ICT" name="tearDownClass" finished-at="2022-07-09T02:26:45 ICT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.pengajuan.HRISCountTanggalCutiRunner -->
+      <class name="runner.pengajuan.HRISTanggalCutiRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c]" started-at="2022-07-09T02:10:53 ICT" name="setUpClass" finished-at="2022-07-09T02:10:53 ICT" duration-ms="28" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7412a4db]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c]" started-at="2022-07-09T02:10:53 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:11:35 ICT" duration-ms="41610" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Compare date "From with current""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:399)
+at ?.Check action(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:14)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c]" started-at="2022-07-09T02:11:35 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:11:52 ICT" duration-ms="16892" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Compare date "From with current""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c]" started-at="2022-07-09T02:11:52 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:12:09 ICT" duration-ms="17480" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Compare date "From with current""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c]" started-at="2022-07-09T02:12:09 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:12:19 ICT" duration-ms="10097" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Compare date "To < From""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c]" started-at="2022-07-09T02:12:19 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:12:38 ICT" duration-ms="18973" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Compare date "To = From""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c]" started-at="2022-07-09T02:12:38 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:12:57 ICT" duration-ms="18734" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Compare date "To > From""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c]" started-at="2022-07-09T02:12:57 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:13:06 ICT" duration-ms="9349" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Empty date"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c]" started-at="2022-07-09T02:13:06 ICT" name="tearDownClass" finished-at="2022-07-09T02:13:06 ICT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.pengajuan.HRISTanggalCutiRunner -->
+      <class name="runner.login.HRISPageSignInSPVRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.login.HRISPageSignInSPVRunner@5b247367]" started-at="2022-07-09T02:04:33 ICT" name="setUpClass" finished-at="2022-07-09T02:04:33 ICT" duration-ms="247" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7412a4db]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.login.HRISPageSignInSPVRunner@5b247367]" started-at="2022-07-09T02:04:33 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:04:41 ICT" duration-ms="7260" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Valid URL"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Sign in page"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [DIKA | EMPLOYEE] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [DIKA | EMPLOYEE] but found []
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at definitions.login.HRISLoginDefine.validatePage(HRISLoginDefine.java:55)
+at ?.User validate page "https://dev.ptdika.com/employee/panel/login/"(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/001-MODUL%20LOGIN/HRISPageSignIn.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.login.HRISPageSignInSPVRunner@5b247367]" started-at="2022-07-09T02:04:41 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:04:46 ICT" duration-ms="5331" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Invalid URL"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Sign in page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.login.HRISPageSignInSPVRunner@5b247367]" started-at="2022-07-09T02:04:46 ICT" name="tearDownClass" finished-at="2022-07-09T02:04:46 ICT" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.login.HRISPageSignInSPVRunner -->
+      <class name="runner.login.HRISLogoutSPVRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.login.HRISLogoutSPVRunner@183ec003]" started-at="2022-07-09T02:06:13 ICT" name="setUpClass" finished-at="2022-07-09T02:06:13 ICT" duration-ms="21" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7412a4db]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.login.HRISLogoutSPVRunner@183ec003]" started-at="2022-07-09T02:06:13 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:06:26 ICT" duration-ms="12743" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Logout from profile "SPV""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Logout"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.login.HRISLogoutSPVRunner@183ec003]" started-at="2022-07-09T02:06:26 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:06:39 ICT" duration-ms="12978" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Logout from navbar "SPV""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Logout"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.login.HRISLogoutSPVRunner@183ec003]" started-at="2022-07-09T02:06:39 ICT" name="tearDownClass" finished-at="2022-07-09T02:06:39 ICT" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.login.HRISLogoutSPVRunner -->
+      <class name="runner.pengajuan.HRISDoubleSubmitRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.pengajuan.HRISDoubleSubmitRunner@24569dba]" started-at="2022-07-09T02:31:04 ICT" name="setUpClass" finished-at="2022-07-09T02:31:04 ICT" duration-ms="13" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7412a4db]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISDoubleSubmitRunner@24569dba]" started-at="2022-07-09T02:31:04 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:31:29 ICT" duration-ms="24964" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Annual not approved yet"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='alert alert-success fade show']"}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'DESKTOP-S76SA9N', ip: '192.168.1.164', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cefcd409f81462d5ff247069ccf10626, findElement {using=xpath, value=//div[@class='alert alert-success fade show']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57103}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57103/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: cefcd409f81462d5ff247069ccf10626]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='alert alert-success fade show']"}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'DESKTOP-S76SA9N', ip: '192.168.1.164', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cefcd409f81462d5ff247069ccf10626, findElement {using=xpath, value=//div[@class='alert alert-success fade show']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57103}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57103/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: cefcd409f81462d5ff247069ccf10626
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at com.sun.proxy.$Proxy28.getText(Unknown Source)
+at definitions.data.HRISBukcetDataDefine.showDataCuti(HRISBukcetDataDefine.java:251)
+at ?.Data cuti created(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISDoubleSubmit.feature:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISDoubleSubmitRunner@24569dba]" started-at="2022-07-09T02:31:29 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:31:58 ICT" duration-ms="28992" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special not approved yet"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.pengajuan.HRISDoubleSubmitRunner@24569dba]" started-at="2022-07-09T02:31:58 ICT" name="tearDownClass" finished-at="2022-07-09T02:31:58 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.pengajuan.HRISDoubleSubmitRunner -->
+      <class name="runner.pengajuan.HRISNotesRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.pengajuan.HRISNotesRunner@3e08ff24]" started-at="2022-07-09T02:13:06 ICT" name="setUpClass" finished-at="2022-07-09T02:13:06 ICT" duration-ms="32" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7412a4db]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISNotesRunner@3e08ff24]" started-at="2022-07-09T02:13:06 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:13:26 ICT" duration-ms="19560" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Input field note"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISNotesRunner@3e08ff24]" started-at="2022-07-09T02:13:26 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:13:44 ICT" duration-ms="18469" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Input field note"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISNotesRunner@3e08ff24]" started-at="2022-07-09T02:13:44 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:14:03 ICT" duration-ms="18811" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Input field note"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISNotesRunner@3e08ff24]" started-at="2022-07-09T02:14:03 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:14:22 ICT" duration-ms="18799" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Input field note"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISNotesRunner@3e08ff24]" started-at="2022-07-09T02:14:22 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:14:31 ICT" duration-ms="9203" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Empty field note"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:234)
+at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:29)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISNotesRunner@3e08ff24]" started-at="2022-07-09T02:14:31 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:14:44 ICT" duration-ms="13117" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Empty all field"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:234)
+at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:39)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.pengajuan.HRISNotesRunner@3e08ff24]" started-at="2022-07-09T02:14:44 ICT" name="tearDownClass" finished-at="2022-07-09T02:14:44 ICT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.pengajuan.HRISNotesRunner -->
+      <class name="runner.dashboard.HRISDashboardSPVRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.dashboard.HRISDashboardSPVRunner@7d9d0818]" started-at="2022-07-09T02:06:39 ICT" name="setUpClass" finished-at="2022-07-09T02:06:39 ICT" duration-ms="35" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7412a4db]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.dashboard.HRISDashboardSPVRunner@7d9d0818]" started-at="2022-07-09T02:06:39 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:06:46 ICT" duration-ms="7094" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Show Home Page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Dashboard"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.dashboard.HRISDashboardSPVRunner@7d9d0818]" started-at="2022-07-09T02:06:46 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:06:55 ICT" duration-ms="9223" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Show Pengajuan Cuti Page from My Task"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Dashboard"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.dashboard.HRISDashboardSPVRunner@7d9d0818]" started-at="2022-07-09T02:06:55 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:07:04 ICT" duration-ms="8561" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Show Pengajuan Cuti Page from Navbar"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Dashboard"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.dashboard.HRISDashboardSPVRunner@7d9d0818]" started-at="2022-07-09T02:07:04 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:07:12 ICT" duration-ms="8395" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Show Signature Page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Dashboard"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.dashboard.HRISDashboardSPVRunner@7d9d0818]" started-at="2022-07-09T02:07:12 ICT" name="tearDownClass" finished-at="2022-07-09T02:07:12 ICT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.dashboard.HRISDashboardSPVRunner -->
+      <class name="runner.pengajuan.HRISSearchAndEntriesRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:26:45 ICT" name="setUpClass" finished-at="2022-07-09T02:26:45 ICT" duration-ms="17" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7412a4db]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:26:45 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:27:01 ICT" duration-ms="15592" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Annual"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:27:01 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:27:17 ICT" duration-ms="15632" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:27:17 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:27:32 ICT" duration-ms="15763" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:27:32 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:27:49 ICT" duration-ms="16401" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:27:49 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:28:04 ICT" duration-ms="15522" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:28:04 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:28:20 ICT" duration-ms="15599" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:28:20 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:28:35 ICT" duration-ms="15506" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:28:35 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:28:51 ICT" duration-ms="15616" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:28:51 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:29:07 ICT" duration-ms="15730" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:29:07 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:29:23 ICT" duration-ms="16140" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:29:23 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:29:39 ICT" duration-ms="16006" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cuti type Special"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:29:39 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:29:49 ICT" duration-ms="10636" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search by value"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
+at ?.User validate search November(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:41)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:29:49 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:30:00 ICT" duration-ms="10587" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search by value"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
+at ?.User validate search 90(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:41)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:30:00 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:30:11 ICT" duration-ms="11302" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search by value"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
+at ?.User validate search Annual(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:41)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:30:11 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:30:23 ICT" duration-ms="11584" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search by value"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
+at ?.User validate search Khitanan(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:41)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:30:23 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:30:35 ICT" duration-ms="11630" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search by value"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
+at ?.User validate search Request(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:41)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:30:35 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:30:46 ICT" duration-ms="11049" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search by value"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:30:46 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:30:55 ICT" duration-ms="9469" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search by value"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:30:55 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:31:04 ICT" duration-ms="8719" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search by value"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.pengajuan.HRISSearchAndEntriesRunner@8462f31]" started-at="2022-07-09T02:31:04 ICT" name="tearDownClass" finished-at="2022-07-09T02:31:04 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.pengajuan.HRISSearchAndEntriesRunner -->
+      <class name="runner.signature.HRISDrawSignatureSPVRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.signature.HRISDrawSignatureSPVRunner@5ddeb7cb]" started-at="2022-07-09T02:31:58 ICT" name="setUpClass" finished-at="2022-07-09T02:31:58 ICT" duration-ms="29" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7412a4db]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.signature.HRISDrawSignatureSPVRunner@5ddeb7cb]" started-at="2022-07-09T02:31:58 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:32:08 ICT" duration-ms="10569" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Draw and save"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.signature.HRISDrawSignatureSPVRunner@5ddeb7cb]" started-at="2022-07-09T02:32:08 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:32:18 ICT" duration-ms="10036" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Empty canvas and save"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.signature.HRISDrawSignatureSPVRunner@5ddeb7cb]" started-at="2022-07-09T02:32:18 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:32:28 ICT" duration-ms="9649" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Draw and delete"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.signature.HRISDrawSignatureSPVRunner@5ddeb7cb]" started-at="2022-07-09T02:32:28 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-09T02:32:37 ICT" duration-ms="9098" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Empty canvas and delete"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Bucket Data Pengajuan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.signature.HRISDrawSignatureSPVRunner@5ddeb7cb]" started-at="2022-07-09T02:32:37 ICT" name="tearDownClass" finished-at="2022-07-09T02:32:37 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.signature.HRISDrawSignatureSPVRunner -->
+    </test> <!-- HRIS Employee -->
+  </suite> <!-- SuiteTest -->
 </testng-results>
