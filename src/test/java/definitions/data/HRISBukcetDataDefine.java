@@ -110,6 +110,12 @@ public class HRISBukcetDataDefine {
 		home.linkSignature.click();
 	}
 
+	@And("User logout from Nav")
+	public void clickLogoutNav() {
+		login.scrollToElem(login.btnLogoutNav);
+		login.btnLogoutNav.click();
+	}
+
 //	<<====================================== PENGAJUAN ======================================>>
 
 	@Then("User at Pengajuan Cuti Page")
@@ -158,6 +164,46 @@ public class HRISBukcetDataDefine {
 		Assert.assertEquals(propose.lblTotalSisaCuti.getText(), "12 Hari");
 	}
 
+	@Then("Show total cuti approved changed")
+	public void showTotalCutiApprovedChanged() {
+		String count = propose.lblTotalCutiApproved.getText();
+		count = count.replace(" Hari", "").trim();
+		int actual = Integer.parseInt(count);
+		int expected = Integer.parseInt(propose.getCount());
+		System.out.println(actual);
+		System.out.println(expected);
+		Assert.assertEquals(actual, expected);
+	}
+	
+	@Then("Show total cuti request changed")
+	public void showTotalCutiRequestChanged() {
+		String count = propose.lblTotalCutiRequest.getText();
+		count = count.replace(" Hari", "").trim();
+		int actual = Integer.parseInt(count);
+		int expected = Integer.parseInt(propose.getCount());
+		System.out.println(actual);
+		System.out.println(expected);
+		Assert.assertEquals(actual, expected);
+	}
+	
+	@Then("Show Show total sisa cuti changed")
+	public void showTotalSisaCutiChanged() {
+		String count = propose.lblTotalSisaCuti.getText();
+		count = count.replace(" Hari", "").trim();
+		String approve = propose.lblTotalCutiApproved.getText();
+		approve = approve.replace(" Hari", "").trim();
+		String request = propose.lblTotalCutiRequest.getText();
+		request = request.replace(" Hari", "").trim();
+		
+		int actual = Integer.parseInt(count);
+		int approveInt = Integer.parseInt(approve); 
+		int requestInt = Integer.parseInt(request); 
+		int expected = 12 - (approveInt + requestInt);
+		System.out.println(actual);
+		System.out.println(expected);
+		Assert.assertEquals(actual, expected);
+	}
+
 //	<====================================== FORM CUTI ======================================>
 
 	@Then("User click button form cuti")
@@ -190,6 +236,12 @@ public class HRISBukcetDataDefine {
 		propose.pickRangeDate(dateFrom, yearFrom, dateTo, yearTo);
 	}
 
+	@And("User select type {string}")
+	public void selectType(String type) {
+		System.out.println(type);
+		propose.selectType(type);
+	}
+
 	@And("^User input notes (.*)$")
 	public void inputNotes(String notes) {
 		System.out.println(notes);
@@ -203,32 +255,28 @@ public class HRISBukcetDataDefine {
 
 	@Then("Show error type field")
 	public void typeFieldError() {
-//		System.out.println(propose.lblErrorType.getText());
 		String actual = propose.getErrorField(propose.lblErrorType);
 		System.out.println(actual);
 		String expected = "The type field is required.";
 		Assert.assertEquals(actual, expected);
 	}
 
-	/*@Then("Show error special field")
+	@And("Show error special field")
 	public void specialFieldError() {
-		System.out.println(propose.alertFailed.getText());
-		String actual = propose.alertFailed.getText();
-		actual = actual.replace("×", "").trim();
+		String actual = propose.getErrorField(propose.lblErrorSpecial);
 		System.out.println(actual);
-		String expected = "Danger! The type special field is required.";
+		String expected = "The type special field is required.";
 		Assert.assertEquals(actual, expected);
-	}*/
-	
+	}
+
 	@Then("Show error date field")
 	public void dateFieldError() {
-//		System.out.println(propose.lblErrorDate.getText());
 		String actual = propose.getErrorField(propose.lblErrorDate);
 		System.out.println(actual);
 		String expected = "The leave periode field is required.";
 		Assert.assertEquals(actual, expected);
 	}
-	
+
 	@Then("Show error note field")
 	public void noteFieldError() {
 		Assert.assertTrue(false);
@@ -412,8 +460,65 @@ public class HRISBukcetDataDefine {
 		Assert.assertEquals(actual, expected);
 	}
 
+	@And("User edit data")
+	public void clickEdit() {
+		try {
+			driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")).click();
+			approve.actionEdit.click();
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.err.println(e);
+			approve.actionEdit.click();
+		}
+	}
+
+	@And("User {string} cuti")
+	public void modalAction(String button) {
+		try {
+			driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")).click();
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.err.println(e);
+			if (button.equals("approve")) {
+				System.out.println(button);
+				approve.btnApprove.click();
+				approve.btnApproveIt.click();
+			} else if (button.equals("reject")) {
+				System.out.println(button);
+				approve.btnReject.click();
+				approve.getAlertMsg();
+				approve.btnRejectIt.click();
+			} else if (button.equals("return")) {
+				System.out.println(button);
+				approve.btnReturn.click();
+				approve.getAlertMsg();
+				approve.btnReturnIt.click();
+			}
+			approve.sleep(2000);
+			approve.btnOk.click();
+		}
+		if (button.equals("approve")) {
+			System.out.println(button);
+			approve.btnApprove.click();
+			approve.btnApproveIt.click();
+		} else if (button.equals("reject")) {
+			System.out.println(button);
+			approve.btnReject.click();
+			approve.getAlertMsg();
+			approve.btnRejectIt.click();
+		} else if (button.equals("return")) {
+			System.out.println(button);
+			approve.btnReturn.click();
+			approve.getAlertMsg();
+			approve.btnReturnIt.click();
+		}
+		approve.sleep(2000);
+		approve.btnOk.click();
+	}
+
 //	<<====================================== SIGNATURE ======================================>>
-	
+
 	@Then("User at Signature Page")
 	public void at_Signature() {
 		System.out.println(signature.lblSignature.getText());

@@ -14,7 +14,6 @@ public class SignaturePage extends Utilities {
 	private WebDriver driver;
 	private Actions builder;
 	private Action drawAction;
-	private Alert alert;
 
 	@FindBy(xpath = "//h1[@class='page-header']")
 	public WebElement lblSignature;
@@ -48,19 +47,5 @@ public class SignaturePage extends Utilities {
         int button_x = (canvas_center_x / 3) * 2;
         int button_y = (canvas_center_y / 3) * 2;
 		builder.moveToElement(canvas, button_x, button_y).click().perform();
-	}
-
-	public String getAlertMsg() {
-		try {
-			alert = driver.switchTo().alert();
-			System.out.println(alert.getText() + " Alert is Displayed");
-			String msg = alert.getText();
-			sleep(1000);
-			alert.accept();
-			return msg;
-		} catch (NoAlertPresentException e) {
-			System.err.println(e);
-			return "Alert is Not Displayed";
-		}
 	}
 }

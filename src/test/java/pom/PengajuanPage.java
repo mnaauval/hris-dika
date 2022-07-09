@@ -33,10 +33,12 @@ public class PengajuanPage extends Utilities {
 	public WebElement btnForm;
 	@FindBy(xpath = "//select[@id='type']")
 	private WebElement selType;
-	@FindBy(xpath = "//select[@id='type_special']")
-	private WebElement selSpecial;
 	@FindBy(xpath = "//small[normalize-space()='The type field is required.']")
 	public WebElement lblErrorType;
+	@FindBy(xpath = "//select[@id='type_special']")
+	private WebElement selSpecial;
+	@FindBy(xpath = "//small[normalize-space()='The type special field is required.']")
+	public WebElement lblErrorSpecial;
 	@FindBy(xpath = "//input[@id='leave_periode']")
 	private WebElement date;
 	@FindBy(xpath = "//small[normalize-space()='The leave periode field is required.']")

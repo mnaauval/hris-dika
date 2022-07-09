@@ -2,7 +2,9 @@ package pom;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,6 +14,7 @@ public class Utilities {
 	private WebDriver driver;
 	private WebDriverWait wait;
 	private JavascriptExecutor je;
+	private Alert alert;
 
 	public Utilities(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -37,5 +40,21 @@ public class Utilities {
 		String zoomJS = "document.body.style.zoom='" + percent + "%'";
 		System.out.println(zoomJS);
 		je.executeScript(zoomJS);
+	}
+	
+
+	
+	public String getAlertMsg() {
+		try {
+			alert = driver.switchTo().alert();
+			System.out.println(alert.getText() + " Alert is Displayed");
+			String msg = alert.getText();
+			sleep(1000);
+			alert.accept();
+			return msg;
+		} catch (NoAlertPresentException e) {
+			System.err.println(e);
+			return "Alert is Not Displayed";
+		}
 	}
 }

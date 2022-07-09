@@ -45,3 +45,14 @@ Feature: Bucket Data Pengajuan
     When User click button form cuti
     Then User click submit
     And Show error type field
+
+  @runthis
+  Scenario Outline: Empty special
+    Given User has logged in as SPV
+    And User at Home Page
+    And User click Pengajuan Cuti in My Task
+    When User click button form cuti
+    And User select type "Special"
+    Then User click submit
+    And User select type "Special"
+    And Show error special field

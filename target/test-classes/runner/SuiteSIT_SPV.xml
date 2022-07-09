@@ -12,6 +12,7 @@
 			<class name="runner.pengajuan.HRISSelectLeaveTypeRunner"></class>
 			<class name="runner.pengajuan.HRISTanggalCutiRunner"></class>
 			<class name="runner.pengajuan.HRISNotesRunner"></class>
+			<class name="runner.pengajuan.HRISSubmitRunner"></class>
 			<class name="runner.pengajuan.HRISCountTanggalCutiRunner"></class>
 			<class name="runner.pengajuan.HRISSearchAndEntriesRunner"></class>
 			<class name="runner.pengajuan.HRISDoubleSubmitRunner"></class>
