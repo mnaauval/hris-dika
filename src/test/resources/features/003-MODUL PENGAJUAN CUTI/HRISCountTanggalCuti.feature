@@ -17,7 +17,7 @@ Feature: Bucket Data Pengajuan
       | count |
       |    12 |
 
-  @tagannual
+  @tagannual @runthis
   Scenario Outline: Cuti type Annual and count date "EQUALS" 12
     Given User has logged in as SPV
     And User at Home Page
@@ -27,8 +27,8 @@ Feature: Bucket Data Pengajuan
     Then User click submit
     And Data cuti created
     And Count equals <count>
-    And User delete data
 
+    #And User delete data
     Examples: 
       | count |
       |    12 |
@@ -54,8 +54,8 @@ Feature: Bucket Data Pengajuan
     Then User click submit
     And Data cuti created
     And Count less than <count>
-    And User delete data
 
+    #And User delete data
     Examples: 
       | type    | special                                                     | dateFrom | dateTo  | yearFrom | yearTo | count | notes          |
       | Special | Persalinan/Keguguran istri---(2 Hari)                       | July20   | July20  |     2022 |   2022 |     2 | Ini test notes |
@@ -76,8 +76,8 @@ Feature: Bucket Data Pengajuan
     Then User click submit
     And Data cuti created
     And Count equals <count>
-    And User delete data
 
+    #And User delete data
     Examples: 
       | type    | special                                                               | dateFrom | dateTo    | yearFrom | yearTo | count | notes          |
       | Special | Persalinan/Keguguran istri---(2 Hari)                                 | July20   | July21    |     2022 |   2022 |     2 | Ini test notes |

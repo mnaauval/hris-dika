@@ -3,41 +3,34 @@
 <suite name="Failed suite [SuiteTest]">
   <test thread-count="5" name="HRIS Employee(failed)">
     <classes>
-      <class name="runner.pengajuan.HRISTanggalCutiRunner">
+      <class name="runner.pengajuan.HRISDoubleSubmitRunner">
         <methods>
           <include name="setUpClass"/>
           <include name="tearDownClass"/>
           <include name="runScenario" invocation-numbers="0"/>
         </methods>
-      </class> <!-- runner.pengajuan.HRISTanggalCutiRunner -->
-      <class name="runner.login.HRISPageSignInSPVRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
-        </methods>
-      </class> <!-- runner.login.HRISPageSignInSPVRunner -->
+      </class> <!-- runner.pengajuan.HRISDoubleSubmitRunner -->
       <class name="runner.pengajuan.HRISSearchAndEntriesRunner">
         <methods>
           <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0 1 2 3 4"/>
           <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="11 12 13 14 15"/>
         </methods>
       </class> <!-- runner.pengajuan.HRISSearchAndEntriesRunner -->
       <class name="runner.pengajuan.HRISCountTanggalCutiRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="4 23 9 25"/>
+          <include name="runScenario" invocation-numbers="23 25"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- runner.pengajuan.HRISCountTanggalCutiRunner -->
-      <class name="runner.pengajuan.HRISDoubleSubmitRunner">
+      <class name="runner.pengajuan.HRISTanggalCutiRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
           <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0 1 6"/>
         </methods>
-      </class> <!-- runner.pengajuan.HRISDoubleSubmitRunner -->
+      </class> <!-- runner.pengajuan.HRISTanggalCutiRunner -->
       <class name="runner.pengajuan.HRISNotesRunner">
         <methods>
           <include name="setUpClass"/>

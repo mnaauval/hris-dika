@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>HRIS Employee</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>80/14/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>70/13/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jul 09 02:04:33 ICT 2022</td>
+<td>Started on:</td><td>Sat Jul 09 10:50:24 ICT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>1684 seconds (1684212 ms)</td>
+<tr><td>Total time:</td><td>1316 seconds (1316531 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,214 +76,28 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "From with current"", "Bucket Data Pengajuan"</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search Annual(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:41)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace793264461", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace793264461'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:399)
+	at ?.Check action(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:14)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1291794687", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1291794687'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertTrue(Assert.java:56)
 	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search Annual(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:41)
+	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:399)
+	at ?.Check action(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:14)
 </pre></div></td>
-<td>11</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search 90(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:41)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace525129514", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace525129514'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertTrue(Assert.java:56)
-	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search 90(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:41)
-</pre></div></td>
-<td>10</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISDoubleSubmitRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISDoubleSubmitRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual not approved yet", "Bucket Data Pengajuan"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;alert alert-success fade show&apos;]&quot;}
-  (Session info: chrome=103.0.5060.114)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;DESKTOP-S76SA9N&apos;, ip: &apos;192.168.1.164&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cefcd409f81462d5ff247069ccf10626, findElement {using=xpath, value=//div[@class=&apos;alert alert-success fade show&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57103}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57103/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: cefcd409f81462d5ff247069ccf10626
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy28.getText(Unknown Source)
-	at definitions.data.HRISBukcetDataDefine.showDataCuti(HRISBukcetDataDefine.java:251)
-	at ?.Data cuti created(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISDoubleSubmit.feature:12)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace661515498", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace661515498'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;alert alert-success fade show&apos;]&quot;}
-  (Session info: chrome=103.0.5060.114)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;DESKTOP-S76SA9N&apos;, ip: &apos;192.168.1.164&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cefcd409f81462d5ff247069ccf10626, findElement {using=xpath, value=//div[@class=&apos;alert alert-success fade show&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57103}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57103/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: cefcd409f81462d5ff247069ccf10626
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy28.getText(Unknown Source)
-	at definitions.data.HRISBukcetDataDefine.showDataCuti(HRISBukcetDataDefine.java:251)
-	at ?.Data cuti created(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISDoubleSubmit.feature:12)
-</pre></div></td>
-<td>24</td>
-<td>runner.pengajuan.HRISDoubleSubmitRunner@24569dba</td></tr>
-<tr>
-<td title='runner.login.HRISPageSignInSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISPageSignInSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid URL", "Sign in page"</td>
-<td><div><pre>java.lang.AssertionError: expected [DIKA | EMPLOYEE] but found []
-	at definitions.login.HRISLoginDefine.validatePage(HRISLoginDefine.java:55)
-	at ?.User validate page &quot;https://dev.ptdika.com/employee/panel/login/&quot;(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/001-MODUL%20LOGIN/HRISPageSignIn.feature:7)
-... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace438493423", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace438493423'><pre>java.lang.AssertionError: expected [DIKA | EMPLOYEE] but found []
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at definitions.login.HRISLoginDefine.validatePage(HRISLoginDefine.java:55)
-	at ?.User validate page &quot;https://dev.ptdika.com/employee/panel/login/&quot;(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/001-MODUL%20LOGIN/HRISPageSignIn.feature:7)
-</pre></div></td>
-<td>7</td>
-<td>runner.login.HRISPageSignInSPVRunner@5b247367</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty all field", "Bucket Data Pengajuan"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:234)
-	at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:39)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1127510425", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1127510425'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertTrue(Assert.java:56)
-	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:234)
-	at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:39)
-</pre></div></td>
-<td>13</td>
-<td>runner.pengajuan.HRISNotesRunner@3e08ff24</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[normalize-space()=&apos;Yes, cancle it!&apos;]&quot;}
-  (Session info: chrome=103.0.5060.114)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;DESKTOP-S76SA9N&apos;, ip: &apos;192.168.1.164&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6ff3e5008e6e011327f73ca2be780237, findElement {using=xpath, value=//button[normalize-space()=&apos;Yes, cancle it!&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:65090}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65090/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 6ff3e5008e6e011327f73ca2be780237
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy28.click(Unknown Source)
-	at definitions.data.HRISBukcetDataDefine.deleteAnnual(HRISBukcetDataDefine.java:378)
-	at ?.User delete data(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:79)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace193852000", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace193852000'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[normalize-space()=&apos;Yes, cancle it!&apos;]&quot;}
-  (Session info: chrome=103.0.5060.114)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;DESKTOP-S76SA9N&apos;, ip: &apos;192.168.1.164&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6ff3e5008e6e011327f73ca2be780237, findElement {using=xpath, value=//button[normalize-space()=&apos;Yes, cancle it!&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:65090}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65090/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 6ff3e5008e6e011327f73ca2be780237
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy28.click(Unknown Source)
-	at definitions.data.HRISBukcetDataDefine.deleteAnnual(HRISBukcetDataDefine.java:378)
-	at ?.User delete data(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:79)
-</pre></div></td>
-<td>46</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search November(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:41)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1820516307", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1820516307'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertTrue(Assert.java:56)
-	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search November(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:41)
-</pre></div></td>
-<td>10</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
+<td>43</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@5ddeb7cb</td></tr>
 <tr>
 <td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Count date as expected", "Bucket Data Pengajuan"</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
 	at definitions.data.HRISBukcetDataDefine.countEquals(HRISBukcetDataDefine.java:360)
 	at ?.Count equals 3(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:122)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace297031904", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace297031904'><pre>java.lang.AssertionError: expected [true] but found [false]
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace850230988", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace850230988'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertTrue(Assert.java:56)
@@ -292,30 +106,30 @@ Session ID: 6ff3e5008e6e011327f73ca2be780237
 	at ?.Count equals 3(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:122)
 </pre></div></td>
 <td>16</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "From with current"", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:399)
-	at ?.Check action(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:14)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1460592187", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1460592187'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
+	at ?.User validate search 90(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace107123562", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace107123562'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertTrue(Assert.java:56)
 	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:399)
-	at ?.Check action(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:14)
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
+	at ?.User validate search 90(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
 </pre></div></td>
-<td>41</td>
-<td>runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c</td></tr>
+<td>12</td>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
 <tr>
 <td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Count date as expected", "Bucket Data Pengajuan"</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
 	at definitions.data.HRISBukcetDataDefine.countEquals(HRISBukcetDataDefine.java:360)
 	at ?.Count equals 0(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:122)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace568279911", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace568279911'><pre>java.lang.AssertionError: expected [true] but found [false]
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace595596745", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace595596745'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertTrue(Assert.java:56)
@@ -323,31 +137,189 @@ Session ID: 6ff3e5008e6e011327f73ca2be780237
 	at definitions.data.HRISBukcetDataDefine.countEquals(HRISBukcetDataDefine.java:360)
 	at ?.Count equals 0(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:122)
 </pre></div></td>
-<td>15</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
+<td>16</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "From with current"", "Bucket Data Pengajuan"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:399)
+	at ?.Check action(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:14)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace626010908", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace626010908'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:399)
+	at ?.Check action(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:14)
+</pre></div></td>
+<td>42</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@5ddeb7cb</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISDoubleSubmitRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISDoubleSubmitRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual not approved yet", "Bucket Data Pengajuan"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;alert alert-success fade show&apos;]&quot;}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;DESKTOP-S76SA9N&apos;, ip: &apos;192.168.1.164&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d1cbdbff24470eee011a7061c3202954, findElement {using=xpath, value=//div[@class=&apos;alert alert-success fade show&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:65229}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65229/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d1cbdbff24470eee011a7061c3202954
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy28.getText(Unknown Source)
+	at definitions.data.HRISBukcetDataDefine.showDataCuti(HRISBukcetDataDefine.java:251)
+	at ?.Data cuti created(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISDoubleSubmit.feature:12)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1672616989", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1672616989'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;alert alert-success fade show&apos;]&quot;}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;DESKTOP-S76SA9N&apos;, ip: &apos;192.168.1.164&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d1cbdbff24470eee011a7061c3202954, findElement {using=xpath, value=//div[@class=&apos;alert alert-success fade show&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:65229}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65229/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d1cbdbff24470eee011a7061c3202954
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy28.getText(Unknown Source)
+	at definitions.data.HRISBukcetDataDefine.showDataCuti(HRISBukcetDataDefine.java:251)
+	at ?.Data cuti created(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISDoubleSubmit.feature:12)
+</pre></div></td>
+<td>25</td>
+<td>runner.pengajuan.HRISDoubleSubmitRunner@7188af83</td></tr>
 <tr>
 <td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
 	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search Khitanan(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:41)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace716330186", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace716330186'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at ?.User validate search November(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace696602804", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace696602804'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertTrue(Assert.java:56)
 	at org.testng.Assert.assertTrue(Assert.java:66)
 	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search Khitanan(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:41)
+	at ?.User validate search November(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
 </pre></div></td>
-<td>11</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
+<td>10</td>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
+	at ?.User validate search Request(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1555136995", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1555136995'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
+	at ?.User validate search Request(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+</pre></div></td>
+<td>12</td>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty date", "Bucket Data Pengajuan"</td>
+<td><div><pre>java.lang.AssertionError: expected [The leave periode field is required.] but found []
+	at definitions.data.HRISBukcetDataDefine.dateFieldError(HRISBukcetDataDefine.java:229)
+	at ?.Show error date field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:75)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace371605426", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace371605426'><pre>java.lang.AssertionError: expected [The leave periode field is required.] but found []
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at definitions.data.HRISBukcetDataDefine.dateFieldError(HRISBukcetDataDefine.java:229)
+	at ?.Show error date field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:75)
+</pre></div></td>
+<td>10</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@5ddeb7cb</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
+	at ?.User validate search Annual(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2084141836", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2084141836'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
+	at ?.User validate search Annual(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+</pre></div></td>
+<td>10</td>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
+	at ?.User validate search Khitanan(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1503713277", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1503713277'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
+	at ?.User validate search Khitanan(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+</pre></div></td>
+<td>10</td>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty all field", "Bucket Data Pengajuan"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:234)
+	at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:39)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1419076011", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1419076011'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:234)
+	at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:39)
+</pre></div></td>
+<td>10</td>
+<td>runner.pengajuan.HRISNotesRunner@70ed52de</td></tr>
 <tr>
 <td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty field note", "Bucket Data Pengajuan"</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
 	at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:234)
 	at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:29)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1970590475", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1970590475'><pre>java.lang.AssertionError: expected [true] but found [false]
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace301821698", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace301821698'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertTrue(Assert.java:56)
@@ -355,197 +327,8 @@ Session ID: 6ff3e5008e6e011327f73ca2be780237
 	at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:234)
 	at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:29)
 </pre></div></td>
-<td>9</td>
-<td>runner.pengajuan.HRISNotesRunner@3e08ff24</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
-Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;DESKTOP-S76SA9N&apos;, ip: &apos;192.168.1.164&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cacac00c5730407040e56dcd1e773ddf, clickElement {id=7b7b33ab-be39-4f61-a6c3-ade23beafe6c}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:64818}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64818/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (cacac00c5730407040e56dcd1e773ddf)] -&gt; xpath: //button[@type=&apos;submit&apos;]]
-Session ID: cacac00c5730407040e56dcd1e773ddf
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:72)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:51)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:119)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy28.click(Unknown Source)
-	at pom.LoginPage.clickLogin(LoginPage.java:43)
-	at definitions.data.HRISBukcetDataDefine.hasLoggedInAsSPV(HRISBukcetDataDefine.java:57)
-	at ?.User has logged in as SPV(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:48)
-Caused by: java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1886)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2021)
-	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:66)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:51)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:119)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy28.click(Unknown Source)
-	at pom.LoginPage.clickLogin(LoginPage.java:43)
-	at definitions.data.HRISBukcetDataDefine.hasLoggedInAsSPV(HRISBukcetDataDefine.java:57)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1120633204", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1120633204'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
-Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;DESKTOP-S76SA9N&apos;, ip: &apos;192.168.1.164&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cacac00c5730407040e56dcd1e773ddf, clickElement {id=7b7b33ab-be39-4f61-a6c3-ade23beafe6c}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:64818}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64818/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (cacac00c5730407040e56dcd1e773ddf)] -&gt; xpath: //button[@type=&apos;submit&apos;]]
-Session ID: cacac00c5730407040e56dcd1e773ddf
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:72)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:51)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:119)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at jdk.internal.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy28.click(Unknown Source)
-	at pom.LoginPage.clickLogin(LoginPage.java:43)
-	at definitions.data.HRISBukcetDataDefine.hasLoggedInAsSPV(HRISBukcetDataDefine.java:57)
-	at ?.User has logged in as SPV(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:48)
-Caused by: java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1886)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2021)
-	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:66)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:51)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:119)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at jdk.internal.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy28.click(Unknown Source)
-	at pom.LoginPage.clickLogin(LoginPage.java:43)
-	at definitions.data.HRISBukcetDataDefine.hasLoggedInAsSPV(HRISBukcetDataDefine.java:57)
-	at jdk.internal.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-	at jdk.internal.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>276</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search Request(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:41)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace169274889", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace169274889'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertTrue(Assert.java:56)
-	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search Request(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:41)
-</pre></div></td>
-<td>11</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
+<td>10</td>
+<td>runner.pengajuan.HRISNotesRunner@70ed52de</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -556,405 +339,355 @@ Caused by: java.util.concurrent.TimeoutException
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>15</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>19</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input field note", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISNotesRunner@3e08ff24</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>20</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "From with current"", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>16</td>
-<td>runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c</td></tr>
-<tr>
-<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
-<td></td>
-<td>21</td>
-<td>runner.login.HRISLoginSPVRunner@7c137fd5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>19</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
-<td></td>
-<td>9</td>
-<td>runner.login.HRISLoginSPVRunner@7c137fd5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>19</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>16</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5</td></tr>
-<tr>
-<td title='runner.login.HRISLogoutSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLogoutSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logout from navbar "SPV"", "Logout"</td>
-<td></td>
-<td>12</td>
-<td>runner.login.HRISLogoutSPVRunner@183ec003</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual and count date "EQUALS" 12", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual and count date "LESS" than 12", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>20</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti approved", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>8</td>
-<td>runner.pengajuan.HRISTableResultCutiRunner@221a3fa4</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>9</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>12</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>11</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.signature.HRISDrawSignatureSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.signature.HRISDrawSignatureSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Draw and delete", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>9</td>
-<td>runner.signature.HRISDrawSignatureSPVRunner@5ddeb7cb</td></tr>
-<tr>
-<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
-<td></td>
-<td>10</td>
-<td>runner.login.HRISLoginSPVRunner@7c137fd5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>19</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>11</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input field note", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>19</td>
-<td>runner.pengajuan.HRISNotesRunner@3e08ff24</td></tr>
-<tr>
-<td title='runner.signature.HRISDrawSignatureSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.signature.HRISDrawSignatureSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty canvas and delete", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>9</td>
-<td>runner.signature.HRISDrawSignatureSPVRunner@5ddeb7cb</td></tr>
-<tr>
 <td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total sisa cuti", "Bucket Data Pengajuan"</td>
 <td></td>
 <td>8</td>
-<td>runner.pengajuan.HRISTableResultCutiRunner@221a3fa4</td></tr>
+<td>runner.pengajuan.HRISTableResultCutiRunner@8462f31</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input field note", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti bersama", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>8</td>
-<td>runner.pengajuan.HRISTableResultCutiRunner@221a3fa4</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>19</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "To > From"", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>16</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISDoubleSubmitRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISDoubleSubmitRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special not approved yet", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>28</td>
-<td>runner.pengajuan.HRISDoubleSubmitRunner@24569dba</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>15</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>11</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>15</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>15</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>15</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>12</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.login.HRISPageSignInSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISPageSignInSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid URL", "Sign in page"</td>
-<td></td>
-<td>5</td>
-<td>runner.login.HRISPageSignInSPVRunner@5b247367</td></tr>
+<td>21</td>
+<td>runner.pengajuan.HRISNotesRunner@70ed52de</td></tr>
 <tr>
 <td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
 <td></td>
 <td>22</td>
-<td>runner.login.HRISLoginSPVRunner@7c137fd5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>8</td>
-<td>runner.pengajuan.HRISTableResultCutiRunner@221a3fa4</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "From with current"", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>17</td>
-<td>runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>11</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
+<td>runner.login.HRISLoginSPVRunner@2b40ff9c</td></tr>
 <tr>
 <td title='runner.dashboard.HRISDashboardSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.dashboard.HRISDashboardSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show Pengajuan Cuti Page from My Task", "Dashboard"</td>
 <td></td>
-<td>9</td>
-<td>runner.dashboard.HRISDashboardSPVRunner@7d9d0818</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti request", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>7</td>
-<td>runner.pengajuan.HRISTableResultCutiRunner@221a3fa4</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti yang bisa diambil", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>7</td>
-<td>runner.pengajuan.HRISTableResultCutiRunner@221a3fa4</td></tr>
-<tr>
-<td title='runner.login.HRISLogoutSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLogoutSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logout from profile "SPV"", "Logout"</td>
-<td></td>
-<td>12</td>
-<td>runner.login.HRISLogoutSPVRunner@183ec003</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>19</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>19</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "To < From"", "Bucket Data Pengajuan"</td>
-<td></td>
 <td>10</td>
-<td>runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Count date as expected", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>19</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>19</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>11</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>19</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
+<td>runner.dashboard.HRISDashboardSPVRunner@4d1c005e</td></tr>
 <tr>
 <td title='runner.signature.HRISDrawSignatureSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.signature.HRISDrawSignatureSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty canvas and save", "Bucket Data Pengajuan"</td>
 <td></td>
 <td>10</td>
-<td>runner.signature.HRISDrawSignatureSPVRunner@5ddeb7cb</td></tr>
+<td>runner.signature.HRISDrawSignatureSPVRunner@6be968ce</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual and count date "MORE" than 12", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>12</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty date", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
 <td></td>
 <td>9</td>
-<td>runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Menampilkan form cuti (Button form cuti)", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>8</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login valid "SPV"", "Login"</td>
-<td></td>
-<td>12</td>
-<td>runner.login.HRISLoginSPVRunner@7c137fd5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>15</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>15</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>15</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
-<tr>
-<td title='runner.dashboard.HRISDashboardSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.dashboard.HRISDashboardSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show Home Page", "Dashboard"</td>
-<td></td>
-<td>7</td>
-<td>runner.dashboard.HRISDashboardSPVRunner@7d9d0818</td></tr>
-<tr>
-<td title='runner.dashboard.HRISDashboardSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.dashboard.HRISDashboardSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show Pengajuan Cuti Page from Navbar", "Dashboard"</td>
-<td></td>
-<td>8</td>
-<td>runner.dashboard.HRISDashboardSPVRunner@7d9d0818</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input field note", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISNotesRunner@3e08ff24</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5</td></tr>
-<tr>
-<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
-<td></td>
-<td>10</td>
-<td>runner.login.HRISLoginSPVRunner@7c137fd5</td></tr>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
 <tr>
 <td title='runner.signature.HRISDrawSignatureSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.signature.HRISDrawSignatureSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Draw and save", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>10</td>
-<td>runner.signature.HRISDrawSignatureSPVRunner@5ddeb7cb</td></tr>
+<td>11</td>
+<td>runner.signature.HRISDrawSignatureSPVRunner@6be968ce</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "To = From"", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti approved", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISTanggalCutiRunner@2b40ff9c</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty type", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>9</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@451001e5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>16</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
+<td>8</td>
+<td>runner.pengajuan.HRISTableResultCutiRunner@8462f31</td></tr>
 <tr>
 <td title='runner.dashboard.HRISDashboardSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.dashboard.HRISDashboardSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show Signature Page", "Dashboard"</td>
 <td></td>
 <td>8</td>
-<td>runner.dashboard.HRISDashboardSPVRunner@7d9d0818</td></tr>
+<td>runner.dashboard.HRISDashboardSPVRunner@4d1c005e</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input field note", "Bucket Data Pengajuan"</td>
+<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
+<td></td>
+<td>9</td>
+<td>runner.login.HRISLoginSPVRunner@2b40ff9c</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>17</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty type", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>10</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "To < From"", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>11</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@5ddeb7cb</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
 <td></td>
 <td>18</td>
-<td>runner.pengajuan.HRISNotesRunner@3e08ff24</td></tr>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISDoubleSubmitRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISDoubleSubmitRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special not approved yet", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>42</td>
+<td>runner.pengajuan.HRISDoubleSubmitRunner@7188af83</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>18</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.login.HRISPageSignInSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISPageSignInSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid URL", "Sign in page"</td>
+<td></td>
+<td>7</td>
+<td>runner.login.HRISPageSignInSPVRunner@5890e879</td></tr>
+<tr>
+<td title='runner.dashboard.HRISDashboardSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.dashboard.HRISDashboardSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show Pengajuan Cuti Page from Navbar", "Dashboard"</td>
+<td></td>
+<td>10</td>
+<td>runner.dashboard.HRISDashboardSPVRunner@4d1c005e</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti bersama", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>8</td>
+<td>runner.pengajuan.HRISTableResultCutiRunner@8462f31</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual and count date "MORE" than 12", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>12</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>20</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>11</td>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>19</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Count date as expected", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>25</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>25</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>18</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Menampilkan form cuti (Button form cuti)", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>8</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
+<tr>
+<td title='runner.signature.HRISDrawSignatureSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.signature.HRISDrawSignatureSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Draw and delete", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>10</td>
+<td>runner.signature.HRISDrawSignatureSPVRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.signature.HRISDrawSignatureSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.signature.HRISDrawSignatureSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty canvas and delete", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>8</td>
+<td>runner.signature.HRISDrawSignatureSPVRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.login.HRISPageSignInSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISPageSignInSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid URL", "Sign in page"</td>
+<td></td>
+<td>5</td>
+<td>runner.login.HRISPageSignInSPVRunner@5890e879</td></tr>
+<tr>
+<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
+<td></td>
+<td>21</td>
+<td>runner.login.HRISLoginSPVRunner@2b40ff9c</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual and count date "LESS" than 12", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>20</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
 <tr>
 <td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
 <td></td>
 <td>11</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@4d1c005e</td></tr>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>13</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>17</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>16</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>12</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>16</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti request", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>8</td>
+<td>runner.pengajuan.HRISTableResultCutiRunner@8462f31</td></tr>
+<tr>
+<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
+<td></td>
+<td>10</td>
+<td>runner.login.HRISLoginSPVRunner@2b40ff9c</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>12</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>25</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>16</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>17</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>21</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>12</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>11</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.login.HRISLogoutSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLogoutSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logout from navbar "SPV"", "Logout"</td>
+<td></td>
+<td>13</td>
+<td>runner.login.HRISLogoutSPVRunner@3e08ff24</td></tr>
+<tr>
+<td title='runner.dashboard.HRISDashboardSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.dashboard.HRISDashboardSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show Home Page", "Dashboard"</td>
+<td></td>
+<td>6</td>
+<td>runner.dashboard.HRISDashboardSPVRunner@4d1c005e</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>15</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>17</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>20</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>21</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>18</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti yang bisa diambil", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>8</td>
+<td>runner.pengajuan.HRISTableResultCutiRunner@8462f31</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "To > From"", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>21</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@5ddeb7cb</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual and count date "EQUALS" 12", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>17</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input field note", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>30</td>
+<td>runner.pengajuan.HRISNotesRunner@70ed52de</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "To = From"", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>19</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@5ddeb7cb</td></tr>
+<tr>
+<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
+<td></td>
+<td>10</td>
+<td>runner.login.HRISLoginSPVRunner@2b40ff9c</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>9</td>
+<td>runner.pengajuan.HRISTableResultCutiRunner@8462f31</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>12</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.login.HRISLogoutSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLogoutSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logout from profile "SPV"", "Logout"</td>
+<td></td>
+<td>13</td>
+<td>runner.login.HRISLogoutSPVRunner@3e08ff24</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input field note", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>21</td>
+<td>runner.pengajuan.HRISNotesRunner@70ed52de</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>26</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>18</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input field note", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>20</td>
+<td>runner.pengajuan.HRISNotesRunner@70ed52de</td></tr>
+<tr>
+<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login valid "SPV"", "Login"</td>
+<td></td>
+<td>11</td>
+<td>runner.login.HRISLoginSPVRunner@2b40ff9c</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "From with current"", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>17</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@5ddeb7cb</td></tr>
 <tr>
 <td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>8</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@8462f31</td></tr>
+<td>9</td>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
 </table><p>
 </body>
 </html>

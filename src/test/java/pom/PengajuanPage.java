@@ -92,6 +92,7 @@ public class PengajuanPage extends Utilities {
 	
 	public String getErrorField(WebElement element) {
 		scrollToElem(element);
+		sleep(1000);
 		return element.getText();
 	}
 

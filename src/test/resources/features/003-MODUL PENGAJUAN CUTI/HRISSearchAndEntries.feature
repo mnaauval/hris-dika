@@ -1,6 +1,7 @@
 #Author: mnaauval@gmail.com
 Feature: Bucket Data Pengajuan
 
+  @datasample
   Scenario: Cuti type Annual
     Given User has logged in as SPV
     And User at Home Page
@@ -10,6 +11,7 @@ Feature: Bucket Data Pengajuan
     Then User click submit
     And Data cuti created
 
+  @datasample
   Scenario Outline: Cuti type Special
     Given User has logged in as SPV
     And User at Home Page
