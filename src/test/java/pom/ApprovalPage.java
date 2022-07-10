@@ -15,6 +15,8 @@ public class ApprovalPage extends Utilities {
 	public WebElement lblPersetujuanCuti;
 	@FindBy(xpath = "//span[@class='dtr-data']//i[@class='fa fa-edit']")
 	public WebElement actionEdit;
+	@FindBy(xpath = "//i[@class='fa fa-edit']")
+	public WebElement actionEditTd;
 	@FindBy(xpath = "//button[@id='btnApprove']")
 	public WebElement btnApprove;
 	@FindBy(xpath = "//button[@id='btnReject']")
@@ -39,19 +41,19 @@ public class ApprovalPage extends Utilities {
 		super(driver);
 		this.driver = driver;
 	}
-	
+
 	public String getLeave() {
 		return driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[1]/td[2]")).getText();
 	}
-	
+
 	public String getCount() {
 		return driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[1]/td[3]")).getText();
 	}
-	
+
 	public String getType() {
 		return driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[1]/td[4]")).getText();
 	}
-	
+
 	public String getStatus() {
 		return driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[1]/td[5]")).getText();
 	}

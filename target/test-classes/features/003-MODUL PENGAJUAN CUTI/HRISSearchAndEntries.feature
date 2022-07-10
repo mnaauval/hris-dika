@@ -44,14 +44,14 @@ Feature: Bucket Data Pengajuan
 
     #And User delete data
     Examples: 
-      | value    |
-      | November |
-      |       90 |
-      | Annual   |
-      | Khitanan |
-      #| Incomplete |
-      | Request  |
-      |          |
+      | value      |
+      | November   |
+      |         90 |
+      | Annual     |
+      | persalinan |
+      | Incomplete |
+      #| Queue    |
+      |            |
 
   Scenario Outline: Search by value
     Given User has logged in as SPV

@@ -27,8 +27,8 @@ Feature: Bucket Data Pengajuan
     Then User click submit
     And Data cuti created
     And Count equals <count>
+    And User delete data
 
-    #And User delete data
     Examples: 
       | count |
       |    12 |

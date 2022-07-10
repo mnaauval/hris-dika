@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>HRIS Employee</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>70/13/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>99/14/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jul 09 10:50:24 ICT 2022</td>
+<td>Started on:</td><td>Sun Jul 10 22:12:16 ICT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>1316 seconds (1316531 ms)</td>
+<tr><td>Total time:</td><td>2092 seconds (2092731 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -78,94 +78,194 @@ function toggleAllBoxes() {
 <tr>
 <td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "From with current"", "Bucket Data Pengajuan"</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:399)
+	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:631)
 	at ?.Check action(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:14)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1291794687", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1291794687'><pre>java.lang.AssertionError: expected [true] but found [false]
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace800292754", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace800292754'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertTrue(Assert.java:56)
 	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:399)
+	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:631)
 	at ?.Check action(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:14)
 </pre></div></td>
 <td>43</td>
-<td>runner.pengajuan.HRISTanggalCutiRunner@5ddeb7cb</td></tr>
+<td>runner.pengajuan.HRISTanggalCutiRunner@59402b8f</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Count date as expected", "Bucket Data Pengajuan"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.countEquals(HRISBukcetDataDefine.java:360)
-	at ?.Count equals 3(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:122)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace850230988", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace850230988'><pre>java.lang.AssertionError: expected [true] but found [false]
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate delete action", "Bucket Data Pengajuan"</td>
+<td><div><pre>java.lang.AssertionError: expected [No matching records found] but found [1]
+	at definitions.data.HRISBukcetDataDefine.validateEmptyTable(HRISBukcetDataDefine.java:495)
+	at ?.User validate empty table(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISActionButton.feature:43)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace376668882", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace376668882'><pre>java.lang.AssertionError: expected [No matching records found] but found [1]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertTrue(Assert.java:56)
-	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.countEquals(HRISBukcetDataDefine.java:360)
-	at ?.Count equals 3(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:122)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at definitions.data.HRISBukcetDataDefine.validateEmptyTable(HRISBukcetDataDefine.java:495)
+	at ?.User validate empty table(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISActionButton.feature:43)
 </pre></div></td>
-<td>16</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<td>23</td>
+<td>runner.pengajuan.HRISActionButtonRunner@1033576a</td></tr>
 <tr>
 <td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search 90(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace107123562", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace107123562'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:530)
+	at ?.User validate search Annual(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1221376650", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1221376650'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertTrue(Assert.java:56)
 	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search 90(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:530)
+	at ?.User validate search Annual(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
 </pre></div></td>
-<td>12</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Count date as expected", "Bucket Data Pengajuan"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.countEquals(HRISBukcetDataDefine.java:360)
-	at ?.Count equals 0(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:122)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace595596745", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace595596745'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertTrue(Assert.java:56)
-	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.countEquals(HRISBukcetDataDefine.java:360)
-	at ?.Count equals 0(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:122)
-</pre></div></td>
-<td>16</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<td>11</td>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@7c37508a</td></tr>
 <tr>
 <td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "From with current"", "Bucket Data Pengajuan"</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:399)
+	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:631)
 	at ?.Check action(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:14)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace626010908", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace626010908'><pre>java.lang.AssertionError: expected [true] but found [false]
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1551307504", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1551307504'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertTrue(Assert.java:56)
 	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:399)
+	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:631)
 	at ?.Check action(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:14)
 </pre></div></td>
-<td>42</td>
-<td>runner.pengajuan.HRISTanggalCutiRunner@5ddeb7cb</td></tr>
+<td>40</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@59402b8f</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISDoubleSubmitRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISDoubleSubmitRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual not approved yet", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Count date as expected", "Bucket Data Pengajuan"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at definitions.data.HRISBukcetDataDefine.countEquals(HRISBukcetDataDefine.java:592)
+	at ?.Count equals 0(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:122)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace766574007", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace766574007'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at definitions.data.HRISBukcetDataDefine.countEquals(HRISBukcetDataDefine.java:592)
+	at ?.Count equals 0(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:122)
+</pre></div></td>
+<td>16</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty all field", "Bucket Data Pengajuan"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:288)
+	at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:39)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1158687226", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1158687226'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:288)
+	at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:39)
+</pre></div></td>
+<td>12</td>
+<td>runner.pengajuan.HRISNotesRunner@7188af83</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Count date as expected", "Bucket Data Pengajuan"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at definitions.data.HRISBukcetDataDefine.countEquals(HRISBukcetDataDefine.java:592)
+	at ?.Count equals 3(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:122)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1321391983", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1321391983'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at definitions.data.HRISBukcetDataDefine.countEquals(HRISBukcetDataDefine.java:592)
+	at ?.Count equals 3(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISCountTanggalCuti.feature:122)
+</pre></div></td>
+<td>16</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:527)
+	at ?.User validate search 90(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1563649027", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1563649027'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:527)
+	at ?.User validate search 90(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+</pre></div></td>
+<td>11</td>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@7c37508a</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Select should show Special", "Bucket Data Pengajuan"</td>
+<td><div><pre>java.lang.AssertionError: expected [Special] but found []
+	at definitions.data.HRISBukcetDataDefine.validateSelectType(HRISBukcetDataDefine.java:311)
+	at ?.User validate select type &quot;Special&quot;(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISActionButton.feature:125)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace657044825", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace657044825'><pre>java.lang.AssertionError: expected [Special] but found []
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at definitions.data.HRISBukcetDataDefine.validateSelectType(HRISBukcetDataDefine.java:311)
+	at ?.User validate select type &quot;Special&quot;(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISActionButton.feature:125)
+</pre></div></td>
+<td>43</td>
+<td>runner.pengajuan.HRISActionButtonRunner@1033576a</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:536)
+	at ?.User validate search Incomplete(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1053496634", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1053496634'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:536)
+	at ?.User validate search Incomplete(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+</pre></div></td>
+<td>11</td>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@7c37508a</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty field note", "Bucket Data Pengajuan"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:288)
+	at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:29)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1098502923", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1098502923'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:288)
+	at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:29)
+</pre></div></td>
+<td>9</td>
+<td>runner.pengajuan.HRISNotesRunner@7188af83</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Button new", "Bucket Data Pengajuan"</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;alert alert-success fade show&apos;]&quot;}
   (Session info: chrome=103.0.5060.114)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
 System info: host: &apos;DESKTOP-S76SA9N&apos;, ip: &apos;192.168.1.164&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d1cbdbff24470eee011a7061c3202954, findElement {using=xpath, value=//div[@class=&apos;alert alert-success fade show&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:65229}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65229/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d1cbdbff24470eee011a7061c3202954
+Command: [45a1d75c6501f7952eaea9f69df736c4, findElement {using=xpath, value=//div[@class=&apos;alert alert-success fade show&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58296}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58296/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 45a1d75c6501f7952eaea9f69df736c4
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -180,18 +280,18 @@ Session ID: d1cbdbff24470eee011a7061c3202954
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
 	at com.sun.proxy.$Proxy28.getText(Unknown Source)
-	at definitions.data.HRISBukcetDataDefine.showDataCuti(HRISBukcetDataDefine.java:251)
-	at ?.Data cuti created(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISDoubleSubmit.feature:12)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1672616989", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1672616989'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;alert alert-success fade show&apos;]&quot;}
+	at definitions.data.HRISBukcetDataDefine.showDataCuti(HRISBukcetDataDefine.java:392)
+	at ?.Data cuti created(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISActionButton.feature:241)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace860390960", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace860390960'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;alert alert-success fade show&apos;]&quot;}
   (Session info: chrome=103.0.5060.114)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
 System info: host: &apos;DESKTOP-S76SA9N&apos;, ip: &apos;192.168.1.164&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d1cbdbff24470eee011a7061c3202954, findElement {using=xpath, value=//div[@class=&apos;alert alert-success fade show&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:65229}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65229/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d1cbdbff24470eee011a7061c3202954
+Command: [45a1d75c6501f7952eaea9f69df736c4, findElement {using=xpath, value=//div[@class=&apos;alert alert-success fade show&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58296}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58296/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 45a1d75c6501f7952eaea9f69df736c4
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -210,125 +310,43 @@ Session ID: d1cbdbff24470eee011a7061c3202954
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
 	at com.sun.proxy.$Proxy28.getText(Unknown Source)
-	at definitions.data.HRISBukcetDataDefine.showDataCuti(HRISBukcetDataDefine.java:251)
-	at ?.Data cuti created(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISDoubleSubmit.feature:12)
+	at definitions.data.HRISBukcetDataDefine.showDataCuti(HRISBukcetDataDefine.java:392)
+	at ?.Data cuti created(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISActionButton.feature:241)
 </pre></div></td>
-<td>25</td>
-<td>runner.pengajuan.HRISDoubleSubmitRunner@7188af83</td></tr>
+<td>26</td>
+<td>runner.pengajuan.HRISActionButtonRunner@1033576a</td></tr>
 <tr>
 <td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:524)
 	at ?.User validate search November(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace696602804", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace696602804'><pre>java.lang.AssertionError: expected [true] but found [false]
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace680867145", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace680867145'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertTrue(Assert.java:56)
 	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:524)
 	at ?.User validate search November(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
 </pre></div></td>
 <td>10</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@7c37508a</td></tr>
 <tr>
 <td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search Request(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1555136995", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1555136995'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:533)
+	at ?.User validate search persalinan(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace257221194", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace257221194'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertTrue(Assert.java:56)
 	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search Request(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
+	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:533)
+	at ?.User validate search persalinan(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
 </pre></div></td>
-<td>12</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty date", "Bucket Data Pengajuan"</td>
-<td><div><pre>java.lang.AssertionError: expected [The leave periode field is required.] but found []
-	at definitions.data.HRISBukcetDataDefine.dateFieldError(HRISBukcetDataDefine.java:229)
-	at ?.Show error date field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:75)
-... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace371605426", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace371605426'><pre>java.lang.AssertionError: expected [The leave periode field is required.] but found []
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at definitions.data.HRISBukcetDataDefine.dateFieldError(HRISBukcetDataDefine.java:229)
-	at ?.Show error date field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:75)
-</pre></div></td>
-<td>10</td>
-<td>runner.pengajuan.HRISTanggalCutiRunner@5ddeb7cb</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search Annual(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2084141836", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2084141836'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertTrue(Assert.java:56)
-	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search Annual(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
-</pre></div></td>
-<td>10</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search Khitanan(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1503713277", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1503713277'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertTrue(Assert.java:56)
-	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.validateSearch(HRISBukcetDataDefine.java:307)
-	at ?.User validate search Khitanan(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISSearchAndEntries.feature:43)
-</pre></div></td>
-<td>10</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty all field", "Bucket Data Pengajuan"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:234)
-	at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:39)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1419076011", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1419076011'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertTrue(Assert.java:56)
-	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:234)
-	at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:39)
-</pre></div></td>
-<td>10</td>
-<td>runner.pengajuan.HRISNotesRunner@70ed52de</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty field note", "Bucket Data Pengajuan"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:234)
-	at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:29)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace301821698", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace301821698'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertTrue(Assert.java:56)
-	at org.testng.Assert.assertTrue(Assert.java:66)
-	at definitions.data.HRISBukcetDataDefine.noteFieldError(HRISBukcetDataDefine.java:234)
-	at ?.Show error note field(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISNotes.feature:29)
-</pre></div></td>
-<td>10</td>
-<td>runner.pengajuan.HRISNotesRunner@70ed52de</td></tr>
+<td>11</td>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@7c37508a</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -339,355 +357,500 @@ Session ID: d1cbdbff24470eee011a7061c3202954
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total sisa cuti", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Select should show Annual", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>8</td>
-<td>runner.pengajuan.HRISTableResultCutiRunner@8462f31</td></tr>
+<td>35</td>
+<td>runner.pengajuan.HRISActionButtonRunner@1033576a</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input field note", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Button form cuti show form cuti", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>21</td>
-<td>runner.pengajuan.HRISNotesRunner@70ed52de</td></tr>
+<td>9</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>17</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
 <tr>
 <td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
 <td></td>
-<td>22</td>
-<td>runner.login.HRISLoginSPVRunner@2b40ff9c</td></tr>
-<tr>
-<td title='runner.dashboard.HRISDashboardSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.dashboard.HRISDashboardSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show Pengajuan Cuti Page from My Task", "Dashboard"</td>
-<td></td>
 <td>10</td>
-<td>runner.dashboard.HRISDashboardSPVRunner@4d1c005e</td></tr>
+<td>runner.login.HRISLoginSPVRunner@4d1c005e</td></tr>
 <tr>
-<td title='runner.signature.HRISDrawSignatureSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.signature.HRISDrawSignatureSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty canvas and save", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty special", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>10</td>
-<td>runner.signature.HRISDrawSignatureSPVRunner@6be968ce</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>9</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
+<td>12</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@496bc455</td></tr>
 <tr>
 <td title='runner.signature.HRISDrawSignatureSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.signature.HRISDrawSignatureSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Draw and save", "Bucket Data Pengajuan"</td>
 <td></td>
+<td>10</td>
+<td>runner.signature.HRISDrawSignatureSPVRunner@303cf2ba</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
 <td>11</td>
-<td>runner.signature.HRISDrawSignatureSPVRunner@6be968ce</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti approved", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>8</td>
-<td>runner.pengajuan.HRISTableResultCutiRunner@8462f31</td></tr>
-<tr>
-<td title='runner.dashboard.HRISDashboardSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.dashboard.HRISDashboardSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show Signature Page", "Dashboard"</td>
-<td></td>
-<td>8</td>
-<td>runner.dashboard.HRISDashboardSPVRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
-<td></td>
-<td>9</td>
-<td>runner.login.HRISLoginSPVRunner@2b40ff9c</td></tr>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
 <tr>
 <td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
 <td></td>
 <td>17</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty type", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total sisa cuti", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>10</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
+<td>7</td>
+<td>runner.pengajuan.HRISTableResultCutiRunner@5ddeb7cb</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "To < From"", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISTableDataCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableDataCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Leave column", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>11</td>
-<td>runner.pengajuan.HRISTanggalCutiRunner@5ddeb7cb</td></tr>
+<td>21</td>
+<td>runner.pengajuan.HRISTableDataCutiRunner@70ed52de</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISDoubleSubmitRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISDoubleSubmitRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special not approved yet", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>42</td>
-<td>runner.pengajuan.HRISDoubleSubmitRunner@7188af83</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual", "Bucket Data Pengajuan"</td>
 <td></td>
 <td>18</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@496bc455</td></tr>
 <tr>
 <td title='runner.login.HRISPageSignInSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISPageSignInSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid URL", "Sign in page"</td>
 <td></td>
 <td>7</td>
-<td>runner.login.HRISPageSignInSPVRunner@5890e879</td></tr>
+<td>runner.login.HRISPageSignInSPVRunner@31ea9581</td></tr>
 <tr>
-<td title='runner.dashboard.HRISDashboardSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.dashboard.HRISDashboardSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show Pengajuan Cuti Page from Navbar", "Dashboard"</td>
-<td></td>
-<td>10</td>
-<td>runner.dashboard.HRISDashboardSPVRunner@4d1c005e</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti bersama", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti", "Bucket Data Pengajuan"</td>
 <td></td>
 <td>8</td>
-<td>runner.pengajuan.HRISTableResultCutiRunner@8462f31</td></tr>
+<td>runner.pengajuan.HRISTableResultCutiRunner@5ddeb7cb</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual and count date "MORE" than 12", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>12</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>20</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
 <td></td>
 <td>11</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>19</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Count date as expected", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>25</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>25</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Menampilkan form cuti (Button form cuti)", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>8</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
 <tr>
 <td title='runner.signature.HRISDrawSignatureSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.signature.HRISDrawSignatureSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Draw and delete", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>10</td>
-<td>runner.signature.HRISDrawSignatureSPVRunner@6be968ce</td></tr>
-<tr>
-<td title='runner.signature.HRISDrawSignatureSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.signature.HRISDrawSignatureSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty canvas and delete", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>8</td>
-<td>runner.signature.HRISDrawSignatureSPVRunner@6be968ce</td></tr>
-<tr>
-<td title='runner.login.HRISPageSignInSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISPageSignInSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid URL", "Sign in page"</td>
-<td></td>
-<td>5</td>
-<td>runner.login.HRISPageSignInSPVRunner@5890e879</td></tr>
-<tr>
-<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
-<td></td>
-<td>21</td>
-<td>runner.login.HRISLoginSPVRunner@2b40ff9c</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual and count date "LESS" than 12", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>20</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>11</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>13</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>17</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>16</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>12</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>16</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti request", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>8</td>
-<td>runner.pengajuan.HRISTableResultCutiRunner@8462f31</td></tr>
-<tr>
-<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
-<td></td>
-<td>10</td>
-<td>runner.login.HRISLoginSPVRunner@2b40ff9c</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>12</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>25</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>16</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>17</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<td>9</td>
+<td>runner.signature.HRISDrawSignatureSPVRunner@303cf2ba</td></tr>
 <tr>
 <td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
 <td></td>
 <td>21</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>12</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>11</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.login.HRISLogoutSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLogoutSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logout from navbar "SPV"", "Logout"</td>
-<td></td>
-<td>13</td>
-<td>runner.login.HRISLogoutSPVRunner@3e08ff24</td></tr>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@496bc455</td></tr>
 <tr>
 <td title='runner.dashboard.HRISDashboardSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.dashboard.HRISDashboardSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show Home Page", "Dashboard"</td>
 <td></td>
 <td>6</td>
-<td>runner.dashboard.HRISDashboardSPVRunner@4d1c005e</td></tr>
+<td>runner.dashboard.HRISDashboardSPVRunner@24569dba</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>15</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>17</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>20</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>21</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>18</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti yang bisa diambil", "Bucket Data Pengajuan"</td>
+<td title='runner.dashboard.HRISDashboardSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.dashboard.HRISDashboardSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show Pengajuan Cuti Page from My Task", "Dashboard"</td>
 <td></td>
 <td>8</td>
-<td>runner.pengajuan.HRISTableResultCutiRunner@8462f31</td></tr>
+<td>runner.dashboard.HRISDashboardSPVRunner@24569dba</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "To > From"", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Button edit show form cuti", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>21</td>
-<td>runner.pengajuan.HRISTanggalCutiRunner@5ddeb7cb</td></tr>
+<td>35</td>
+<td>runner.pengajuan.HRISActionButtonRunner@1033576a</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual and count date "EQUALS" 12", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISTableDataCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableDataCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty table", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>17</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<td>9</td>
+<td>runner.pengajuan.HRISTableDataCutiRunner@70ed52de</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input field note", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty type", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>30</td>
-<td>runner.pengajuan.HRISNotesRunner@70ed52de</td></tr>
+<td>11</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableDataCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableDataCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Status column returned", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>42</td>
+<td>runner.pengajuan.HRISTableDataCutiRunner@70ed52de</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableDataCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableDataCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Status column approved", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>32</td>
+<td>runner.pengajuan.HRISTableDataCutiRunner@70ed52de</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableDataCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableDataCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Action column init", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>22</td>
+<td>runner.pengajuan.HRISTableDataCutiRunner@70ed52de</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual and count date "LESS" than 12", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>19</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableDataCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableDataCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Count column", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>20</td>
+<td>runner.pengajuan.HRISTableDataCutiRunner@70ed52de</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty date", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>9</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@59402b8f</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>19</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@496bc455</td></tr>
 <tr>
 <td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "To = From"", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>19</td>
-<td>runner.pengajuan.HRISTanggalCutiRunner@5ddeb7cb</td></tr>
-<tr>
-<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
-<td></td>
-<td>10</td>
-<td>runner.login.HRISLoginSPVRunner@2b40ff9c</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>9</td>
-<td>runner.pengajuan.HRISTableResultCutiRunner@8462f31</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>12</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
-<tr>
-<td title='runner.login.HRISLogoutSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLogoutSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logout from profile "SPV"", "Logout"</td>
-<td></td>
-<td>13</td>
-<td>runner.login.HRISLogoutSPVRunner@3e08ff24</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input field note", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>21</td>
-<td>runner.pengajuan.HRISNotesRunner@70ed52de</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>26</td>
-<td>runner.pengajuan.HRISSelectLeaveTypeRunner@24569dba</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
-<td></td>
 <td>18</td>
-<td>runner.pengajuan.HRISCountTanggalCutiRunner@496bc455</td></tr>
+<td>runner.pengajuan.HRISTanggalCutiRunner@59402b8f</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableDataCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableDataCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Status column rejected", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>30</td>
+<td>runner.pengajuan.HRISTableDataCutiRunner@70ed52de</td></tr>
 <tr>
 <td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input field note", "Bucket Data Pengajuan"</td>
 <td></td>
 <td>20</td>
-<td>runner.pengajuan.HRISNotesRunner@70ed52de</td></tr>
+<td>runner.pengajuan.HRISNotesRunner@7188af83</td></tr>
 <tr>
-<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login valid "SPV"", "Login"</td>
+<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti approved", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>11</td>
-<td>runner.login.HRISLoginSPVRunner@2b40ff9c</td></tr>
+<td>8</td>
+<td>runner.pengajuan.HRISTableResultCutiRunner@5ddeb7cb</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "From with current"", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISDoubleSubmitRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISDoubleSubmitRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special not approved yet", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>17</td>
-<td>runner.pengajuan.HRISTanggalCutiRunner@5ddeb7cb</td></tr>
+<td>32</td>
+<td>runner.pengajuan.HRISDoubleSubmitRunner@247310d0</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>19</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>16</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableDataCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableDataCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Action column rejected", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>31</td>
+<td>runner.pengajuan.HRISTableDataCutiRunner@70ed52de</td></tr>
+<tr>
+<td title='runner.dashboard.HRISDashboardSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.dashboard.HRISDashboardSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show Signature Page", "Dashboard"</td>
+<td></td>
+<td>8</td>
+<td>runner.dashboard.HRISDashboardSPVRunner@24569dba</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti request", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>8</td>
+<td>runner.pengajuan.HRISTableResultCutiRunner@5ddeb7cb</td></tr>
+<tr>
+<td title='runner.login.HRISPageSignInSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISPageSignInSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid URL", "Sign in page"</td>
+<td></td>
+<td>6</td>
+<td>runner.login.HRISPageSignInSPVRunner@31ea9581</td></tr>
+<tr>
+<td title='runner.signature.HRISDrawSignatureSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.signature.HRISDrawSignatureSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty canvas and delete", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>9</td>
+<td>runner.signature.HRISDrawSignatureSPVRunner@303cf2ba</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Date should show as Leave column", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>37</td>
+<td>runner.pengajuan.HRISActionButtonRunner@1033576a</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti bersama", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>8</td>
+<td>runner.pengajuan.HRISTableResultCutiRunner@5ddeb7cb</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cancel delete action", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>27</td>
+<td>runner.pengajuan.HRISActionButtonRunner@1033576a</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>16</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual and count date "EQUALS" 12", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>22</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISDoubleSubmitRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISDoubleSubmitRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual approved", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>47</td>
+<td>runner.pengajuan.HRISDoubleSubmitRunner@247310d0</td></tr>
 <tr>
 <td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
 <td></td>
 <td>9</td>
-<td>runner.pengajuan.HRISSearchAndEntriesRunner@59402b8f</td></tr>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@7c37508a</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>19</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total sisa cuti", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>19</td>
+<td>runner.pengajuan.HRISTableResultCutiRunner@5ddeb7cb</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "To < From"", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>10</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@59402b8f</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>15</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti approved", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>30</td>
+<td>runner.pengajuan.HRISTableResultCutiRunner@5ddeb7cb</td></tr>
+<tr>
+<td title='runner.login.HRISLogoutSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLogoutSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logout from navbar "SPV"", "Logout"</td>
+<td></td>
+<td>16</td>
+<td>runner.login.HRISLogoutSPVRunner@8462f31</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>11</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit new valid data", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>18</td>
+<td>runner.pengajuan.HRISActionButtonRunner@1033576a</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>11</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>11</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit valid edit data", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>40</td>
+<td>runner.pengajuan.HRISActionButtonRunner@1033576a</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>19</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>19</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@496bc455</td></tr>
+<tr>
+<td title='runner.signature.HRISDrawSignatureSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.signature.HRISDrawSignatureSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty canvas and save", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>9</td>
+<td>runner.signature.HRISDrawSignatureSPVRunner@303cf2ba</td></tr>
+<tr>
+<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
+<td></td>
+<td>10</td>
+<td>runner.login.HRISLoginSPVRunner@4d1c005e</td></tr>
+<tr>
+<td title='runner.dashboard.HRISDashboardSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.dashboard.HRISDashboardSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show Pengajuan Cuti Page from Navbar", "Dashboard"</td>
+<td></td>
+<td>8</td>
+<td>runner.dashboard.HRISDashboardSPVRunner@24569dba</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableDataCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableDataCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Status column init", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>18</td>
+<td>runner.pengajuan.HRISTableDataCutiRunner@70ed52de</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableDataCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableDataCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Type column", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>19</td>
+<td>runner.pengajuan.HRISTableDataCutiRunner@70ed52de</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>12</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableDataCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableDataCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Action column returned", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>36</td>
+<td>runner.pengajuan.HRISTableDataCutiRunner@70ed52de</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "MORE" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>11</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Date should show as Leave column", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>36</td>
+<td>runner.pengajuan.HRISActionButtonRunner@1033576a</td></tr>
+<tr>
+<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
+<td></td>
+<td>21</td>
+<td>runner.login.HRISLoginSPVRunner@4d1c005e</td></tr>
+<tr>
+<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
+<td></td>
+<td>21</td>
+<td>runner.login.HRISLoginSPVRunner@4d1c005e</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>16</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISDoubleSubmitRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISDoubleSubmitRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special approved", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>46</td>
+<td>runner.pengajuan.HRISDoubleSubmitRunner@247310d0</td></tr>
+<tr>
+<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login valid "SPV"", "Login"</td>
+<td></td>
+<td>12</td>
+<td>runner.login.HRISLoginSPVRunner@4d1c005e</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>15</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "To > From"", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>19</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@59402b8f</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>15</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>16</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti yang bisa diambil", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>8</td>
+<td>runner.pengajuan.HRISTableResultCutiRunner@5ddeb7cb</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Count date as expected", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>19</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>10</td>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@7c37508a</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSelectLeaveTypeRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSelectLeaveTypeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>20</td>
+<td>runner.pengajuan.HRISSelectLeaveTypeRunner@496bc455</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>16</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input field note", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>19</td>
+<td>runner.pengajuan.HRISNotesRunner@7188af83</td></tr>
+<tr>
+<td title='runner.login.HRISLoginSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLoginSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login invalid "SPV"", "Login"</td>
+<td></td>
+<td>10</td>
+<td>runner.login.HRISLoginSPVRunner@4d1c005e</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "LESS" than max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>15</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input field note", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>18</td>
+<td>runner.pengajuan.HRISNotesRunner@7188af83</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit invalid edit data", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>32</td>
+<td>runner.pengajuan.HRISActionButtonRunner@1033576a</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual and count date "MORE" than 12", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>11</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableResultCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableResultCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Show total cuti request", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>19</td>
+<td>runner.pengajuan.HRISTableResultCutiRunner@5ddeb7cb</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>15</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "From with current"", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>18</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@59402b8f</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit invalid data", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>11</td>
+<td>runner.pengajuan.HRISActionButtonRunner@1033576a</td></tr>
+<tr>
+<td title='runner.login.HRISLogoutSPVRunner.runScenario()'><b>runScenario</b><br>Test class: runner.login.HRISLogoutSPVRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logout from profile "SPV"", "Logout"</td>
+<td></td>
+<td>12</td>
+<td>runner.login.HRISLogoutSPVRunner@8462f31</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISDoubleSubmitRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISDoubleSubmitRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Annual not approved yet", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>22</td>
+<td>runner.pengajuan.HRISDoubleSubmitRunner@247310d0</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISSearchAndEntriesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISSearchAndEntriesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search by value", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>11</td>
+<td>runner.pengajuan.HRISSearchAndEntriesRunner@7c37508a</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISCountTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISCountTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cuti type Special and count date "EQUALS" max count", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>15</td>
+<td>runner.pengajuan.HRISCountTanggalCutiRunner@6be968ce</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISNotesRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISNotesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Input field note", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>19</td>
+<td>runner.pengajuan.HRISNotesRunner@7188af83</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISTableDataCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTableDataCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Action column approved", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>33</td>
+<td>runner.pengajuan.HRISTableDataCutiRunner@70ed52de</td></tr>
 </table><p>
 </body>
 </html>

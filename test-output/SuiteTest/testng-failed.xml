@@ -3,13 +3,6 @@
 <suite name="Failed suite [SuiteTest]">
   <test thread-count="5" name="HRIS Employee(failed)">
     <classes>
-      <class name="runner.pengajuan.HRISDoubleSubmitRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- runner.pengajuan.HRISDoubleSubmitRunner -->
       <class name="runner.pengajuan.HRISSearchAndEntriesRunner">
         <methods>
           <include name="setUpClass"/>
@@ -17,20 +10,6 @@
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- runner.pengajuan.HRISSearchAndEntriesRunner -->
-      <class name="runner.pengajuan.HRISCountTanggalCutiRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="23 25"/>
-          <include name="tearDownClass"/>
-        </methods>
-      </class> <!-- runner.pengajuan.HRISCountTanggalCutiRunner -->
-      <class name="runner.pengajuan.HRISTanggalCutiRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0 1 6"/>
-        </methods>
-      </class> <!-- runner.pengajuan.HRISTanggalCutiRunner -->
       <class name="runner.pengajuan.HRISNotesRunner">
         <methods>
           <include name="setUpClass"/>
@@ -38,6 +17,27 @@
           <include name="runScenario" invocation-numbers="4 5"/>
         </methods>
       </class> <!-- runner.pengajuan.HRISNotesRunner -->
+      <class name="runner.pengajuan.HRISCountTanggalCutiRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="23 25"/>
+        </methods>
+      </class> <!-- runner.pengajuan.HRISCountTanggalCutiRunner -->
+      <class name="runner.pengajuan.HRISActionButtonRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="2 6 11"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- runner.pengajuan.HRISActionButtonRunner -->
+      <class name="runner.pengajuan.HRISTanggalCutiRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0 1"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- runner.pengajuan.HRISTanggalCutiRunner -->
     </classes>
   </test> <!-- HRIS Employee(failed) -->
 </suite> <!-- Failed suite [SuiteTest] -->

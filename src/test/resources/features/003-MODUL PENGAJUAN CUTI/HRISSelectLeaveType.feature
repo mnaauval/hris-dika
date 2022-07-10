@@ -1,7 +1,7 @@
 #Author: mnaauval@gmail.com
 Feature: Bucket Data Pengajuan
 
-  Scenario: Menampilkan form cuti (Button form cuti)
+  Scenario: Button form cuti show form cuti
     Given User has logged in as SPV
     And User at Home Page
     When User click Pengajuan Cuti in My Task

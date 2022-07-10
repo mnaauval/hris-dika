@@ -44,8 +44,8 @@ public class SignaturePage extends Utilities {
 		System.out.println(canvas_dimension);
 		System.out.println(canvas_center_x);
 		System.out.println(canvas_center_y);
-        int button_x = (canvas_center_x / 3) * 2;
-        int button_y = (canvas_center_y / 3) * 2;
-		builder.moveToElement(canvas, button_x, button_y).click().perform();
+//        int button_x = (canvas_center_x / 3) * 2;
+//        int button_y = (canvas_center_y / 3) * 2;
+//		builder.moveToElement(canvas, button_x, button_y).click().perform();
 	}
 }

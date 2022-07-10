@@ -1,6 +1,12 @@
 package definitions.data;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -174,7 +180,7 @@ public class HRISBukcetDataDefine {
 		System.out.println(expected);
 		Assert.assertEquals(actual, expected);
 	}
-	
+
 	@Then("Show total cuti request changed")
 	public void showTotalCutiRequestChanged() {
 		String count = propose.lblTotalCutiRequest.getText();
@@ -185,7 +191,7 @@ public class HRISBukcetDataDefine {
 		System.out.println(expected);
 		Assert.assertEquals(actual, expected);
 	}
-	
+
 	@Then("Show Show total sisa cuti changed")
 	public void showTotalSisaCutiChanged() {
 		String count = propose.lblTotalSisaCuti.getText();
@@ -194,10 +200,10 @@ public class HRISBukcetDataDefine {
 		approve = approve.replace(" Hari", "").trim();
 		String request = propose.lblTotalCutiRequest.getText();
 		request = request.replace(" Hari", "").trim();
-		
+
 		int actual = Integer.parseInt(count);
-		int approveInt = Integer.parseInt(approve); 
-		int requestInt = Integer.parseInt(request); 
+		int approveInt = Integer.parseInt(approve);
+		int requestInt = Integer.parseInt(request);
 		int expected = 12 - (approveInt + requestInt);
 		System.out.println(actual);
 		System.out.println(expected);
@@ -218,9 +224,9 @@ public class HRISBukcetDataDefine {
 		String notes = "Ini notes test";
 		System.out.println(type);
 		System.out.println(dateFrom + ", " + yearFrom + " - " + dateTo + ", " + yearTo);
-		propose.selectType(type);
+		System.out.println(propose.selectType(type) + " check");
 		propose.sleep(1000);
-		propose.pickRangeDate(dateFrom, yearFrom, dateTo, yearTo);
+		System.out.println(propose.pickRangeDate(dateFrom, yearFrom, dateTo, yearTo) + " check");
 		propose.txtNotes.sendKeys(notes);
 	}
 
@@ -230,16 +236,16 @@ public class HRISBukcetDataDefine {
 		System.out.println(type);
 		System.out.println(special);
 		System.out.println(dateFrom + ", " + yearFrom + " - " + dateTo + ", " + yearTo);
-		propose.selectType(type);
+		System.out.println(propose.selectType(type) + " check");
 		propose.sleep(1000);
 		propose.selectSpecial(special);
-		propose.pickRangeDate(dateFrom, yearFrom, dateTo, yearTo);
+		System.out.println(propose.pickRangeDate(dateFrom, yearFrom, dateTo, yearTo) + " check");
 	}
 
 	@And("User select type {string}")
 	public void selectType(String type) {
 		System.out.println(type);
-		propose.selectType(type);
+		System.out.println(propose.selectType(type) + " check");
 	}
 
 	@And("^User input notes (.*)$")
@@ -291,6 +297,93 @@ public class HRISBukcetDataDefine {
 		Assert.assertEquals(actual, expected);
 	}
 
+	@Then("User validate select type {string}")
+	public void validateSelectType(String type) {
+		propose.sleep(2000);
+		String actual = propose.getSelectAtt();
+		System.out.println(actual + " check");
+		System.out.println(type);
+		if (type.equalsIgnoreCase("Annual")) {
+			String expected = "Annual";
+			Assert.assertEquals(actual, expected);
+		} else if (type.equalsIgnoreCase("Special")) {
+			String expected = "Special";
+			Assert.assertEquals(actual, expected);
+		} else if (type.equalsIgnoreCase("empty")) {
+			String expected = "-- Select leave type --";
+			Assert.assertEquals(actual, expected);
+		}
+	}
+
+	@Then("User validate date {string}")
+	public void validateDate(String content) {
+		propose.sleep(2000);
+		String date = propose.getDateAtt();
+		String dateStr = new String(date);
+		String expected = "";
+		String temp = "";
+		String actual = "";
+		if (content.equalsIgnoreCase("not empty")) {
+			expected = propose.getDate();
+			System.out.println(dateStr + "<->" + expected);
+			String[] arrStr = dateStr.split("-");
+			int i = 0;
+			for (String string : arrStr) {
+				string = string.trim();
+				System.out.println(string);
+				String[] arrStr2 = string.split(",");
+				if (i == 0) {
+					temp = arrStr2[i];
+				}
+				i++;
+			}
+			System.out.println(temp);
+
+			String[] arrStr3 = temp.trim().split(" ");
+			System.out.println(arrStr3[0]);
+			System.out.println(arrStr3[1]);
+			actual = arrStr3[1] + " " + arrStr3[0];
+			System.out.println(actual);
+			SimpleDateFormat sdf = new SimpleDateFormat("d MMMM", Locale.US);
+			Date myDate = null;
+			try {
+				myDate = sdf.parse(actual);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			sdf.applyPattern("d MMM");
+			actual = sdf.format(myDate);
+			System.out.println(actual);
+		} else if (content.equalsIgnoreCase("empty")) {
+			expected = "";
+			actual = dateStr;
+			System.out.println(dateStr + "<->" + expected);
+		}
+
+		Assert.assertTrue(expected.matches(".*" + actual + ".*"));
+	}
+
+	@Then("User validate notes")
+	public void validateNotes() {
+		propose.sleep(2000);
+		String actual = propose.getNotesAtt();
+		System.out.println(actual);
+		String expected = "Ini notes test";
+		Assert.assertEquals(actual, expected);
+	}
+
+	@Then("User clear field")
+	public void clearField() {
+		propose.date.clear();
+	}
+
+	@And("User click new")
+	public void clickNew() {
+		propose.btnNew.click();
+		propose.sleep(2000);
+	}
+
 //	====================================== TABLE DATA CUTI ======================================
 
 	@And("Data cuti created")
@@ -320,6 +413,88 @@ public class HRISBukcetDataDefine {
 		}
 	}
 
+	@Then("User validate {string} data column contain {string}")
+	public void validateColumn(String column, String data) {
+		String date = propose.getDate();
+		String count = propose.getCount();
+		String type = propose.getType();
+		String status = propose.getStatus();
+		String strDate = new String(date);
+		String strCount = new String(count);
+		String strType = new String(type);
+		String strStatus = new String(status);
+		System.out.println(strDate);
+		System.out.println(strCount);
+		System.out.println(strType);
+		System.out.println(strStatus);
+		System.out.println("Check column " + column);
+		System.out.println("Contains data " + data);
+		boolean check = true;
+		if (column.equalsIgnoreCase("leave")) {
+			System.out.println("leave true");
+			Assert.assertTrue(strDate.matches(".*" + data + ".*"));
+		} else if (column.equalsIgnoreCase("count")) {
+			System.out.println("count true");
+			Assert.assertTrue(strCount.matches(".*" + data + ".*"));
+		} else if (column.equalsIgnoreCase("type")) {
+			System.out.println("type true");
+			Assert.assertTrue(strType.matches(".*" + data + ".*"));
+		} else if (column.equalsIgnoreCase("status")) {
+			System.out.println("status true");
+			Assert.assertTrue(strStatus.matches(".*" + data + ".*"));
+		} else if (column.equalsIgnoreCase("action")) {
+			driver.get("https://dev.ptdika.com/employee/data/cuti");
+			if (data.equalsIgnoreCase("cancel")) {
+				System.out.println(data);
+				try {
+					driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")).click();
+					propose.actionDelete.click();
+				} catch (Exception e) {
+					// TODO: handle exception
+					System.err.println(e);
+					try {
+						propose.actionDeleteTd.click();
+					} catch (Exception e2) {
+						// TODO: handle exception
+						System.err.println(e2);
+						check = false;
+					} finally {
+						Assert.assertTrue(check);
+					}
+				}
+				Assert.assertTrue(check);
+			} else if (data.equalsIgnoreCase("edit")) {
+				System.out.println(data);
+				try {
+					driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")).click();
+					propose.actionEdit.click();
+				} catch (Exception e) {
+					// TODO: handle exception
+					System.err.println(e);
+					try {
+						propose.actionEditTd.click();
+					} catch (Exception e2) {
+						// TODO: handle exception
+						System.err.println(e2);
+						check = false;
+					} finally {
+						Assert.assertTrue(check);
+					}
+				}
+				Assert.assertTrue(check);
+			}
+		}
+	}
+
+	@Then("User validate empty table")
+	public void validateEmptyTable() {
+		driver.get("https://dev.ptdika.com/employee/data/cuti");
+		String actual = propose.getEmptyData();
+		System.out.println(actual);
+		String expected = "No matching records found";
+		Assert.assertEquals(actual, expected);
+	}
+
 	@When("^User search by value (.*)$")
 	public void searchByValue(String value) {
 		propose.getCount(); // just scroll to element
@@ -334,25 +509,34 @@ public class HRISBukcetDataDefine {
 		String date = propose.getDate();
 		String count = propose.getCount();
 		String type = propose.getType();
-		String status = propose.getStatus();
-		boolean check = false;
-		System.out.println(date);
-		System.out.println(count);
-		System.out.println(type);
-		System.out.println(status);
+		String status = propose.getStatus1();
+		String strDate = new String(date);
+		String strCount = new String(count);
+		String strType = new String(type);
+		String strStatus = new String(status);
+		System.out.println(strDate);
+		System.out.println(strCount);
+		System.out.println(strType);
+		System.out.println(strStatus);
 		System.out.println(value);
-		if (value.contains(date)) {
-			check = true;
-		} else if (value.contains(count)) {
-			check = true;
-		} else if (value.contains(type)) {
-			check = true;
-		} else if (value.contains(status)) {
-			check = true;
-		} else if (value.isEmpty()) {
-			check = true;
+		if (value.equalsIgnoreCase("November")) {
+			System.out.println("leave true");
+			Assert.assertTrue(strDate.matches(".*" + value + ".*"));
+		} else if (value.equalsIgnoreCase("90")) {
+			System.out.println("count true");
+			Assert.assertTrue(strCount.matches(".*" + value + ".*"));
+		} else if (value.equalsIgnoreCase("Annual")) {
+			System.out.println("type true");
+			Assert.assertTrue(strType.matches(".*" + value + ".*"));
+		} else if (value.equalsIgnoreCase("persalinan")) {
+			System.out.println("special true");
+			Assert.assertTrue(strType.matches(".*" + value + ".*"));
+		} else if (value.equalsIgnoreCase("Incomplete")) {
+			System.out.println("status true");
+			Assert.assertTrue(strStatus.matches(".*" + value + ".*"));
+		} else {
+			Assert.assertTrue(true);
 		}
-		Assert.assertTrue(check);
 	}
 
 	@When("^User choose show (.*) entries$")
@@ -468,7 +652,7 @@ public class HRISBukcetDataDefine {
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.err.println(e);
-			approve.actionEdit.click();
+			approve.actionEditTd.click();
 		}
 	}
 
