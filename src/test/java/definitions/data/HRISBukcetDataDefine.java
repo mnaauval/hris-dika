@@ -4,19 +4,19 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.Reporter;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -26,6 +26,7 @@ import pom.HomePage;
 import pom.LoginPage;
 import pom.PengajuanPage;
 import pom.SignaturePage;
+import pom.Utilities;
 
 public class HRISBukcetDataDefine {
 
@@ -36,6 +37,7 @@ public class HRISBukcetDataDefine {
 	private PengajuanPage propose;
 	private ApprovalPage approve;
 	private SignaturePage signature;
+	private Utilities util;
 
 	@SuppressWarnings("deprecation")
 	@Before
@@ -53,6 +55,7 @@ public class HRISBukcetDataDefine {
 		propose = PageFactory.initElements(driver, PengajuanPage.class);
 		approve = PageFactory.initElements(driver, ApprovalPage.class);
 		signature = PageFactory.initElements(driver, SignaturePage.class);
+		util = PageFactory.initElements(driver, Utilities.class);
 	}
 
 //	<<====================================== LOGIN ======================================>>
@@ -73,9 +76,9 @@ public class HRISBukcetDataDefine {
 
 	@And("User at Home Page")
 	public void at_Home() {
-		System.out.println(home.lblName.getText());
 		String actual = home.lblName.getText();
 		actual = actual.replace("×", "").trim();
+		System.out.println(actual + " at home");
 		boolean check = false;
 		if (actual.contains("EX - ADHITYA BAYU W")) {
 			check = true;
@@ -126,8 +129,8 @@ public class HRISBukcetDataDefine {
 
 	@Then("User at Pengajuan Cuti Page")
 	public void at_Pengajuan() {
-		System.out.println(propose.lblPengajuanCuti.getText());
 		String actual = propose.lblPengajuanCuti.getText();
+		System.out.println(actual + " at pengajuan cuti");
 		String expected = "Pengajuan cuti";
 		Assert.assertEquals(actual, expected);
 	}
@@ -176,8 +179,7 @@ public class HRISBukcetDataDefine {
 		count = count.replace(" Hari", "").trim();
 		int actual = Integer.parseInt(count);
 		int expected = Integer.parseInt(propose.getCount());
-		System.out.println(actual);
-		System.out.println(expected);
+		System.out.println(actual + " <-> " + expected);
 		Assert.assertEquals(actual, expected);
 	}
 
@@ -187,8 +189,7 @@ public class HRISBukcetDataDefine {
 		count = count.replace(" Hari", "").trim();
 		int actual = Integer.parseInt(count);
 		int expected = Integer.parseInt(propose.getCount());
-		System.out.println(actual);
-		System.out.println(expected);
+		System.out.println(actual + " <-> " + expected);
 		Assert.assertEquals(actual, expected);
 	}
 
@@ -205,8 +206,7 @@ public class HRISBukcetDataDefine {
 		int approveInt = Integer.parseInt(approve);
 		int requestInt = Integer.parseInt(request);
 		int expected = 12 - (approveInt + requestInt);
-		System.out.println(actual);
-		System.out.println(expected);
+		System.out.println(actual + " <-> " + expected);
 		Assert.assertEquals(actual, expected);
 	}
 
@@ -222,35 +222,35 @@ public class HRISBukcetDataDefine {
 	@And("User select type {string}, pick range date {string} {string} {string} {string} and input {string}")
 	public void selectTypeNotes(String type, String dateFrom, String yearFrom, String dateTo, String yearTo,
 			String notes) {
-		System.out.println(type);
-		System.out.println(dateFrom + ", " + yearFrom + " - " + dateTo + ", " + yearTo);
-		System.out.println(propose.selectType(type) + " check");
+//		System.out.println(type);
+//		System.out.println(dateFrom + ", " + yearFrom + " - " + dateTo + ", " + yearTo);
+		System.out.println(propose.selectType(type) + " selected");
 		propose.sleep(1000);
-		System.out.println(propose.pickRangeDate(dateFrom, yearFrom, dateTo, yearTo) + " check");
+		System.out.println(propose.pickRangeDate(dateFrom, yearFrom, dateTo, yearTo) + " input");
 		propose.txtNotes.sendKeys(notes);
 	}
 
 	@And("^User select type (.*), select special (.*), pick range date (.*) (.*) (.*) (.*)$")
 	public void selectType(String type, String special, String dateFrom, String yearFrom, String dateTo,
 			String yearTo) {
-		System.out.println(type);
-		System.out.println(special);
-		System.out.println(dateFrom + ", " + yearFrom + " - " + dateTo + ", " + yearTo);
-		System.out.println(propose.selectType(type) + " check");
+//		System.out.println(type);
+//		System.out.println(dateFrom + ", " + yearFrom + " - " + dateTo + ", " + yearTo);
+		System.out.println(propose.selectType(type) + " selected");
+		System.out.println(special + " selected");
 		propose.sleep(1000);
 		propose.selectSpecial(special);
-		System.out.println(propose.pickRangeDate(dateFrom, yearFrom, dateTo, yearTo) + " check");
+		System.out.println(propose.pickRangeDate(dateFrom, yearFrom, dateTo, yearTo) + " input");
 	}
 
 	@And("User select type {string}")
 	public void selectType(String type) {
 		System.out.println(type);
-		System.out.println(propose.selectType(type) + " check");
+		System.out.println(propose.selectType(type) + " selected");
 	}
 
 	@And("^User input notes (.*)$")
 	public void inputNotes(String notes) {
-		System.out.println(notes);
+		System.out.println("Input notes : " + notes);
 		propose.txtNotes.sendKeys(notes);
 	}
 
@@ -262,7 +262,7 @@ public class HRISBukcetDataDefine {
 	@Then("Show error type field")
 	public void typeFieldError() {
 		String actual = propose.getErrorField(propose.lblErrorType);
-		System.out.println(actual);
+		System.out.println(actual + " <- error type field");
 		String expected = "The type field is required.";
 		Assert.assertEquals(actual, expected);
 	}
@@ -270,29 +270,31 @@ public class HRISBukcetDataDefine {
 	@And("Show error special field")
 	public void specialFieldError() {
 		String actual = propose.getErrorField(propose.lblErrorSpecial);
-		System.out.println(actual);
+		System.out.println(actual + " <- error special field");
 		String expected = "The type special field is required.";
 		Assert.assertEquals(actual, expected);
 	}
 
 	@Then("Show error date field")
 	public void dateFieldError() {
-		String actual = propose.getErrorField(propose.lblErrorDate);
-		System.out.println(actual);
-		String expected = "The leave periode field is required.";
+		String actual = propose
+				.getErrorField(driver.findElement(By.xpath("//div[@id='content']/div[2]/div/div/div[2]/div")));
+		actual = actual.replace("×", "").trim();
+		System.out.println(actual + " <- error date field");
+		String expected = "Danger! The type field is required.";
 		Assert.assertEquals(actual, expected);
 	}
 
 	@Then("Show error note field")
 	public void noteFieldError() {
+		// no alert error
 		Assert.assertTrue(false);
 	}
 
 	@And("Database occured")
 	public void databaseOccured() {
-		System.out.println(propose.lblError1604.getText());
 		String actual = propose.lblError1604.getText();
-		System.out.println(actual);
+		System.out.println(actual + " <- database error");
 		String expected = "Error Number: 1064";
 		Assert.assertEquals(actual, expected);
 	}
@@ -301,7 +303,7 @@ public class HRISBukcetDataDefine {
 	public void validateSelectType(String type) {
 		propose.sleep(2000);
 		String actual = propose.getSelectAtt();
-		System.out.println(actual + " check");
+		System.out.println(actual + " <- validate type");
 		System.out.println(type);
 		if (type.equalsIgnoreCase("Annual")) {
 			String expected = "Annual";
@@ -368,7 +370,7 @@ public class HRISBukcetDataDefine {
 	public void validateNotes() {
 		propose.sleep(2000);
 		String actual = propose.getNotesAtt();
-		System.out.println(actual);
+		System.out.println(actual + " <- validate notes");
 		String expected = "Ini test notes";
 		Assert.assertEquals(actual, expected);
 	}
@@ -390,10 +392,9 @@ public class HRISBukcetDataDefine {
 	@And("Data cuti created")
 	public void showDataCuti() {
 		home.sleep(2000);
-		System.out.println(propose.alertSuccess.getText());
 		String actual = propose.alertSuccess.getText();
 		actual = actual.replace("×", "").trim();
-		System.out.println(actual);
+		System.out.println(actual + " <- data cuti created");
 		String expected = "Pengajuan cuti berhasil diinput";
 		Assert.assertEquals(actual, expected);
 		propose.sleep(2000);
@@ -401,10 +402,9 @@ public class HRISBukcetDataDefine {
 
 	@And("Data cuti not created")
 	public void showError() {
-		System.out.println(propose.alertFailed.getText());
 		String actual = propose.alertFailed.getText();
 		actual = actual.replace("×", "").trim();
-		System.out.println(actual);
+		System.out.println(actual + " <- data cuti not created");
 		if (actual.equals("Permintaan cuti anda yang sebelumnya masih di SPV anda")) {
 			String expected = "Permintaan cuti anda yang sebelumnya masih di SPV anda";
 			Assert.assertEquals(actual, expected);
@@ -420,6 +420,7 @@ public class HRISBukcetDataDefine {
 		String strCount = new String(propose.getCount());
 		String strType = new String(propose.getType());
 		String strStatus = new String(propose.getStatus());
+		System.out.println("-- validate column contain data --");
 		System.out.println(strDate);
 		System.out.println(strCount);
 		System.out.println(strType);
@@ -486,7 +487,7 @@ public class HRISBukcetDataDefine {
 	public void validateEmptyTable() {
 //		driver.get("https://dev.ptdika.com/employee/data/cuti");
 		String actual = new String(propose.getEmptyData());
-		System.out.println(actual);
+		System.out.println(actual + " <- validate data not exist");
 //		String expected = "No matching records found";
 		String expected = "1";
 		Assert.assertTrue(actual.matches(".*" + expected + ".*"));
@@ -497,7 +498,7 @@ public class HRISBukcetDataDefine {
 		propose.getCount(); // just scroll to element
 		propose.txtSearch.clear();
 		propose.txtSearch.sendKeys(value);
-		propose.txtSearch.sendKeys(Keys.ENTER);
+//		propose.txtSearch.sendKeys(Keys.ENTER);
 		propose.sleep(2000);
 	}
 
@@ -507,11 +508,14 @@ public class HRISBukcetDataDefine {
 		String strCount = new String(propose.getCount());
 		String strType = new String(propose.getType());
 		String strStatus = new String(propose.getStatus1());
+		System.out.println("-- validate search --");
 		System.out.println(strDate);
 		System.out.println(strCount);
 		System.out.println(strType);
 		System.out.println(strStatus);
 		System.out.println(value);
+		propose.scrollToElem(driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[3]/p")));
+		propose.screenshootElm(propose.txtSearch);
 		if (value.equalsIgnoreCase("November")) {
 			System.out.println("leave column");
 			Assert.assertTrue(strDate.matches(".*" + value + ".*"));
@@ -534,7 +538,7 @@ public class HRISBukcetDataDefine {
 
 	@When("^User choose show (.*) entries$")
 	public void showEntries(String entries) {
-		System.out.println(entries);
+		System.out.println("Shows " + entries);
 		propose.selectEntries(entries);
 	}
 
@@ -543,13 +547,13 @@ public class HRISBukcetDataDefine {
 		boolean check = false;
 		if (entries.equals("10")) {
 			if (!driver.findElements(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[10]/td[1]")).isEmpty()) { // if element
-																											// exist
+				propose.scrollToElem(driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[10]/td[1]"))); // exist
 				check = true;
 				System.out.println("entries 10 true");
 			}
 		} else if (entries.equals("25")) {
 			if (!driver.findElements(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[11]/td[1]")).isEmpty()) { // if element
-																											// exist
+				propose.scrollToElem(driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[11]/td[1]"))); // exist
 				check = true;
 				System.out.println("entries 25 true");
 			}
@@ -559,29 +563,29 @@ public class HRISBukcetDataDefine {
 
 	@And("^Count less than (.*)$")
 	public void coutLessThan(String count) {
-		System.out.println(propose.getCount());
 		int actual = Integer.parseInt(propose.getCount());
-		System.out.println(actual);
+		System.out.println("Count less than -> " + actual);
 		int expected = Integer.parseInt(count);
 		boolean check = false;
 		if (actual < expected) {
 			check = true;
 			System.out.println("True");
 		}
+		propose.scrollToElem(driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[3]/p")));
 		Assert.assertTrue(check);
 	}
 
 	@And("^Count equals (.*)$")
 	public void countEquals(String count) {
-		System.out.println(propose.getCount());
 		int actual = Integer.parseInt(propose.getCount());
-		System.out.println(actual);
+		System.out.println("Count equals -> " + actual);
 		int expected = Integer.parseInt(count);
 		boolean check = false;
 		if (actual == expected) {
 			check = true;
 			System.out.println("True");
 		}
+		propose.scrollToElem(driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[3]/p")));
 		Assert.assertTrue(check);
 	}
 
@@ -601,6 +605,7 @@ public class HRISBukcetDataDefine {
 		}
 		propose.sleep(2000);
 		propose.btnValidateAction.click();
+		System.out.println("Data deleted");
 	}
 
 	@And("Check action")
@@ -611,19 +616,19 @@ public class HRISBukcetDataDefine {
 		try {
 			driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")).click();
 			propose.actionDelete.click();
-		} catch (Exception e) {
+		} catch (NoSuchElementException e) {
 			// TODO: handle exception
 			System.err.println(e);
+			check = false;
 			try {
 				propose.actionDeleteTd.click();
-			} catch (Exception e2) {
+			} catch (NoSuchElementException e2) {
 				// TODO: handle exception
 				System.err.println(e2);
 				check = false;
-			} finally {
-				Assert.assertTrue(check);
 			}
 		}
+		System.out.println("Check delete action present");
 		Assert.assertTrue(check);
 	}
 
@@ -632,7 +637,7 @@ public class HRISBukcetDataDefine {
 	@Then("User at Approval Cuti Page")
 	public void at_Approval() {
 		String actual = approve.lblPersetujuanCuti.getText();
-		System.out.println(actual);
+		System.out.println(actual + " <- at approval");
 		String expected = "Persetujuan cuti";
 		Assert.assertEquals(actual, expected);
 	}
@@ -641,6 +646,7 @@ public class HRISBukcetDataDefine {
 	public void validateModal(String data) {
 		approve.sleep(1000);
 		String strDate = new String(approve.getLeaveDate());
+		System.out.println("-- validate modal --");
 		System.out.println(strDate);
 		System.out.println(data);
 		String actual = "";
@@ -670,7 +676,7 @@ public class HRISBukcetDataDefine {
 
 	@And("^User input approval notes (.*)$")
 	public void inputApprovalNotes(String notes) {
-		System.out.println(notes + " approval notes");
+		System.out.println("Input approval notes : " + notes);
 		approve.txtNotes.sendKeys(notes);
 	}
 
@@ -679,7 +685,7 @@ public class HRISBukcetDataDefine {
 		// asumsi kolom notes kosong tidak bisa disubmit ->
 		// jika muncul button konfirmasi yes/no maka flow berlanjut
 		// shg jika flow berlanjut maka salah
-
+		System.out.println("-- validate approval notes empty/not --");
 		approve.sleep(1000);
 		boolean check = false;
 		boolean checkNotes = false;
@@ -727,14 +733,19 @@ public class HRISBukcetDataDefine {
 		System.out.println(checkNotes);
 		if (alertAccept == true && checkNotes == true) {
 			check = true;
+			System.out.println("flow berlanjut");
 		} else if (alertAccept == true && checkNotes == false) {
 			check = false;
+			System.out.println("flow berhenti");
 		} else if (alertAccept == false && checkNotes == false) {
 			check = true;
+			System.out.println("flow berlanjut");
 		} else if (alertAccept == false && checkNotes == true) {
 			check = false;
+			System.out.println("flow berhenti");
 		}
 		approve.btnOk.click();
+		System.out.println("flow berlanjut");
 		Assert.assertTrue(check);
 	}
 
@@ -831,6 +842,7 @@ public class HRISBukcetDataDefine {
 			System.err.println(e);
 			approve.actionEditTd.click();
 		}
+		System.out.println("-- edit data --");
 	}
 
 	@And("User {string} {string} cuti")
@@ -910,24 +922,24 @@ public class HRISBukcetDataDefine {
 		}
 	}
 
-	@Then("User validate modal action {string} with notes")
-	public void validateModalActionWithNotes(String action) {
-		approve.sleep(1000);
-		System.out.printf(action + " disabled ");
-		if (action.equalsIgnoreCase("return")) {
-			System.out.println(approve.getDisabledAtt(approve.btnReturn));
-			System.out.println();
-			boolean actual = Boolean.parseBoolean(approve.getDisabledAtt(approve.btnReturn));
-			Assert.assertTrue(actual);
-		}
-	}
+//	@Then("User validate modal action {string} with notes")
+//	public void validateModalActionWithNotes(String action) {
+//		approve.sleep(1000);
+//		System.out.printf(action + " disabled ");
+//		if (action.equalsIgnoreCase("return")) {
+//			System.out.println(approve.getDisabledAtt(approve.btnReturn));
+//			System.out.println();
+//			boolean actual = Boolean.parseBoolean(approve.getDisabledAtt(approve.btnReturn));
+//			Assert.assertTrue(actual);
+//		}
+//	}
 
 //	<<====================================== SIGNATURE ======================================>>
 
 	@Then("User at Signature Page")
 	public void at_Signature() {
-		System.out.println(signature.lblSignature.getText());
 		String actual = signature.lblSignature.getText();
+		System.out.println(actual + " at signature");
 		String expected = "Setup Tanda Tangan";
 		Assert.assertEquals(actual, expected);
 	}
@@ -949,7 +961,7 @@ public class HRISBukcetDataDefine {
 
 	@And("User validate signature")
 	public void validateSignature() {
-		String actual = signature.getAlertMsg();
+		String actual = signature.handleAlert();
 		System.out.println(actual);
 		if (actual.equals("Succesfully uploaded")) {
 			String expected = "Succesfully uploaded";
@@ -965,9 +977,24 @@ public class HRISBukcetDataDefine {
 		signature.checkEmptyCanvas();
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	@After
-	public void close() {
+	public void tearDown(Scenario scenario) {
 		propose.sleep(2000);
+		System.out.println(scenario.getStatus());
+//		scenario.log(scenario.getName());
+		if (scenario.getStatus().equals("FAILED")) {
+			System.out.println("screenshot status");
+			String file = "<img src='file://" + util.screenshoot(driver, scenario.getName())
+					+ "'height=\"350\" width=\"792\"/>";
+			Reporter.log(file);
+		}
+		if (scenario.isFailed()) {
+			System.out.println("screenshot isFailed");
+			String file = "<img src='file://" + util.screenshoot(driver, scenario.getName())
+					+ "'height=\"350\" width=\"792\"/>";
+			Reporter.log(file);
+		}
 		driver.close();
 	}
 }

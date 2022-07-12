@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jul 12 13:54:01 ICT 2022</td>
+<td>Started on:</td><td>Wed Jul 13 00:34:16 ICT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>400 seconds (400829 ms)</td>
+<tr><td>Total time:</td><td>136 seconds (136561 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,29 +76,69 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Select should show Special", "Bucket Data Pengajuan"</td>
-<td><div><pre>java.lang.AssertionError: expected [Special] but found []
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at definitions.data.HRISBukcetDataDefine.validateSelectType(HRISBukcetDataDefine.java:311)
-	at ?.User validate select type &quot;Special&quot;(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISActionButton.feature:125)
-</pre></div><a href='#' onClick='toggleBox("stack-trace896508113", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace896508113'><pre>java.lang.AssertionError: expected [Special] but found []
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at definitions.data.HRISBukcetDataDefine.validateSelectType(HRISBukcetDataDefine.java:311)
-	at ?.User validate select type &quot;Special&quot;(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISActionButton.feature:125)
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "From with current"", "Bucket Data Pengajuan"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class=&apos;dtr-data&apos;]//i[@class=&apos;fa fa-times&apos;]&quot;}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;DESKTOP-S76SA9N&apos;, ip: &apos;192.168.1.164&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5989c9501b72e0f04888068404d86f74, findElement {using=xpath, value=//span[@class=&apos;dtr-data&apos;]//i[@class=&apos;fa fa-times&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57402}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57402/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5989c9501b72e0f04888068404d86f74
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy28.click(Unknown Source)
+	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:618)
+	at ?.Check action(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace793485742", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace793485742'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class=&apos;dtr-data&apos;]//i[@class=&apos;fa fa-times&apos;]&quot;}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;DESKTOP-S76SA9N&apos;, ip: &apos;192.168.1.164&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5989c9501b72e0f04888068404d86f74, findElement {using=xpath, value=//span[@class=&apos;dtr-data&apos;]//i[@class=&apos;fa fa-times&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\nexsoft\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57402}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57402/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5989c9501b72e0f04888068404d86f74
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy28.click(Unknown Source)
+	at definitions.data.HRISBukcetDataDefine.checkAction(HRISBukcetDataDefine.java:618)
+	at ?.Check action(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISTanggalCuti.feature:14)
 </pre></div></td>
 <td>32</td>
-<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<td>runner.pengajuan.HRISTanggalCutiRunner@451001e5</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -109,60 +149,35 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit invalid data", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty date", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>11</td>
-<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<td>12</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@451001e5</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Button edit show form cuti", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>34</td>
-<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit valid edit data", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>38</td>
-<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Select should show Annual", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>39</td>
-<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cancel delete action", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "To = From"", "Bucket Data Pengajuan"</td>
 <td></td>
 <td>20</td>
-<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<td>runner.pengajuan.HRISTanggalCutiRunner@451001e5</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit invalid edit data", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "From with current"", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>40</td>
-<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<td>19</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@451001e5</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Button new", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "To > From"", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>60</td>
-<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<td>20</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@451001e5</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit new valid data", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "From with current"", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>21</td>
-<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<td>18</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@451001e5</td></tr>
 <tr>
-<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Notes should show as data before", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISTanggalCutiRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISTanggalCutiRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Compare date "To < From"", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>37</td>
-<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Date should show as Leave column", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>38</td>
-<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
-<tr>
-<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate delete action", "Bucket Data Pengajuan"</td>
-<td></td>
-<td>24</td>
-<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<td>12</td>
+<td>runner.pengajuan.HRISTanggalCutiRunner@451001e5</td></tr>
 </table><p>
 </body>
 </html>

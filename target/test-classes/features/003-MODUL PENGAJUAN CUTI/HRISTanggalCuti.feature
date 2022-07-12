@@ -15,8 +15,8 @@ Feature: Bucket Data Pengajuan
 
     Examples: 
       | type    | special                            | dateFrom | dateTo | yearFrom | yearTo | notes          |
-      | Special | Pernikahan diri sendiri---(3 Hari) | July9    | July10  |     2022 |   2022 | Ini test notes |
-      | Special | Pernikahan diri sendiri---(3 Hari) | July10    | July11 |     2022 |   2022 | Ini test notes |
+      | Special | Pernikahan diri sendiri---(3 Hari) | July9    | July10 |     2022 |   2022 | Ini test notes |
+      | Special | Pernikahan diri sendiri---(3 Hari) | July13   | July14 |     2022 |   2022 | Ini test notes |
       | Special | Pernikahan diri sendiri---(3 Hari) | July20   | July21 |     2022 |   2022 | Ini test notes |
 
   @datecompare

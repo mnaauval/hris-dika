@@ -34,7 +34,7 @@ Feature: Bucket Data Pengajuan
       | Special | Cuti persalinan---(3 Bulan)                                           | July20   | November1 |     2022 |   2022 | Ini test |
       | Special | Cuti persalinan---(3 Bulan)                                           | July20   | November1 |     2022 |   2022 | Ini test |
       | Special | Cuti duka saudara kandung/keluarga yang tinggal satu rumah---(1 Hari) | July20   | July20    |     2022 |   2022 | Ini test |
-
+@runthis
   Scenario Outline: Search by value
     Given User has logged in as SPV
     And User at Home Page
@@ -52,7 +52,7 @@ Feature: Bucket Data Pengajuan
       | Incomplete |
       #| Queue    |
       |            |
-
+@runthis
   Scenario Outline: Entries
     Given User has logged in as SPV
     And User at Home Page

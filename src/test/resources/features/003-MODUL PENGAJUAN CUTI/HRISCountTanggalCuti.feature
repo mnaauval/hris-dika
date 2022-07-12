@@ -17,7 +17,7 @@ Feature: Bucket Data Pengajuan
       | count |
       |    12 |
 
-  @tagannual @runthis
+  @tagannual
   Scenario Outline: Cuti type Annual and count date "EQUALS" 12
     Given User has logged in as SPV
     And User at Home Page
