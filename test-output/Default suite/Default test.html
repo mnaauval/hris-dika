@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>11/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jul 10 22:07:51 ICT 2022</td>
+<td>Started on:</td><td>Tue Jul 12 13:54:01 ICT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>70 seconds (70042 ms)</td>
+<tr><td>Total time:</td><td>400 seconds (400829 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,39 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Select should show Special", "Bucket Data Pengajuan"</td>
+<td><div><pre>java.lang.AssertionError: expected [Special] but found []
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at definitions.data.HRISBukcetDataDefine.validateSelectType(HRISBukcetDataDefine.java:311)
+	at ?.User validate select type &quot;Special&quot;(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISActionButton.feature:125)
+</pre></div><a href='#' onClick='toggleBox("stack-trace896508113", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace896508113'><pre>java.lang.AssertionError: expected [Special] but found []
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at definitions.data.HRISBukcetDataDefine.validateSelectType(HRISBukcetDataDefine.java:311)
+	at ?.User validate select type &quot;Special&quot;(file:///D:/Project/Java/TestNG/HRIS/src/test/resources/features/003-MODUL%20PENGAJUAN%20CUTI/HRISActionButton.feature:125)
+</pre></div></td>
+<td>32</td>
+<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,10 +109,60 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Leave column", "Bucket Data Pengajuan"</td>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit invalid data", "Bucket Data Pengajuan"</td>
 <td></td>
-<td>69</td>
-<td>runner.TestRunner@909217e</td></tr>
+<td>11</td>
+<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Button edit show form cuti", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>34</td>
+<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit valid edit data", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>38</td>
+<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Select should show Annual", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>39</td>
+<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cancel delete action", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>20</td>
+<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit invalid edit data", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>40</td>
+<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Button new", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>60</td>
+<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit new valid data", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>21</td>
+<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Notes should show as data before", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>37</td>
+<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Date should show as Leave column", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>38</td>
+<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
+<tr>
+<td title='runner.pengajuan.HRISActionButtonRunner.runScenario()'><b>runScenario</b><br>Test class: runner.pengajuan.HRISActionButtonRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate delete action", "Bucket Data Pengajuan"</td>
+<td></td>
+<td>24</td>
+<td>runner.pengajuan.HRISActionButtonRunner@451001e5</td></tr>
 </table><p>
 </body>
 </html>

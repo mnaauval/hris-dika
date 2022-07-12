@@ -7,7 +7,7 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July27" "2022" and input notes
+    And User select type "Annual", pick range date "July20" "2022" "July27" "2022" and input "Cuti type Annual and count date less than 12"
     Then User click submit
     And Data cuti created
     And Count less than <count>
@@ -23,7 +23,7 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "August2" "2022" and input notes
+    And User select type "Annual", pick range date "July20" "2022" "August2" "2022" and input "Cuti type Annual and count date equals 12"
     Then User click submit
     And Data cuti created
     And Count equals <count>
@@ -39,7 +39,7 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "August3" "2022" and input notes
+    And User select type "Annual", pick range date "July20" "2022" "August3" "2022" and input "Cuti type Annual and count date more than 12"
     Then User click submit
     And Data cuti not created
 

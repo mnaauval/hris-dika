@@ -48,6 +48,7 @@ public class HRISLoginDefine {
 	@Then("User validate page {string}")
 	public void validatePage(String URL) {
 		driver.get(URL);
+		home.sleep(2000);
 		if (URL.equals("https://dev.ptdika.com/employee/panel/login/")) {
 			String actual = login.lblDIKA.getText();
 			System.out.println(actual);

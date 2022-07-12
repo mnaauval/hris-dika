@@ -1,7 +1,6 @@
 #Author: mnaauval@gmail.com
 Feature: Bucket Data Pengajuan
 
-  @notes
   Scenario Outline: Input field note
     Given User has logged in as SPV
     And User at Home Page
@@ -20,20 +19,20 @@ Feature: Bucket Data Pengajuan
       | Special | Pernikahan diri sendiri---(3 Hari) | August20 | August22 |     2022 |   2022 | !%^&@$!!        |
       | Special | Pernikahan diri sendiri---(3 Hari) | August20 | August22 |     2022 |   2022 | ক্ষক্ষক্ষক্ষক্ষ |
 
-  Scenario Outline: Empty field note
+  Scenario: Empty field note
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    Then User click submit
-    And Show error note field
+    And User click submit
+    Then Show error note field
 
-  Scenario Outline: Empty all field
+  Scenario: Empty all field
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    Then User click submit
-    And Show error type field
+    And User click submit
+    Then Show error type field
     And Show error date field
     And Show error note field

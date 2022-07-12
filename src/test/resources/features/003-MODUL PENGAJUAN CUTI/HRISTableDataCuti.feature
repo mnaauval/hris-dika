@@ -6,7 +6,7 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input notes
+    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Leave column"
     And User click submit
     And Data cuti created
     Then User validate "leave" data column contain "20 Jul 2022"
@@ -17,7 +17,7 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input notes
+    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Count column"
     And User click submit
     And Data cuti created
     Then User validate "count" data column contain "6"
@@ -28,7 +28,7 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input notes
+    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Type column"
     And User click submit
     And Data cuti created
     Then User validate "type" data column contain "Annual"
@@ -39,7 +39,7 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input notes
+    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Status column init"
     And User click submit
     And Data cuti created
     Then User validate "status" data column contain "Queue"
@@ -50,7 +50,7 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input notes
+    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Status column returned"
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -59,7 +59,7 @@ Feature: Bucket Data Pengajuan
     And User click Approval Cuti in My Task
     And User at Approval Cuti Page
     And User edit data
-    And User "return" cuti
+    And User "validate" "return" cuti
     And User logout from Nav
     And User has logged in as SPV
     And User at Home Page
@@ -74,8 +74,7 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input notes
-    And User click submit
+    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Status column rejected"
     And Data cuti created
     And User logout from Nav
     And User has logged in as MNGR
@@ -83,19 +82,19 @@ Feature: Bucket Data Pengajuan
     And User click Approval Cuti in My Task
     And User at Approval Cuti Page
     And User edit data
-    And User "reject" cuti
+    And User "validate" "reject" cuti
     And User logout from Nav
     And User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
-    Then User validate empty table
+    Then User validate data not exist
 
   Scenario: Status column approved
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input notes
+    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Status column approved"
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -104,7 +103,7 @@ Feature: Bucket Data Pengajuan
     And User click Approval Cuti in My Task
     And User at Approval Cuti Page
     And User edit data
-    And User "approve" cuti
+    And User "validate" "approve" cuti
     And User logout from Nav
     And User has logged in as SPV
     And User at Home Page
@@ -117,7 +116,7 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input notes
+    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Action column init"
     And User click submit
     And Data cuti created
     Then User validate "action" data column contain "cancel"
@@ -128,7 +127,7 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input notes
+    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Action column returned"
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -137,7 +136,7 @@ Feature: Bucket Data Pengajuan
     And User click Approval Cuti in My Task
     And User at Approval Cuti Page
     And User edit data
-    And User "return" cuti
+    And User "validate" "return" cuti
     And User logout from Nav
     And User has logged in as SPV
     And User at Home Page
@@ -151,7 +150,7 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input notes
+    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Action column rejected"
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -160,19 +159,19 @@ Feature: Bucket Data Pengajuan
     And User click Approval Cuti in My Task
     And User at Approval Cuti Page
     And User edit data
-    And User "reject" cuti
+    And User "validate" "reject" cuti
     And User logout from Nav
     And User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
-    And User validate empty table
-
+    And User validate data not exist
+    
   Scenario: Action column approved
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input notes
+    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Action column approved"
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -181,7 +180,7 @@ Feature: Bucket Data Pengajuan
     And User click Approval Cuti in My Task
     And User at Approval Cuti Page
     And User edit data
-    And User "approve" cuti
+    And User "validate" "approve" cuti
     And User logout from Nav
     And User has logged in as SPV
     And User at Home Page
@@ -194,4 +193,4 @@ Feature: Bucket Data Pengajuan
     Given User has logged in as SPV
     When User at Home Page
     And User click Pengajuan Cuti in My Task
-    Then User validate empty table
+    Then User validate data not exist

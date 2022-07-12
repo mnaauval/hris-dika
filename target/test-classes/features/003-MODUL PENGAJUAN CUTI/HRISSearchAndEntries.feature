@@ -7,7 +7,7 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July27" "2022" and input notes
+    And User select type "Annual", pick range date "July20" "2022" "July27" "2022" and input "Cuti type Annual"
     Then User click submit
     And Data cuti created
 
@@ -53,7 +53,7 @@ Feature: Bucket Data Pengajuan
       #| Queue    |
       |            |
 
-  Scenario Outline: Search by value
+  Scenario Outline: Entries
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task

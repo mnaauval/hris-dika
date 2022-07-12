@@ -219,9 +219,9 @@ public class HRISBukcetDataDefine {
 
 //	====================================== INPUT FIELD CUTI ======================================
 
-	@And("User select type {string}, pick range date {string} {string} {string} {string} and input notes")
-	public void selectType(String type, String dateFrom, String yearFrom, String dateTo, String yearTo) {
-		String notes = "Ini notes test";
+	@And("User select type {string}, pick range date {string} {string} {string} {string} and input {string}")
+	public void selectTypeNotes(String type, String dateFrom, String yearFrom, String dateTo, String yearTo,
+			String notes) {
 		System.out.println(type);
 		System.out.println(dateFrom + ", " + yearFrom + " - " + dateTo + ", " + yearTo);
 		System.out.println(propose.selectType(type) + " check");
@@ -369,7 +369,7 @@ public class HRISBukcetDataDefine {
 		propose.sleep(2000);
 		String actual = propose.getNotesAtt();
 		System.out.println(actual);
-		String expected = "Ini notes test";
+		String expected = "Ini test notes";
 		Assert.assertEquals(actual, expected);
 	}
 
@@ -380,8 +380,9 @@ public class HRISBukcetDataDefine {
 
 	@And("User click new")
 	public void clickNew() {
+		propose.sleep(1000);
 		propose.btnNew.click();
-		propose.sleep(2000);
+		propose.sleep(1000);
 	}
 
 //	====================================== TABLE DATA CUTI ======================================
@@ -415,20 +416,15 @@ public class HRISBukcetDataDefine {
 
 	@Then("User validate {string} data column contain {string}")
 	public void validateColumn(String column, String data) {
-		String date = propose.getDate();
-		String count = propose.getCount();
-		String type = propose.getType();
-		String status = propose.getStatus();
-		String strDate = new String(date);
-		String strCount = new String(count);
-		String strType = new String(type);
-		String strStatus = new String(status);
+		String strDate = new String(propose.getDate());
+		String strCount = new String(propose.getCount());
+		String strType = new String(propose.getType());
+		String strStatus = new String(propose.getStatus());
 		System.out.println(strDate);
 		System.out.println(strCount);
 		System.out.println(strType);
 		System.out.println(strStatus);
-		System.out.println("Check column " + column);
-		System.out.println("Contains data " + data);
+		System.out.printf("Check column \"%s\" contains data \"%s\"\n", column, data);
 		boolean check = true;
 		if (column.equalsIgnoreCase("leave")) {
 			System.out.println("leave true");
@@ -486,13 +482,14 @@ public class HRISBukcetDataDefine {
 		}
 	}
 
-	@Then("User validate empty table")
+	@Then("User validate data not exist")
 	public void validateEmptyTable() {
-		driver.get("https://dev.ptdika.com/employee/data/cuti");
-		String actual = propose.getEmptyData();
+//		driver.get("https://dev.ptdika.com/employee/data/cuti");
+		String actual = new String(propose.getEmptyData());
 		System.out.println(actual);
-		String expected = "No matching records found";
-		Assert.assertEquals(actual, expected);
+//		String expected = "No matching records found";
+		String expected = "1";
+		Assert.assertTrue(actual.matches(".*" + expected + ".*"));
 	}
 
 	@When("^User search by value (.*)$")
@@ -506,33 +503,29 @@ public class HRISBukcetDataDefine {
 
 	@When("^User validate search (.*)$")
 	public void validateSearch(String value) {
-		String date = propose.getDate();
-		String count = propose.getCount();
-		String type = propose.getType();
-		String status = propose.getStatus1();
-		String strDate = new String(date);
-		String strCount = new String(count);
-		String strType = new String(type);
-		String strStatus = new String(status);
+		String strDate = new String(propose.getDate());
+		String strCount = new String(propose.getCount());
+		String strType = new String(propose.getType());
+		String strStatus = new String(propose.getStatus1());
 		System.out.println(strDate);
 		System.out.println(strCount);
 		System.out.println(strType);
 		System.out.println(strStatus);
 		System.out.println(value);
 		if (value.equalsIgnoreCase("November")) {
-			System.out.println("leave true");
+			System.out.println("leave column");
 			Assert.assertTrue(strDate.matches(".*" + value + ".*"));
 		} else if (value.equalsIgnoreCase("90")) {
-			System.out.println("count true");
+			System.out.println("count column");
 			Assert.assertTrue(strCount.matches(".*" + value + ".*"));
 		} else if (value.equalsIgnoreCase("Annual")) {
-			System.out.println("type true");
+			System.out.println("type column");
 			Assert.assertTrue(strType.matches(".*" + value + ".*"));
 		} else if (value.equalsIgnoreCase("persalinan")) {
-			System.out.println("special true");
+			System.out.println("special column");
 			Assert.assertTrue(strType.matches(".*" + value + ".*"));
 		} else if (value.equalsIgnoreCase("Incomplete")) {
-			System.out.println("status true");
+			System.out.println("status column");
 			Assert.assertTrue(strStatus.matches(".*" + value + ".*"));
 		} else {
 			Assert.assertTrue(true);
@@ -638,14 +631,198 @@ public class HRISBukcetDataDefine {
 
 	@Then("User at Approval Cuti Page")
 	public void at_Approval() {
-		System.out.println(approve.lblPersetujuanCuti.getText());
 		String actual = approve.lblPersetujuanCuti.getText();
+		System.out.println(actual);
 		String expected = "Persetujuan cuti";
 		Assert.assertEquals(actual, expected);
 	}
 
+	@Then("User validate modal {string}")
+	public void validateModal(String data) {
+		approve.sleep(1000);
+		String strDate = new String(approve.getLeaveDate());
+		System.out.println(strDate);
+		System.out.println(data);
+		String actual = "";
+		if (data.equalsIgnoreCase("present")) {
+			System.out.println(approve.modalHeader.isDisplayed());
+			Assert.assertTrue(approve.modalHeader.isDisplayed());
+		} else if (data.equalsIgnoreCase("tanggal")) {
+			actual = driver.findElement(By.xpath("//*[@id=\"duration\"]")).getText();
+			System.out.println(actual);
+			String[] arrStr = actual.split("-");
+			arrStr[0] = arrStr[0].replace("2022", "").trim();
+			actual = arrStr[0];
+			SimpleDateFormat sdf = new SimpleDateFormat("d MMMM", Locale.US);
+			Date myDate = null;
+			try {
+				myDate = sdf.parse(actual);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			sdf.applyPattern("d MMM");
+			actual = sdf.format(myDate);
+			System.out.println(actual);
+			Assert.assertTrue(strDate.matches(".*" + actual + ".*"));
+		}
+	}
+
+	@And("^User input approval notes (.*)$")
+	public void inputApprovalNotes(String notes) {
+		System.out.println(notes + " approval notes");
+		approve.txtNotes.sendKeys(notes);
+	}
+
+	@And("User validate approval notes {string} button")
+	public void validateApprovalNotes(String button) {
+		// asumsi kolom notes kosong tidak bisa disubmit ->
+		// jika muncul button konfirmasi yes/no maka flow berlanjut
+		// shg jika flow berlanjut maka salah
+
+		approve.sleep(1000);
+		boolean check = false;
+		boolean checkNotes = false;
+		boolean alertAccept = false;
+		if (button.equalsIgnoreCase("return")) {
+			approve.btnReturn.click();
+			if (approve.handleAlert().equalsIgnoreCase("No allert")) {
+				System.out.println("Notes terisi");
+				checkNotes = true;
+			} else {
+				System.out.println("Notes kosong");
+				checkNotes = false;
+			}
+			approve.handleAlert();
+			approve.sleep(1000);
+			approve.btnReturnIt.click();
+		} else if (button.equalsIgnoreCase("reject")) {
+			approve.btnReject.click();
+			if (approve.handleAlert().equalsIgnoreCase("No allert")) {
+				System.out.println("Notes terisi");
+				checkNotes = true;
+			} else {
+				System.out.println("Notes kosong");
+				checkNotes = false;
+			}
+			approve.handleAlert();
+			approve.sleep(1000);
+			approve.btnRejectIt.click();
+		} else if (button.equalsIgnoreCase("approve")) {
+			approve.btnApprove.click();
+			if (approve.handleAlert().equalsIgnoreCase("No allert")) {
+				System.out.println("Notes terisi");
+				checkNotes = true;
+			} else {
+				System.out.println("Notes kosong");
+				checkNotes = false;
+			}
+			approve.handleAlert();
+			approve.sleep(1000);
+			approve.btnApproveIt.click();
+		}
+		approve.sleep(1000);
+		alertAccept = approve.actionAccept.isDisplayed();
+		System.out.println(alertAccept);
+		System.out.println(checkNotes);
+		if (alertAccept == true && checkNotes == true) {
+			check = true;
+		} else if (alertAccept == true && checkNotes == false) {
+			check = false;
+		} else if (alertAccept == false && checkNotes == false) {
+			check = true;
+		} else if (alertAccept == false && checkNotes == true) {
+			check = false;
+		}
+		approve.btnOk.click();
+		Assert.assertTrue(check);
+	}
+
+	@Then("User validate approval {string} data column contain {string}")
+	public void validateAproveColumn(String column, String data) {
+		System.out.printf("Check column \"%s\" contains data \"%s\"\n", column, data);
+		String strName = new String(approve.getLeaveName());
+		String strDate = new String(approve.getLeaveDate());
+		String strCount = new String(approve.getCount());
+		String strType = new String(approve.getType());
+		String strStatus = new String(approve.getStatus());
+		boolean check = true;
+		if (column.equalsIgnoreCase("leave name")) {
+			System.out.println(strName);
+			Assert.assertTrue(strName.matches(".*" + data + ".*"));
+		} else if (column.equalsIgnoreCase("leave date")) {
+			System.out.println(strDate);
+			Assert.assertTrue(strDate.matches(".*" + data + ".*"));
+		} else if (column.equalsIgnoreCase("count")) {
+			System.out.println(strCount);
+			Assert.assertTrue(strCount.matches(".*" + data + ".*"));
+		} else if (column.equalsIgnoreCase("leave type")) {
+			System.out.println(strType);
+			Assert.assertTrue(strType.matches(".*" + data + ".*"));
+		} else if (column.equalsIgnoreCase("status")) {
+			System.out.println(strStatus);
+			Assert.assertTrue(strStatus.matches(".*" + data + ".*"));
+		} else if (column.equalsIgnoreCase("missing data")) {
+			System.out.println(strName);
+			Assert.assertFalse(strName.matches(".*" + data + ".*"));
+		} else if (column.equalsIgnoreCase("action")) {
+			driver.get("https://dev.ptdika.com/employee/data/cuti/approval");
+			if (data.equalsIgnoreCase("cancel")) {
+				System.out.println(data);
+				try {
+					driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")).click();
+					propose.actionDelete.click();
+				} catch (Exception e) {
+					// TODO: handle exception
+					System.err.println(e);
+					try {
+						propose.actionDeleteTd.click();
+					} catch (Exception e2) {
+						// TODO: handle exception
+						System.err.println(e2);
+						check = false;
+					} finally {
+						Assert.assertTrue(check);
+					}
+				}
+				Assert.assertTrue(check);
+			} else if (data.equalsIgnoreCase("edit")) {
+				System.out.println(data);
+				try {
+					driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")).click();
+					propose.actionEdit.click();
+				} catch (Exception e) {
+					// TODO: handle exception
+					System.err.println(e);
+					try {
+						propose.actionEditTd.click();
+					} catch (Exception e2) {
+						// TODO: handle exception
+						System.err.println(e2);
+						check = false;
+					} finally {
+						Assert.assertTrue(check);
+					}
+				}
+				Assert.assertTrue(check);
+			} else if (data.equalsIgnoreCase("none")) {
+				System.out.println(data);
+				try {
+					driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")).click();
+					propose.actionEdit.click();
+				} catch (Exception e) {
+					// TODO: handle exception
+					check = true;
+					Assert.assertTrue(check);
+				}
+				Assert.assertTrue(check);
+			}
+		}
+	}
+
 	@And("User edit data")
 	public void clickEdit() {
+//		driver.get("https://dev.ptdika.com/employee/data/cuti");
 		try {
 			driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")).click();
 			approve.actionEdit.click();
@@ -656,49 +833,93 @@ public class HRISBukcetDataDefine {
 		}
 	}
 
-	@And("User {string} cuti")
-	public void modalAction(String button) {
-		try {
-			driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")).click();
-
-		} catch (Exception e) {
-			// TODO: handle exception
-			System.err.println(e);
-			if (button.equals("approve")) {
-				System.out.println(button);
-				approve.btnApprove.click();
-				approve.btnApproveIt.click();
-			} else if (button.equals("reject")) {
-				System.out.println(button);
-				approve.btnReject.click();
-				approve.getAlertMsg();
-				approve.btnRejectIt.click();
-			} else if (button.equals("return")) {
-				System.out.println(button);
-				approve.btnReturn.click();
-				approve.getAlertMsg();
-				approve.btnReturnIt.click();
-			}
-			approve.sleep(2000);
-			approve.btnOk.click();
-		}
+	@And("User {string} {string} cuti")
+	public void modalAction(String action, String button) {
+		System.out.println(action + " " + button);
+		approve.sleep(1000);
 		if (button.equals("approve")) {
-			System.out.println(button);
+			System.out.println(button + " check");
 			approve.btnApprove.click();
-			approve.btnApproveIt.click();
+			if (action.equalsIgnoreCase("validate")) {
+				approve.btnApproveIt.click();
+			}
 		} else if (button.equals("reject")) {
-			System.out.println(button);
+			System.out.println(button + " check");
 			approve.btnReject.click();
 			approve.getAlertMsg();
-			approve.btnRejectIt.click();
+			if (action.equalsIgnoreCase("validate")) {
+				approve.btnRejectIt.click();
+			}
 		} else if (button.equals("return")) {
-			System.out.println(button);
+			System.out.println(button + " check");
 			approve.btnReturn.click();
 			approve.getAlertMsg();
-			approve.btnReturnIt.click();
+			if (action.equalsIgnoreCase("validate")) {
+				approve.btnReturnIt.click();
+			}
 		}
-		approve.sleep(2000);
-		approve.btnOk.click();
+		approve.sleep(1000);
+		if (action.equalsIgnoreCase("validate")) {
+			approve.btnOk.click();
+		} else if (action.equalsIgnoreCase("cancel")) {
+			approve.btnNo.click();
+		}
+	}
+
+	@Then("User close modal with {string}")
+	public void closeModal(String data) {
+		approve.sleep(1000);
+//		System.out.println(data);
+		if (data.equalsIgnoreCase("close")) {
+			approve.btnClose.click();
+			System.out.println(data + " clicked");
+			Assert.assertTrue(true);
+		} else if (data.equalsIgnoreCase("cross")) {
+			approve.btnCross.click();
+			System.out.println(data + " clicked");
+			Assert.assertTrue(true);
+		} else if (data.equalsIgnoreCase("leave modal")) {
+			approve.modalLeave.click();
+			System.out.println(data + " clicked");
+			Assert.assertTrue(true);
+		}
+		driver.get("https://dev.ptdika.com/employee/data/cuti/approval");
+	}
+
+	@Then("User validate modal action {string}")
+	public void validateModalAction(String action) {
+		approve.sleep(1000);
+		System.out.printf(action + " disabled ");
+		// asumsi ketika melakukan cancel/no ->
+		// button "action" seharusnya tidak disabled
+		if (action.equalsIgnoreCase("return")) {
+			System.out.println(approve.getDisabledAtt(approve.btnReturn));
+			System.out.println();
+			boolean actual = Boolean.parseBoolean(approve.getDisabledAtt(approve.btnReturn));
+			Assert.assertFalse(actual);
+		} else if (action.equalsIgnoreCase("reject")) {
+			System.out.println(approve.getDisabledAtt(approve.btnReject));
+			System.out.println();
+			boolean actual = Boolean.parseBoolean(approve.getDisabledAtt(approve.btnReject));
+			Assert.assertFalse(actual);
+		} else if (action.equalsIgnoreCase("approve")) {
+			System.out.println(approve.getDisabledAtt(approve.btnApprove));
+			System.out.println();
+			boolean actual = Boolean.parseBoolean(approve.getDisabledAtt(approve.btnApprove));
+			Assert.assertFalse(actual);
+		}
+	}
+
+	@Then("User validate modal action {string} with notes")
+	public void validateModalActionWithNotes(String action) {
+		approve.sleep(1000);
+		System.out.printf(action + " disabled ");
+		if (action.equalsIgnoreCase("return")) {
+			System.out.println(approve.getDisabledAtt(approve.btnReturn));
+			System.out.println();
+			boolean actual = Boolean.parseBoolean(approve.getDisabledAtt(approve.btnReturn));
+			Assert.assertTrue(actual);
+		}
 	}
 
 //	<<====================================== SIGNATURE ======================================>>

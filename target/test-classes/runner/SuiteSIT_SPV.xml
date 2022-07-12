@@ -9,6 +9,7 @@
 			<class name="runner.login.HRISLogoutSPVRunner"></class>
 			<class name="runner.dashboard.HRISDashboardSPVRunner"></class>
 			<class name="runner.pengajuan.HRISTableResultCutiRunner"></class>
+			<class name="runner.pengajuan.HRISActionButtonRunner"></class>			
 			<class name="runner.pengajuan.HRISTableDataCutiRunner"></class>
 			<class name="runner.pengajuan.HRISSelectLeaveTypeRunner"></class>
 			<class name="runner.pengajuan.HRISTanggalCutiRunner"></class>
@@ -16,7 +17,6 @@
 			<class name="runner.pengajuan.HRISCountTanggalCutiRunner"></class>
 			<class name="runner.pengajuan.HRISSearchAndEntriesRunner"></class>
 			<class name="runner.pengajuan.HRISDoubleSubmitRunner"></class>
-			<class name="runner.pengajuan.HRISActionButtonRunner"></class>			
 			<class name="runner.signature.HRISDrawSignatureSPVRunner"></class>
 		</classes>
 
