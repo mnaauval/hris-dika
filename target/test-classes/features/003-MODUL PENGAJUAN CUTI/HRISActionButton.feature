@@ -53,6 +53,7 @@ Feature: Bucket Data Pengajuan
     Then User validate "action" data column contain "cancel"
     And User validate "leave" data column contain "20 Jul 2022"
     And User validate "type" data column contain "Annual"
+    And User validate data exist
     And User delete data
 
   Scenario: Button edit show form cuti

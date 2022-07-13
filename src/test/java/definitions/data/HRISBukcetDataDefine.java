@@ -977,19 +977,11 @@ public class HRISBukcetDataDefine {
 		signature.checkEmptyCanvas();
 	}
 
-	@SuppressWarnings("unlikely-arg-type")
 	@After
 	public void tearDown(Scenario scenario) {
 		propose.sleep(2000);
 		System.out.println(scenario.getStatus());
-//		scenario.log(scenario.getName());
-		if (scenario.getStatus().equals("FAILED")) {
-			System.out.println("screenshot status");
-			String file = "<img src='file://" + util.screenshoot(driver, scenario.getName())
-					+ "'height=\"350\" width=\"792\"/>";
-			Reporter.log(file);
-		}
-		if (scenario.isFailed()) {
+		if (scenario.isFailed() || scenario.getStatus().equals("UNDEFINED") || scenario.getStatus().equals("FAILED")) {
 			System.out.println("screenshot isFailed");
 			String file = "<img src='file://" + util.screenshoot(driver, scenario.getName())
 					+ "'height=\"350\" width=\"792\"/>";

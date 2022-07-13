@@ -6,8 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.Reporter;
 
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -15,12 +17,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pom.HomePage;
 import pom.LoginPage;
+import pom.Utilities;
 
 public class HRISLoginDefine {
 
 	private WebDriver driver;
 	private LoginPage login;
 	private HomePage home;
+	private Utilities util;
 
 	@SuppressWarnings("deprecation")
 	@Before
@@ -33,6 +37,7 @@ public class HRISLoginDefine {
 		driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
 		login = PageFactory.initElements(driver, LoginPage.class);
 		home = PageFactory.initElements(driver, HomePage.class);
+		util = PageFactory.initElements(driver, Utilities.class);
 	}
 
 	@Given("User open browser")
@@ -140,8 +145,15 @@ public class HRISLoginDefine {
 	}
 
 	@After
-	public void close() {
-		login.sleep(3000);
+	public void tearDown(Scenario scenario) {
+		login.sleep(2000);
+		System.out.println(scenario.getStatus());
+		if (scenario.isFailed()) {
+			System.out.println("screenshot isFailed");
+			String file = "<img src='file://" + util.screenshoot(driver, scenario.getName())
+					+ "'height=\"350\" width=\"792\"/>";
+			Reporter.log(file);
+		}
 		driver.close();
 	}
 }
