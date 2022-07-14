@@ -37,7 +37,6 @@ public class HRISBukcetDataDefine {
 	private PengajuanPage propose;
 	private ApprovalPage approve;
 	private SignaturePage signature;
-	private Utilities util;
 
 	@SuppressWarnings("deprecation")
 	@Before
@@ -55,7 +54,6 @@ public class HRISBukcetDataDefine {
 		propose = PageFactory.initElements(driver, PengajuanPage.class);
 		approve = PageFactory.initElements(driver, ApprovalPage.class);
 		signature = PageFactory.initElements(driver, SignaturePage.class);
-		util = PageFactory.initElements(driver, Utilities.class);
 	}
 
 //	<<====================================== LOGIN ======================================>>
@@ -378,6 +376,7 @@ public class HRISBukcetDataDefine {
 	@Then("User clear field")
 	public void clearField() {
 		propose.date.clear();
+		propose.txtNotes.clear();
 	}
 
 	@And("User click new")
@@ -488,9 +487,13 @@ public class HRISBukcetDataDefine {
 //		driver.get("https://dev.ptdika.com/employee/data/cuti");
 		String actual = new String(propose.getEmptyData());
 		System.out.println(actual + " <- validate data not exist");
-//		String expected = "No matching records found";
-		String expected = "1";
-		Assert.assertTrue(actual.matches(".*" + expected + ".*"));
+		if (actual.equalsIgnoreCase("1")) {
+			String expected = "1";			
+			Assert.assertTrue(actual.matches(".*" + expected + ".*"));
+		} else if (actual.equalsIgnoreCase("No matching records found")) {
+			String expected = "No matching records found";
+			Assert.assertTrue(actual.matches(".*" + expected + ".*"));			
+		}
 	}
 
 	@When("^User search by value (.*)$")
@@ -514,8 +517,8 @@ public class HRISBukcetDataDefine {
 		System.out.println(strType);
 		System.out.println(strStatus);
 		System.out.println(value);
-		propose.scrollToElem(driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[3]/p")));
-		propose.screenshootElm(propose.txtSearch);
+		propose.scrollToElem(driver.findElement(By.xpath("//input[@placeholder='Enter value here']")));
+//		propose.screenshootElm(propose.txtSearch);
 		if (value.equalsIgnoreCase("November")) {
 			System.out.println("leave column");
 			Assert.assertTrue(strDate.matches(".*" + value + ".*"));
@@ -545,6 +548,7 @@ public class HRISBukcetDataDefine {
 	@Then("^User validate show entries (.*)$")
 	public void validateEntries(String entries) {
 		boolean check = false;
+		propose.scrollToElem(driver.findElement(By.xpath("//input[@placeholder='Enter value here']")));
 		if (entries.equals("10")) {
 			if (!driver.findElements(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[10]/td[1]")).isEmpty()) { // if element
 				propose.scrollToElem(driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr[10]/td[1]"))); // exist
@@ -612,7 +616,8 @@ public class HRISBukcetDataDefine {
 	public void checkAction() {
 		boolean check = true;
 		driver.get("https://dev.ptdika.com/employee/data/cuti");
-//		propose.zoomOut(67);
+		propose.scrollToElem(driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")));
+		// propose.zoomOut(67);
 		try {
 			driver.findElement(By.xpath("//*[@id=\"dataTable\"]/tbody/tr/td[1]")).click();
 			propose.actionDelete.click();
@@ -628,8 +633,18 @@ public class HRISBukcetDataDefine {
 				check = false;
 			}
 		}
+
 		System.out.println("Check delete action present");
 		Assert.assertTrue(check);
+	}
+
+	@And("Validate alert")
+	public void validateAlert() {
+		String actual = propose.handleAlert();
+		System.out.println(actual + " <- validate alert");
+		if (actual.equals("No allert")) {
+			Assert.assertTrue(false);
+		}
 	}
 
 //	<<====================================== APPROVAL ======================================>>
@@ -981,11 +996,12 @@ public class HRISBukcetDataDefine {
 	public void tearDown(Scenario scenario) {
 		propose.sleep(2000);
 		System.out.println(scenario.getStatus());
-		if (scenario.isFailed() || scenario.getStatus().equals("UNDEFINED") || scenario.getStatus().equals("FAILED")) {
-			System.out.println("screenshot isFailed");
-			String file = "<img src='file://" + util.screenshoot(driver, scenario.getName())
-					+ "'height=\"350\" width=\"792\"/>";
+
+		if (scenario.isFailed() || scenario.getStatus().equals("FAILED") || scenario.getStatus().equals("UNDEFINED")) {
+			System.out.println("take screenshot");
+			String file = "<img src='file://" + propose.screenshoot(driver) + "'height=\"350\" width=\"792\"/>";
 			Reporter.log(file);
+			driver.close();
 		}
 		driver.close();
 	}

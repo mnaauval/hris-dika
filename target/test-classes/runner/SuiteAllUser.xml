@@ -7,10 +7,12 @@
 			<class name="runner.login.HRISPageSignInSPVRunner"></class>
 			<class name="runner.login.HRISLoginSPVRunner"></class>
 			<class name="runner.login.HRISLogoutSPVRunner"></class>
-			<class name="runner.dashboard.HRISDashboardSPVRunner"></class>
 			<class name="runner.login.HRISPageSignInMNGRRunner"></class>
 			<class name="runner.login.HRISLoginMNGRRunner"></class>
 			<class name="runner.login.HRISLogoutMNGRRunner"></class>
+			
+			
+			<class name="runner.dashboard.HRISDashboardSPVRunner"></class>
 			<class name="runner.dashboard.HRISDashboardMNGRRunner"></class>
 			
 			<class name="runner.approval.HRISSearchAndEntriesRunner"></class>

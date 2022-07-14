@@ -101,10 +101,10 @@ public class Utilities {
 		}
 	}
 
-	public String screenshoot(WebDriver driver, String title) {
+	public String screenshoot(WebDriver driver) {
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String waktu = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-		String namaFile = "D:\\Project\\Java\\TestNG\\HRIS\\src\\test\\resources\\SS\\" + waktu + title + ".PNG";
+		String namaFile = "D:\\Project\\Java\\TestNG\\HRIS\\src\\test\\resources\\SS\\" + waktu + ".PNG";
 		File screenshoot = new File(namaFile);
 		try {
 			FileUtils.copyFile(srcFile, screenshoot);

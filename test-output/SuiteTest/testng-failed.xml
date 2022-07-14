@@ -3,6 +3,13 @@
 <suite name="Failed suite [SuiteTest]">
   <test thread-count="5" name="HRIS Employee(failed)">
     <classes>
+      <class name="runner.approval.HRISSearchAndEntriesRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0 1 3 4"/>
+        </methods>
+      </class> <!-- runner.approval.HRISSearchAndEntriesRunner -->
       <class name="runner.approval.HRISActionApproveRunner">
         <methods>
           <include name="setUpClass"/>
@@ -10,6 +17,20 @@
           <include name="runScenario" invocation-numbers="2 3"/>
         </methods>
       </class> <!-- runner.approval.HRISActionApproveRunner -->
+      <class name="runner.approval.HRISActionReturnRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="1 2"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- runner.approval.HRISActionReturnRunner -->
+      <class name="runner.approval.HRISActionRejectRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0 1 2"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- runner.approval.HRISActionRejectRunner -->
       <class name="runner.approval.HRISNotesRunner">
         <methods>
           <include name="setUpClass"/>
@@ -17,83 +38,13 @@
           <include name="runScenario" invocation-numbers="4"/>
         </methods>
       </class> <!-- runner.approval.HRISNotesRunner -->
-      <class name="runner.pengajuan.HRISNotesRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="4 5"/>
-          <include name="tearDownClass"/>
-        </methods>
-      </class> <!-- runner.pengajuan.HRISNotesRunner -->
-      <class name="runner.pengajuan.HRISCountTanggalCutiRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="23 25"/>
-          <include name="tearDownClass"/>
-        </methods>
-      </class> <!-- runner.pengajuan.HRISCountTanggalCutiRunner -->
-      <class name="runner.pengajuan.HRISActionButtonRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="6"/>
-        </methods>
-      </class> <!-- runner.pengajuan.HRISActionButtonRunner -->
-      <class name="runner.approval.HRISActionRejectRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="1 2"/>
-        </methods>
-      </class> <!-- runner.approval.HRISActionRejectRunner -->
-      <class name="runner.pengajuan.HRISSearchAndEntriesRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="11 12 13 14 15"/>
-        </methods>
-      </class> <!-- runner.pengajuan.HRISSearchAndEntriesRunner -->
-      <class name="runner.approval.HRISSearchAndEntriesRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0 1 2 3 4"/>
-          <include name="tearDownClass"/>
-        </methods>
-      </class> <!-- runner.approval.HRISSearchAndEntriesRunner -->
-      <class name="runner.pengajuan.HRISDoubleSubmitRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0 1"/>
-        </methods>
-      </class> <!-- runner.pengajuan.HRISDoubleSubmitRunner -->
-      <class name="runner.pengajuan.HRISTanggalCutiRunner">
+      <class name="runner.approval.HRISTableDataCutiRunner">
         <methods>
           <include name="setUpClass"/>
           <include name="tearDownClass"/>
           <include name="runScenario" invocation-numbers="0"/>
         </methods>
-      </class> <!-- runner.pengajuan.HRISTanggalCutiRunner -->
-      <class name="runner.approval.HRISActionReturnRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="1 2"/>
-        </methods>
-      </class> <!-- runner.approval.HRISActionReturnRunner -->
-      <class name="runner.pengajuan.HRISSelectLeaveTypeRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="8"/>
-        </methods>
-      </class> <!-- runner.pengajuan.HRISSelectLeaveTypeRunner -->
-      <class name="runner.pengajuan.HRISTableDataCutiRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="5"/>
-        </methods>
-      </class> <!-- runner.pengajuan.HRISTableDataCutiRunner -->
+      </class> <!-- runner.approval.HRISTableDataCutiRunner -->
     </classes>
   </test> <!-- HRIS Employee(failed) -->
 </suite> <!-- Failed suite [SuiteTest] -->

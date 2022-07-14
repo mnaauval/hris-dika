@@ -1,12 +1,13 @@
 #Author: mnaauval@gmail.com
-Feature: Bucket Data Pengajuan
+Feature: Bucket Data Approval
 
-  Scenario: Leave column (name)
+  Scenario Outline: Leave column (name)
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Leave column (name)"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -18,12 +19,17 @@ Feature: Bucket Data Pengajuan
     And User edit data
     And User "validate" "reject" cuti
 
-  Scenario: Leave column (date)
+    Examples: 
+      | type    | special                            | dateFrom | dateTo   | yearFrom | yearTo | notes               |
+      | Special | Pernikahan diri sendiri---(3 Hari) | August20 | August22 |     2022 |   2022 | Leave column (name) |
+
+  Scenario Outline: Leave column (date)
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Leave column (date)"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -31,16 +37,21 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Approval Cuti in My Task
     And User at Approval Cuti Page
-    Then User validate approval "leave date" data column contain "20 Jul 2022"
+    Then User validate approval "leave date" data column contain "20 Aug 2022"
     And User edit data
     And User "validate" "reject" cuti
 
-  Scenario: Count column
+    Examples: 
+      | type    | special                            | dateFrom | dateTo   | yearFrom | yearTo | notes               |
+      | Special | Pernikahan diri sendiri---(3 Hari) | August20 | August22 |     2022 |   2022 | Leave column (date) |
+
+  Scenario Outline: Count column
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Count column"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -48,16 +59,21 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Approval Cuti in My Task
     And User at Approval Cuti Page
-    Then User validate approval "count" data column contain "6"
+    Then User validate approval "count" data column contain "3"
     And User edit data
     And User "validate" "reject" cuti
+    #senin libur
+    Examples: 
+      | type    | special                            | dateFrom | dateTo   | yearFrom | yearTo | notes        |
+      | Special | Pernikahan diri sendiri---(3 Hari) | August20 | August23 |     2022 |   2022 | Count column |
 
-  Scenario: Type column
+  Scenario Outline: Type column
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Type column"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -65,16 +81,21 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Approval Cuti in My Task
     And User at Approval Cuti Page
-    Then User validate approval "leave type" data column contain "Annual"
+    Then User validate approval "leave type" data column contain "Pernikahan diri sendiri"
     And User edit data
     And User "validate" "reject" cuti
 
-  Scenario: Status new column
+    Examples: 
+      | type    | special                            | dateFrom | dateTo   | yearFrom | yearTo | notes        |
+      | Special | Pernikahan diri sendiri---(3 Hari) | August20 | August22 |     2022 |   2022 | Count column |
+
+  Scenario Outline: Status new column
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Status new column"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -86,12 +107,17 @@ Feature: Bucket Data Pengajuan
     And User edit data
     And User "validate" "reject" cuti
 
-  Scenario: Status returned column
+    Examples: 
+      | type    | special                            | dateFrom | dateTo   | yearFrom | yearTo | notes             |
+      | Special | Pernikahan diri sendiri---(3 Hari) | August20 | August22 |     2022 |   2022 | Status new column |
+
+  Scenario Outline: Status returned column
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Status returned column"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -101,21 +127,29 @@ Feature: Bucket Data Pengajuan
     And User at Approval Cuti Page
     And User edit data
     And User "validate" "return" cuti
-    Then User validate approval "missing data" data column contain "20 Jul 2022"
+    Then User validate approval "missing data" data column contain "20 Aug 2022"
     And User logout from Nav
     And User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     And User edit data
+    And User clear field
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     Then User click submit
     And User delete data
 
-  Scenario: Status rejected column
+    Examples: 
+      | type    | special                            | dateFrom | dateTo   | yearFrom | yearTo | notes                  |
+      | Special | Pernikahan diri sendiri---(3 Hari) | August20 | August22 |     2022 |   2022 | Status returned column |
+
+  Scenario Outline: Status rejected column
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Status rejected column"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -127,12 +161,17 @@ Feature: Bucket Data Pengajuan
     And User "validate" "reject" cuti
     Then User validate approval "missing data" data column contain "20 Jul 2022"
 
-  Scenario: Status approved column
+    Examples: 
+      | type    | special                            | dateFrom | dateTo   | yearFrom | yearTo | notes                  |
+      | Special | Pernikahan diri sendiri---(3 Hari) | August20 | August22 |     2022 |   2022 | Status rejected column |
+
+  Scenario Outline: Status approved column
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Status approved column"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -149,12 +188,17 @@ Feature: Bucket Data Pengajuan
     And User click Pengajuan Cuti in My Task
     And User delete data
 
-  Scenario: Action new column
+    Examples: 
+      | type    | special                            | dateFrom | dateTo   | yearFrom | yearTo | notes                  |
+      | Special | Pernikahan diri sendiri---(3 Hari) | August20 | August22 |     2022 |   2022 | Status approved column |
+
+  Scenario Outline: Action new column
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Action new column"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -162,15 +206,21 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Approval Cuti in My Task
     And User at Approval Cuti Page
+    And User edit data
     Then User validate approval "action" data column contain "edit"
     And User "validate" "reject" cuti
 
-  Scenario: Action returned column
+    Examples: 
+      | type    | special                            | dateFrom | dateTo   | yearFrom | yearTo | notes             |
+      | Special | Pernikahan diri sendiri---(3 Hari) | August20 | August22 |     2022 |   2022 | Action new column |
+
+  Scenario Outline: Action returned column
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Action returned column"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -186,15 +236,23 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     And User edit data
+    And User clear field
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     Then User click submit
     And User delete data
 
-  Scenario: Action rejected column
+    Examples: 
+      | type    | special                            | dateFrom | dateTo   | yearFrom | yearTo | notes                  |
+      | Special | Pernikahan diri sendiri---(3 Hari) | August20 | August22 |     2022 |   2022 | Action returned column |
+
+  Scenario Outline: Action rejected column
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Action rejected column"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -206,12 +264,17 @@ Feature: Bucket Data Pengajuan
     And User "validate" "reject" cuti
     Then User validate approval "action" data column contain "none"
 
-  Scenario: Action approved column
+    Examples: 
+      | type    | special                            | dateFrom | dateTo   | yearFrom | yearTo | notes                  |
+      | Special | Pernikahan diri sendiri---(3 Hari) | August20 | August22 |     2022 |   2022 | Action rejected column |
+
+  Scenario Outline: Action approved column
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Action approved column"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -228,12 +291,17 @@ Feature: Bucket Data Pengajuan
     And User click Pengajuan Cuti in My Task
     And User delete data
 
-  Scenario: Action edit
+    Examples: 
+      | type    | special                            | dateFrom | dateTo   | yearFrom | yearTo | notes                  |
+      | Special | Pernikahan diri sendiri---(3 Hari) | August20 | August22 |     2022 |   2022 | Action approved column |
+
+  Scenario Outline: Action edit pressed
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July26" "2022" and input "Action edit"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -244,3 +312,7 @@ Feature: Bucket Data Pengajuan
     And User edit data
     Then User validate modal "present"
     And User "validate" "reject" cuti
+
+    Examples: 
+      | type    | special                            | dateFrom | dateTo   | yearFrom | yearTo | notes               |
+      | Special | Pernikahan diri sendiri---(3 Hari) | August20 | August22 |     2022 |   2022 | Action edit pressed |

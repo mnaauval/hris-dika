@@ -148,12 +148,6 @@ public class HRISLoginDefine {
 	public void tearDown(Scenario scenario) {
 		login.sleep(2000);
 		System.out.println(scenario.getStatus());
-		if (scenario.isFailed()) {
-			System.out.println("screenshot isFailed");
-			String file = "<img src='file://" + util.screenshoot(driver, scenario.getName())
-					+ "'height=\"350\" width=\"792\"/>";
-			Reporter.log(file);
-		}
 		driver.close();
 	}
 }

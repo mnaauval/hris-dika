@@ -28,3 +28,45 @@ Feature: Bucket Data Pengajuan
     And User "validate" "reject" cuti
     And User edit data
     And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti
+    And User edit data
+    And User "validate" "reject" cuti

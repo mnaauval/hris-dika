@@ -14,7 +14,7 @@ Feature: Bucket Data Pengajuan
 
     Examples: 
       | type    | special                            | dateFrom | dateTo | yearFrom | yearTo | notes          |
-      | Special | Pernikahan diri sendiri---(3 Hari) | July20   | July20 |     2022 |   2022 | Ini test notes |
+      | Special | Pernikahan diri sendiri---(3 Hari) | July20   | July20 |     2022 |   2022 | Submit new valid data |
 
   Scenario Outline: Submit invalid data
     Given User has logged in as SPV
@@ -28,40 +28,50 @@ Feature: Bucket Data Pengajuan
 
     Examples: 
       | type    | special                            | dateFrom | dateTo | yearFrom | yearTo | notes          |
-      | Special | Pernikahan diri sendiri---(3 Hari) | July20   | July19 |     2022 |   2022 | Ini test notes |
+      | Special | Pernikahan diri sendiri---(3 Hari) | July20   | July19 |     2022 |   2022 | Submit invalid data |
 
-  Scenario: Validate delete action
+  Scenario Outline: Validate delete action
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July22" "2022" and input "Validate delete action"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     Then User validate "action" data column contain "cancel"
     And User delete data
     And User validate data not exist
 
-  Scenario: Cancel delete action
+    Examples: 
+      | type    | special                            | dateFrom | dateTo | yearFrom | yearTo | notes                  |
+      | Special | Pernikahan diri sendiri---(3 Hari) | July26   | July28 |     2022 |   2022 | Validate delete action |
+
+  Scenario Outline: Cancel delete action
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July22" "2022" and input "Cancel delete action"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
+    And User validate "leave" data column contain "26 Jul 2022"
+    And User validate "type" data column contain "Pernikahan diri sendiri"
     Then User validate "action" data column contain "cancel"
-    And User validate "leave" data column contain "20 Jul 2022"
-    And User validate "type" data column contain "Annual"
-    And User validate data exist
     And User delete data
 
-  Scenario: Button edit show form cuti
+    Examples: 
+      | type    | special                            | dateFrom | dateTo | yearFrom | yearTo | notes                  |
+      | Special | Pernikahan diri sendiri---(3 Hari) | July26   | July28 |     2022 |   2022 | Cancel delete action |
+
+  Scenario Outline: Button edit show form cuti
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "July20" "2022" "July22" "2022" and input "Button edit show form cuti"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -76,8 +86,15 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     And User edit data
-    Then User click submit
+    And User clear field
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
+    And User click submit
     And User delete data
+
+    Examples: 
+      | type    | special                            | dateFrom | dateTo | yearFrom | yearTo | notes                      |
+      | Special | Pernikahan diri sendiri---(3 Hari) | July26   | July28 |     2022 |   2022 | Button edit show form cuti |
 
   Scenario: Select should show Annual
     Given User has logged in as SPV
@@ -178,12 +195,13 @@ Feature: Bucket Data Pengajuan
     And User click submit
     And User delete data
 
-  Scenario: Submit valid edit data
+  Scenario Outline: Submit valid edit data
     Given User has logged in as SPV
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     When User click button form cuti
-    And User select type "Annual", pick range date "August20" "2022" "August21" "2022" and input "Submit valid edit data"
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     And Data cuti created
     And User logout from Nav
@@ -198,9 +216,16 @@ Feature: Bucket Data Pengajuan
     And User at Home Page
     And User click Pengajuan Cuti in My Task
     And User edit data
+    And User clear field
+    And User select type <type>, select special <special>, pick range date <dateFrom> <yearFrom> <dateTo> <yearTo>
+    And User input notes <notes>
     And User click submit
     Then Data cuti created
     And User delete data
+
+    Examples: 
+      | type    | special                            | dateFrom | dateTo | yearFrom | yearTo | notes                    |
+      | Special | Pernikahan diri sendiri---(3 Hari) | July20   | July21 |     2022 |   2022 | Submit invalid edit data |
 
   Scenario Outline: Submit invalid edit data
     Given User has logged in as SPV
@@ -234,7 +259,8 @@ Feature: Bucket Data Pengajuan
     Examples: 
       | type    | special                            | dateFrom | dateTo | yearFrom | yearTo |
       | Special | Pernikahan diri sendiri---(3 Hari) | July20   | July26 |     2022 |   2022 |
-@runthis
+
+  @runthis
   Scenario: Button new
     Given User has logged in as SPV
     And User at Home Page

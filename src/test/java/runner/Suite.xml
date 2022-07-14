@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="HRIS Employee" parallel="none">
+	<test name="Sign In">
+
+		<classes>
+			<class name="runner.login.HRISPageSignInSPVRunner"></class>
+			<class name="runner.login.HRISLoginSPVRunner"></class>
+			<class name="runner.login.HRISLogoutSPVRunner"></class>
+			<class name="runner.login.HRISPageSignInMNGRRunner"></class>
+			<class name="runner.login.HRISLoginMNGRRunner"></class>
+			<class name="runner.login.HRISLogoutMNGRRunner"></class>
+		</classes>
+
+	</test>
+	<test name="Data">
+
+		<classes>
+			<class name="runner.dashboard.HRISDashboardSPVRunner"></class>
+			<class name="runner.dashboard.HRISDashboardMNGRRunner"></class>
+
+			<class name="runner.approval.HRISSearchAndEntriesRunner"></class>
+			<class name="runner.approval.HRISCloseModalRunner"></class>
+			<class name="runner.approval.HRISNotesRunner"></class>
+			<class name="runner.approval.HRISTableDataCutiRunner"></class>
+			<class name="runner.approval.HRISActionReturnRunner"></class>
+			<class name="runner.approval.HRISActionRejectRunner"></class>
+			<class name="runner.approval.HRISActionApproveRunner"></class>
+			<class name="runner.signature.HRISDrawSignatureMNGRRunner"></class>
+
+			<class name="runner.pengajuan.HRISTableResultCutiRunner"></class>
+			<class name="runner.pengajuan.HRISTableDataCutiRunner"></class>
+			<class name="runner.pengajuan.HRISSelectLeaveTypeRunner"></class>
+			<class name="runner.pengajuan.HRISTanggalCutiRunner"></class>
+			<class name="runner.pengajuan.HRISNotesRunner"></class>
+			<class name="runner.pengajuan.HRISCountTanggalCutiRunner"></class>
+			<class name="runner.pengajuan.HRISSearchAndEntriesRunner"></class>
+			<class name="runner.pengajuan.HRISDoubleSubmitRunner"></class>
+			<class name="runner.pengajuan.HRISActionButtonRunner"></class>
+			<class name="runner.signature.HRISDrawSignatureSPVRunner"></class>
+		</classes>
+
+	</test>
+</suite>

@@ -1,5 +1,5 @@
 #Author: mnaauval@gmail.com
-Feature: Bucket Data Pengajuan
+Feature: Bucket Data Approval
 
   Scenario Outline: Action approve validate with notes
     Given User has logged in as SPV

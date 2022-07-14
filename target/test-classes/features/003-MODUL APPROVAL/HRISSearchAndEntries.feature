@@ -1,5 +1,5 @@
 #Author: mnaauval@gmail.com
-Feature: Bucket Data Pengajuan
+Feature: Bucket Data Approval
 
   Scenario Outline: Search by value
     Given User has logged in as MNGR
@@ -14,7 +14,7 @@ Feature: Bucket Data Pengajuan
       | value      |
       | November   |
       |         90 |
-      | Annual     |
+      | Pernikahan |
       | persalinan |
       | Incomplete |
       #| Queue    |
